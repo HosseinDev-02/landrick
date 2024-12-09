@@ -1,1 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer base {
+    @font-face {
+        font-family: 'IranSansDn';
+        src: url("../public/fonts/IranSans/iransansdn.woff2") format('woff2');
+    }
+    @font-face {
+        font-family: 'IranSansDn Bold';
+        src: url("../public/fonts/IranSans/iransansdnbold.woff2") format('woff2');
+    }
+    @font-face {
+        font-family: 'IranSansFaNum';
+        src: url("../public/fonts/IranSans/IRANSansWeb(FaNum).woff2") format('woff2');
+    }
+    @font-face {
+        font-family: 'IranSansFaNum Bold';
+        src: url("../public/fonts/IranSans/IRANSansWeb(FaNum)_Bold.woff2") format('woff2');
+    }
+    @font-face {
+        font-family: 'IranSansFaNum Medium';
+        src: url("../public/fonts/IranSans/IRANSansWeb(FaNum)_Medium.woff2") format('woff2');
+    }
+
+    :root {
+        --color-primary: 47 85 212;
+        --color-primary-darker: 36 67 172;
+        --color-title: 22 28 45;
+        --color-caption: 132 146 166;
+        --color-sub-title: 60 72 88;
+    }
+
+    body {
+        background-color: #fff;
+        color: rgb(var(--color-caption));
+        font-family: 'IranSansFaNum';
+    }
+
+}
