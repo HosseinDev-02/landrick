@@ -28,7 +28,8 @@ module.exports = {
         '46': '11.25rem',
       },
       boxShadow: {
-        'btn': '0 3px 5px 0 rgba(47, 85, 212, 0.3)'
+        'btn': '0 3px 5px 0 rgba(47, 85, 212, 0.3)',
+        'img': '0 5px 13px rgba(60,72,88,0.2)'
       },
       fontFamily: {
         "IranSansDn": "IranSansDn",

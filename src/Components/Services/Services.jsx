@@ -42,7 +42,7 @@ export default function Services() {
                             </svg>
                         </span>
                         <h3 className='text-xl font-IranSansFaNum-Bold text-title mb-2 group-hover:text-white'>
-                            عملکرد بالا
+                            بهترین اوراق بهادار
                         </h3>
                         <p className='group-hover:text-white/50 leading-[26px]'>
                             این یک واقعیت ثابت شده طولانی است که یک خواننده.
@@ -62,7 +62,7 @@ export default function Services() {
                             </svg>
                         </span>
                         <h3 className='text-xl font-IranSansFaNum-Bold text-title mb-2 group-hover:text-white'>
-                            عملکرد بالا
+                            سرویس مورد اعتماد
                         </h3>
                         <p className='group-hover:text-white/50 leading-[26px]'>
                             این یک واقعیت ثابت شده طولانی است که یک خواننده.
@@ -82,7 +82,7 @@ export default function Services() {
                             </svg>
                         </span>
                         <h3 className='text-xl font-IranSansFaNum-Bold text-title mb-2 group-hover:text-white'>
-                            عملکرد بالا
+                            فناوری اطلاعات
                         </h3>
                         <p className='group-hover:text-white/50 leading-[26px]'>
                             این یک واقعیت ثابت شده طولانی است که یک خواننده.
@@ -102,7 +102,7 @@ export default function Services() {
                             </svg>
                         </span>
                         <h3 className='text-xl font-IranSansFaNum-Bold text-title mb-2 group-hover:text-white'>
-                            عملکرد بالا
+                            24/7 پشتیبانی
                         </h3>
                         <p className='group-hover:text-white/50 leading-[26px]'>
                             این یک واقعیت ثابت شده طولانی است که یک خواننده.
@@ -122,7 +122,7 @@ export default function Services() {
                             </svg>
                         </span>
                         <h3 className='text-xl font-IranSansFaNum-Bold text-title mb-2 group-hover:text-white'>
-                            عملکرد بالا
+                            مدیریت اطلاعات
                         </h3>
                         <p className='group-hover:text-white/50 leading-[26px]'>
                             این یک واقعیت ثابت شده طولانی است که یک خواننده.
@@ -142,7 +142,7 @@ export default function Services() {
                             </svg>
                         </span>
                         <h3 className='text-xl font-IranSansFaNum-Bold text-title mb-2 group-hover:text-white'>
-                            عملکرد بالا
+                            شرکت مجاز
                         </h3>
                         <p className='group-hover:text-white/50 leading-[26px]'>
                             این یک واقعیت ثابت شده طولانی است که یک خواننده.
@@ -162,7 +162,7 @@ export default function Services() {
                             </svg>
                         </span>
                         <h3 className='text-xl font-IranSansFaNum-Bold text-title mb-2 group-hover:text-white'>
-                            عملکرد بالا
+                            تجزیه و تحلیل داده
                         </h3>
                         <p className='group-hover:text-white/50 leading-[26px]'>
                             این یک واقعیت ثابت شده طولانی است که یک خواننده.

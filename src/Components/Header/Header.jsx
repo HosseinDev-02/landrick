@@ -31,7 +31,7 @@ export default function Header() {
     return (<>
         <Symbols/>
         <header ref={header}
-            className={`fixed left-0 right-0 flex items-center justify-center bg-body lg:bg-transparent shadow-[0_0_3px_rgba(60,72,88,0.15)] ${headerBg && 'lg:!bg-body'}`}>
+            className={`fixed left-0 right-0 flex items-center transition-colors duration-200 z-50 justify-center bg-body lg:bg-transparent shadow-[0_0_3px_rgba(60,72,88,0.15)] ${headerBg && 'lg:!bg-body'}`}>
             <div className="container">
                 <nav className='flex items-center justify-between'>
                     {/*  Header Landrick Logo  */}
