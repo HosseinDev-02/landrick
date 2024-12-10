@@ -26,16 +26,45 @@
 
     :root {
         --color-primary: 47 85 212;
+        --color-light: 248 249 252;
         --color-primary-darker: 36 67 172;
         --color-title: 22 28 45;
         --color-caption: 132 146 166;
         --color-sub-title: 60 72 88;
+        --color-body: 255 255 255;
+        --color-light-border: 222 226 230;
     }
 
     body {
-        background-color: #fff;
+        background-color: rgb(var(--color-body));
         color: rgb(var(--color-caption));
         font-family: 'IranSansFaNum';
+        min-height: 100vh;
+
     }
 
+}
+
+
+@layer components {
+    .menu-item--active {
+
+    }
+
+    .menu-item--active a {
+        color: #ffffff;
+    }
+
+    .mobile-submenu-item--active {
+
+    }
+
+    .mobile-submenu-item--active a {
+        color: rgb(var(--color-primary));
+    }
+
+    .introduction {
+        background: url("../public/images/bg2.png") rgb(var(--color-primary)) center;
+        background-size: cover;
+    }
 }

@@ -11,13 +11,19 @@ module.exports = {
         'title': 'rgb(var(--color-title))',
         'caption': 'rgb(var(--color-caption))',
         'sub-title': 'rgb(var(--color-sub-title))',
+        'body': 'rgb(var(--color-body))',
+        'light': 'rgb(var(--color-light))',
+        'light-border': 'rgb(var(--color-light-border))',
       },
       fontSize: {
-        'xs': '0.9375rem',
+        'xxs': '0.6875rem',
+        'xs': '0.8125rem',
+        'md': '0.9375rem',
         '5xl': '2.8125rem',
       },
       spacing: {
         '7.5': '1.875rem',
+        '10.5': '2.625rem',
         '15.5': '4.0625rem',
         '46': '11.25rem',
       },
@@ -40,6 +46,7 @@ module.exports = {
       }
     },
     screens: {
+      'xs': '380px',
       'sm': '576px',
       'md': '768px',
       'lg': '992px',
