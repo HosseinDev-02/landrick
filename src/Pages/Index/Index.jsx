@@ -5,6 +5,7 @@ import Services from "../../Components/Services/Services";
 import Aboutus from "../../Components/Aboutus/Aboutus";
 import Specialties from "../../Components/Specialties/Specialties";
 import Statistics from "../../Components/Statistics/Statistics";
+import WorkProcess from "../../Components/WorkProcess/WorkProcess";
 
 export default function Index() {
     return(
@@ -17,6 +18,7 @@ export default function Index() {
                 <Aboutus/>
                 <Specialties/>
                 <Statistics/>
+                <WorkProcess/>
             </main>
         </>
     )

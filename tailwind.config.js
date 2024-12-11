@@ -15,6 +15,9 @@ module.exports = {
         'light': 'rgb(var(--color-light))',
         'light-border': 'rgb(var(--color-light-border))',
       },
+      content: {
+        'process': 'url("../public/images/process.png")'
+      },
       fontSize: {
         'xxs': '0.6875rem',
         'xs': '0.8125rem',

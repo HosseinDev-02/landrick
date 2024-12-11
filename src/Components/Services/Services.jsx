@@ -1,18 +1,16 @@
+import SectionHeader from "../SectionHeader/SectionHeader";
+
 export default function Services() {
     return (
         <section className='pt-[100px]'>
             <div className="container">
-                <div className='text-center'>
-                    <h2 className='font-IranSansFaNum-Bold text-3xl text-title mb-6'>
-                        چه کاری انجام می دهیم؟
-                    </h2>
-                    <p>
+                <SectionHeader title='چه کاری انجام می دهیم؟'>
+                    <p className='max-w-[600px] w-full mx-auto'>
                         شروع به کار با <span className='text-primary font-IranSansFaNum-Bold'>لنـدریـک</span> که می
                         تواند هر آنچه را که شما برای ایجاد آگاهی ، ایجاد ترافیک ،
-                        <br/>
                         اتصال به آن نیاز دارید فراهم کند.
                     </p>
-                </div>
+                </SectionHeader>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mt-16'>
                     <div
                         className='relative rounded flex flex-col items-center justify-center bg-[#f8f9fc] p-7 text-center z-10 hover:bg-primary group transition-colors duration-200 child:transition-all'>
