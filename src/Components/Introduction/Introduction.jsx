@@ -2,8 +2,8 @@ export default function Introduction() {
     return (
         <section className='flex items-center justify-center introduction pt-28 md:pt-40 bg-primary'>
             <div className="container h-full">
-                <div className='md:grid md:grid-cols-12 items-center gap-10'>
-                    <div className='col-span-12 md:col-start-1 md:col-span-6 pb-10'>
+                <div className='md:grid md:grid-cols-12 items-center gap-20'>
+                    <div className='col-span-12 md:col-start-1 md:col-span-7 pb-10'>
                         <span className='text-2xl font-IranSansFaNum-Bold text-white/50 inline-block mb-2'>
                             ما فوق خلاق هستیم!
                         </span>
@@ -18,7 +18,7 @@ export default function Introduction() {
                             شروع کنید
                         </a>
                     </div>
-                    <div className='col-span-12 md:col-end-13 md:col-span-6 lg:col-span-5'>
+                    <div className='col-span-12 md:col-span-6 lg:col-span-5'>
                         <img className='w-full' src="/images/hero1.png" alt="Introduction Image"/>
                     </div>
                 </div>

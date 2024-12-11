@@ -6,6 +6,7 @@ import Aboutus from "../../Components/Aboutus/Aboutus";
 import Specialties from "../../Components/Specialties/Specialties";
 import Statistics from "../../Components/Statistics/Statistics";
 import WorkProcess from "../../Components/WorkProcess/WorkProcess";
+import OurMind from "../../Components/OurMind/OurMind";
 
 export default function Index() {
     return(
@@ -19,6 +20,7 @@ export default function Index() {
                 <Specialties/>
                 <Statistics/>
                 <WorkProcess/>
+                <OurMind/>
             </main>
         </>
     )
