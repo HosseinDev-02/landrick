@@ -14,9 +14,13 @@ module.exports = {
         'body': 'rgb(var(--color-body))',
         'light': 'rgb(var(--color-light))',
         'light-border': 'rgb(var(--color-light-border))',
+        'success': 'rgb(var(--color-success))',
+        'error': 'rgb(var(--color-error))',
+        'footer': 'rgb(var(--color-footer))',
       },
       content: {
-        'process': 'url("../public/images/process.png")'
+        'process': 'url("../public/images/process.png")',
+        'envelope': 'url("../public/images/envelope (1).svg")'
       },
       fontSize: {
         'xxs': '0.6875rem',
