@@ -1,3 +1,5 @@
+import SocialMediaBox from "../SocialMediaBox/SocialMediaBox";
+
 export default function Footer() {
     return (
         <footer className='bg-footer text-[#adb5bd]'>
@@ -16,30 +18,26 @@ export default function Footer() {
                             </p>
                             <div
                                 className='flex items-center justify-start gap-2 transition-all duration-500 mt-8 pr-8'>
-                                <a className='flex items-center justify-center border border-sub-title w-8 h-8 rounded-md hover:text-white hover:border-primary hover:bg-primary duration-500 transition-all'
-                                   href="#">
-                                    <svg className='w-4 h-4'>
-                                        <use href='#facebook'></use>
-                                    </svg>
-                                </a>
-                                <a className='flex items-center justify-center border border-sub-title w-8 h-8 rounded-md hover:text-white hover:border-primary hover:bg-primary duration-500 transition-all'
-                                   href="#">
-                                    <svg className='w-4 h-4'>
-                                        <use href='#instagram'></use>
-                                    </svg>
-                                </a>
-                                <a className='flex items-center justify-center border border-sub-title w-8 h-8 rounded-md hover:text-white hover:border-primary hover:bg-primary duration-500 transition-all'
-                                   href="#">
-                                    <svg className='w-4 h-4'>
-                                        <use href='#twitter'></use>
-                                    </svg>
-                                </a>
-                                <a className='flex items-center justify-center border border-sub-title w-8 h-8 rounded-md hover:text-white hover:border-primary hover:bg-primary duration-500 transition-all'
-                                   href="#">
-                                    <svg className='w-4 h-4'>
-                                        <use href='#linkedin'></use>
-                                    </svg>
-                                </a>
+                                <SocialMediaBox
+                                    icon='facebook'
+                                    link='#'
+                                    className='border-[#283353] hover:text-light hover:border-primary hover:bg-primary'
+                                />
+                                <SocialMediaBox
+                                    icon='instagram'
+                                    link='#'
+                                    className='border-[#283353] hover:text-light hover:border-primary hover:bg-primary'
+                                />
+                                <SocialMediaBox
+                                    icon='twitter'
+                                    link='#'
+                                    className='border-[#283353] hover:text-light hover:border-primary hover:bg-primary'
+                                />
+                                <SocialMediaBox
+                                    icon='linkedin'
+                                    link='#'
+                                    className='border-[#283353] hover:text-light hover:border-primary hover:bg-primary'
+                                />
                             </div>
                         </div>
                         <div className='flex flex-col md:flex-row justify-between gap-x-6 gap-y-6'>

@@ -1,5 +1,7 @@
 import Symbols from "../../Symbols/Symbols";
 import {useEffect, useRef, useState} from "react";
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import LightButton from "../LightButton/LightButton";
 
 export default function Header() {
 
@@ -140,10 +142,17 @@ export default function Header() {
                             </ul>
                         </div>
                         {/* Header Register Btn */}
-                        <a className={`bg-primary rounded-md border hidden xs:inline-block py-2 px-5 font-IranSansFaNum-Bold text-white gap-2 shadow-btn transition-colors hover:bg-primary-darker ${headerBg ? 'lg:bg-primary lg:hover:bg-primary-darker lg:hover:border-primary-darker lg:shadow-btn lg:text-white border-primary' : 'lg:bg-[#F8F9FC] border-[#f8f9fc] lg:hover:bg-[#d4daed] lg:hover:border-[#d4daed] lg:shadow-[#f8f9fc4d] lg:text-sub-title'}`}
-                           href="#">
-                            ورود / ثبت نام
-                        </a>
+                        {
+                            headerBg ? (
+                                <PrimaryButton title='ورود/ثبت نام'/>
+                            ) : (
+                                <LightButton title='ورود/ثبت نام'/>
+                            )
+                        }
+                        {/*<a className={`bg-primary rounded-md border hidden xs:inline-block py-2 px-5 font-IranSansFaNum-Bold text-white gap-2 shadow-btn transition-colors hover:bg-primary-darker ${headerBg ? 'lg:bg-primary lg:hover:bg-primary-darker lg:hover:border-primary-darker lg:shadow-btn lg:text-white border-primary' : 'lg:bg-[#F8F9FC] border-[#f8f9fc] lg:hover:bg-[#d4daed] lg:hover:border-[#d4daed] lg:shadow-[#f8f9fc4d] lg:text-sub-title'}`}*/}
+                        {/*   href="#">*/}
+                        {/*    ورود / ثبت نام*/}
+                        {/*</a>*/}
                     </div>
                 </nav>
             </div>

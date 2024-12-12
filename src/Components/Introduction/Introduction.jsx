@@ -1,3 +1,5 @@
+import LightButton from "../LightButton/LightButton";
+
 export default function Introduction() {
     return (
         <section className='flex items-center justify-center introduction pt-28 md:pt-40 bg-primary'>
@@ -14,9 +16,10 @@ export default function Introduction() {
                         <p className='text-lg text-white/50'>
                             کمپین خود را راه اندازی کنید و از تخصص ما در زمینه طراحی و مدیریت صفحه بوت استرپ v5 html تبدیل محور بهره مند شوید.
                         </p>
-                        <a className='bg-body rounded px-5 py-2 text-sub-title font-IranSansFaNum-Bold inline-block border border-body mt-6 hover:bg-[#d4daed] transition-all hover:border-[#d4daed] shadow-btn shadow-[#f8f9fc4d]' href="#">
-                            شروع کنید
-                        </a>
+                        <LightButton
+                            className={`mt-6`}
+                            title='شروع کنید'
+                        />
                     </div>
                     <div className='col-span-12 md:col-span-6 lg:col-span-5'>
                         <img className='w-full' src="/images/hero1.png" alt="Introduction Image"/>

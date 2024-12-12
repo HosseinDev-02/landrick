@@ -1,3 +1,5 @@
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
+
 export default function Aboutus() {
     return (
         <section className='mt-[100px]'>
@@ -76,13 +78,10 @@ export default function Aboutus() {
                             </li>
                         </ul>
                         <div className='mt-8 flex items-center gap-3'>
-                            <a className='inline-block rounded-md bg-primary text-white px-5 py-2 font-IranSansFaNum-Bold border border-primary shadow-btn align-middle transition-all duration-200 hover:bg-primary-darker hover:border-primary-darker'
-                               href="#">
-                                ادامه مطلب
-                                <svg className='w-6 h-6 align-middle inline rotate-90'>
-                                    <use href='#angle-down'></use>
-                                </svg>
-                            </a>
+                            <PrimaryButton
+                                title='ادامه مطلب'
+                                icon='angle-left'
+                            />
                             <div className='flex items-center gap-2'>
                                 <a className='w-9 h-9 bg-primary flex items-center justify-center border border-primary rounded-full text-white shadow-btn transition-all duration-200 hover:bg-primary-darker hover:border-primary-darker' href='#'>
                                     <svg className='w-4 h-4'>
