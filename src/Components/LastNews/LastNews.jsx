@@ -2,13 +2,13 @@ import BlogBox from "../BlogBox/BlogBox";
 
 export default function LastNews() {
     return(
-        <section className='py-[100px] mt-[100px] bg-light'>
+        <section className='py-[100px] mt-[100px] bg-light-bg'>
             <div className="container">
             {/*  Section Header  */}
                 <div className='flex flex-col lg:flex-row gap-y-6 items-center justify-between'>
                     <div>
-                        <span className='text-primary font-IranSansFaNum-Bold block mb-2 text-center lg:text-right'>وبلاگ</span>
-                        <h2 className='font-IranSansFaNum-Bold text-2xl md:text-3xl text-title leading-[45px] text-center lg:text-right'>
+                        <span className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold block mb-2 text-center lg:text-right'>وبلاگ</span>
+                        <h2 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-2xl md:text-3xl text-title leading-[45px] text-center lg:text-right'>
                             آخرین اخبار سایت
                             <br/>
                             و بروز رسانی ها را دنبال کنید
@@ -42,7 +42,7 @@ export default function LastNews() {
                     />
                     <BlogBox
                         title='هوشمندترین برنامه ها برای تجارت و کار'
-                        img='/images/blogs/01.jpg'
+                        img='/images/blogs/03.jpg'
                         author='کالوین لورس'
                         date='مهر 1403'
                         comment='16'

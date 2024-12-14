@@ -1,28 +1,28 @@
 export default function BlogBox({ title, img, author, date, comment, like, link }) {
     return (
         <div
-            className='blog rounded-md overflow-hidden shadow-[0_0_3px_rgba(60,72,88,0.15)] transition-all duration-500 group'>
+            className='blog rounded-md overflow-hidden shadow-sm shadow-sub-title/15 dark:shadow-white/15 transition-all duration-500 group bg-body'>
             <div className='relative'>
                 <img className='w-full h-full object-cover' src={`${img}`} alt="blog 1"/>
                 <div
-                    className='absolute inset-0 p-4 bg-sub-title/40 invisible opacity-0 transition-opacity duration-500 group-hover:visible group-hover:opacity-100'>
+                    className='absolute inset-0 p-4 bg-sub-title/40 invisible opacity-0 transition-all duration-500 group-hover:visible group-hover:opacity-100'>
                     <div className='mb-1 flex items-center gap-1'>
-                        <svg className='w-4 h-4 text-light'>
+                        <svg className='w-4 h-4 text-light-bg'>
                             <use href='#user'></use>
                         </svg>
-                        <span className='text-sm text-light'>{author}</span>
+                        <span className='text-sm text-light-bg'>{author}</span>
                     </div>
                     <div className='flex items-center gap-1'>
-                        <svg className='w-4 h-4 text-light'>
+                        <svg className='w-4 h-4 text-light-bg'>
                             <use href='#calendar-alt'></use>
                         </svg>
-                        <span className='text-sm text-light'>{date}</span>
+                        <span className='text-sm text-light-bg'>{date}</span>
                     </div>
                 </div>
             </div>
             <div className='p-6'>
                 <h2 className='mb-4'>
-                    <a className='text-xl font-IranSansFaNum-Bold text-title transition-all hover:text-primary duration-500'
+                    <a className='text-xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title transition-all hover:text-primary duration-500'
                        href="#">
                         {title}
                     </a>

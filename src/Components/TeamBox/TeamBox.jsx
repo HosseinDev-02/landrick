@@ -13,28 +13,28 @@ export default function TeamBox({ name, img, job }) {
                     <SocialMediaBox
                         icon='facebook'
                         link='#'
-                        className='border-sub-title text-sub-title hover:text-white hover:border-primary hover:bg-primary'
+                        className='border-sub-title dark:border-footer dark:text-footer dark:hover:border-primary dark:hover:text-white text-sub-title hover:text-white hover:border-primary hover:bg-primary'
                     />
                     <SocialMediaBox
                         icon='instagram'
                         link='#'
-                        className='border-sub-title text-sub-title hover:text-white hover:border-primary hover:bg-primary'
+                        className='border-sub-title dark:border-footer dark:text-footer dark:hover:border-primary dark:hover:text-white text-sub-title hover:text-white hover:border-primary hover:bg-primary'
                     />
                     <SocialMediaBox
                         icon='twitter'
                         link='#'
-                        className='border-sub-title text-sub-title hover:text-white hover:border-primary hover:bg-primary'
+                        className='border-sub-title dark:border-footer dark:text-footer dark:hover:border-primary dark:hover:text-white text-sub-title hover:text-white hover:border-primary hover:bg-primary'
                     />
                     <SocialMediaBox
                         icon='linkedin'
                         link='#'
-                        className='border-sub-title text-sub-title hover:text-white hover:border-primary hover:bg-primary'
+                        className='border-sub-title dark:border-footer dark:text-footer dark:hover:border-primary dark:hover:text-white text-sub-title hover:text-white hover:border-primary hover:bg-primary'
                     />
                 </div>
             </div>
             <div className='mt-4 text-center'>
                 <h3>
-                    <a className='text-title font-IranSansFaNum-Bold text-xl hover:text-primary transition-colors duration-200'
+                    <a className='text-sub-title font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl hover:text-primary transition-colors duration-200'
                        href="#">{name}</a>
                 </h3>
                 <span className='text-sm'>

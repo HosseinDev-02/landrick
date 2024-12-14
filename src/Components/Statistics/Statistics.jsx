@@ -2,7 +2,7 @@ import StatisticsBox from "../StatisticsBox/StatisticsBox";
 
 export default function Statistics() {
     return (
-        <section className='py-28 bg-light'>
+        <section className='py-28 bg-light-bg'>
             <div className="container">
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
                     <StatisticsBox
@@ -11,7 +11,7 @@ export default function Statistics() {
                         caption='مشتریان خوشحال'
                     />
                     <StatisticsBox
-                        title='+15'
+                        title='15+'
                         img='/images/statics/Asset189.svg'
                         caption='جوایز'
                     />

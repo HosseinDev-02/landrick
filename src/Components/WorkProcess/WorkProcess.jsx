@@ -18,18 +18,21 @@ export default function WorkProcess() {
                         icon='presentation-edit'
                         shape={true}
                         caption='مشهورترین متن ساختگی "لورم اپیسوم" است که گفته می شود ریشه دارد'
+                        className='mt-6 pt-2'
                     />
                     <WorkBox
                         title='استراتژی و آزمایش'
                         icon='airplay'
                         shape={true}
                         caption='مشهورترین متن ساختگی "لورم اپیسوم" است که گفته می شود ریشه دارد'
+                        className='mt-12 pt-4'
                     />
                     <WorkBox
                         title='گزارش نویسی'
                         icon='image-check'
                         shape={false}
                         caption='مشهورترین متن ساختگی "لورم اپیسوم" است که گفته می شود ریشه دارد'
+                        className='mt-12 pt-12'
                     />
                 </div>
             </div>

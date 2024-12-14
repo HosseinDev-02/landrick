@@ -6,40 +6,40 @@ export default function Aboutus() {
             <div className="container">
                 <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-6 lg:gap-12'>
                     <div className='flex gap-6 items-center'>
-                        <div className='rounded-md overflow-hidden flex shadow-img items-center justify-center group relative'>
-                            <img className='w-full h-full object-cover group-hover:skew-x-[3deg] group-hover:scale-[1.1] transition-all duration-500' src="/images/aboutus/ab01.jpg" alt="Aboutus User Image"/>
-                            <div className='absolute inset-0 w-full h-full bg-sub-title/65 flex flex-col gap-0.5 items-start justify-end pb-6 pr-4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-500'>
-                                <span className='font-IranSansFaNum-Bold text-white text-lg'>توسعه وب</span>
-                                <span className='text-white text-sm'>اطلاعات و نرم افزار</span>
+                        <div className='rounded-md overflow-hidden flex shadow-md shadow-sub-title/20 dark:shadow-none items-center justify-center group relative'>
+                            <img className='w-full h-full object-cover group-hover:rotate-3 dark:group-hover:-rotate-3 group-hover:scale-[1.1] transition-all duration-500' src="/images/aboutus/ab01.jpg" alt="Aboutus User Image"/>
+                            <div className='absolute inset-0 w-full h-full bg-sub-title/65 dark:bg-white/65 flex flex-col gap-0.5 items-start justify-end pb-6 pr-4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-500'>
+                                <span className='font-IranSansFaNum-Bold text-white text-lg dark:text-[#1f2d3d]'>توسعه وب</span>
+                                <span className='text-white text-sm dark:text-[#253649]'>اطلاعات و نرم افزار</span>
                             </div>
                         </div>
                         <div className='flex flex-col gap-8'>
                             <div
-                                className='rounded-md overflow-hidden flex shadow-img items-center justify-center group relative'>
+                                className='rounded-md overflow-hidden flex shadow-md shadow-sub-title/20 dark:shadow-none items-center justify-center group relative'>
                                 <img
-                                    className='w-full h-full object-cover group-hover:skew-x-[3deg] group-hover:scale-[1.1] transition-all duration-500'
+                                    className='w-full h-full object-cover group-hover:rotate-3 dark:group-hover:-rotate-3 group-hover:scale-[1.1] transition-all duration-500'
                                     src="/images/aboutus/ab02.jpg" alt="Aboutus User Image"/>
                                 <div
-                                    className='absolute inset-0 w-full h-full bg-sub-title/65 flex flex-col gap-0.5 items-start justify-end pb-6 pr-4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-500'>
-                                    <span className='font-IranSansFaNum-Bold text-white text-lg'>مهندسی مکانیک</span>
-                                    <span className='text-white text-sm'>مهندسی</span>
+                                    className='absolute inset-0 w-full h-full bg-sub-title/65 dark:bg-white/65 flex flex-col gap-0.5 items-start justify-end pb-6 pr-4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-500'>
+                                    <span className='font-IranSansFaNum-Bold text-white dark:text-[#1f2d3d] text-lg'>مهندسی مکانیک</span>
+                                    <span className='text-white text-sm dark:text-[#253649]'>مهندسی</span>
                                 </div>
                             </div>
                             <div
-                                className='rounded-md overflow-hidden flex shadow-img items-center justify-center group relative'>
+                                className='rounded-md overflow-hidden flex shadow-md shadow-sub-title/20 dark:shadow-none items-center justify-center group relative'>
                                 <img
-                                    className='w-full h-full object-cover group-hover:skew-x-[3deg] group-hover:scale-[1.1] transition-all duration-500'
+                                    className='w-full h-full object-cover group-hover:rotate-3 dark:group-hover:-rotate-3 group-hover:scale-[1.1] transition-all duration-500'
                                     src="/images/aboutus/ab03.jpg" alt="Aboutus User Image"/>
                                 <div
-                                    className='absolute inset-0 w-full h-full bg-sub-title/65 flex flex-col gap-0.5 items-start justify-end pb-6 pr-4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-500 text-white'>
-                                    <span className='font-IranSansFaNum-Bold text-lg'>حسابدار خبره</span>
-                                    <span className='text-sm'>C.A.</span>
+                                    className='absolute inset-0 w-full h-full bg-sub-title/65 dark:bg-white/65 flex flex-col gap-0.5 items-start justify-end pb-6 pr-4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-500 text-white'>
+                                    <span className='font-IranSansFaNum-Bold text-lg dark:text-[#1f2d3d]'>حسابدار خبره</span>
+                                    <span className='text-sm text-white dark:text-[#253649]'>C.A.</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h2 className='font-IranSansFaNum-Bold text-2xl md:text-3xl text-title mb-6'>
+                        <h2 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-2xl md:text-3xl text-title mb-6'>
                             درباره داستان ما
                         </h2>
                         <p className='mb-4'>
@@ -51,7 +51,7 @@ export default function Aboutus() {
                             در یک زبان شبه لاتین ساخته شده است که کم و بیش با لاتین "مناسب" مطابقت دارد. این شامل یک سری
                             کلمات واقعی لاتین است.
                         </p>
-                        <ul className='pr-8 mb-4'>
+                        <ul className='mb-4'>
                             <li className='flex items-center gap-2 py-1.5'>
                                 <span className='text-primary'>
                                     <svg className='w-6 h-6'>
@@ -83,7 +83,7 @@ export default function Aboutus() {
                                 icon='angle-left'
                             />
                             <div className='flex items-center gap-2'>
-                                <a className='w-9 h-9 bg-primary flex items-center justify-center border border-primary rounded-full text-white shadow-btn transition-all duration-200 hover:bg-primary-darker hover:border-primary-darker' href='#'>
+                                <a className='w-9 h-9 bg-primary flex items-center justify-center border border-primary rounded-full text-white shadow shadow-primary/30 transition-all duration-200 hover:bg-primary-darker hover:border-primary-darker' href='#'>
                                     <svg className='w-4 h-4'>
                                         <use href='#video'></use>
                                     </svg>

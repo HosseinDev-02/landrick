@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -16,7 +17,10 @@ module.exports = {
         'light-border': 'rgb(var(--color-light-border))',
         'success': 'rgb(var(--color-success))',
         'error': 'rgb(var(--color-error))',
+        'footer-bg': 'rgb(var(--color-footer-bg))',
+        'light-bg': 'rgb(var(--color-light-bg))',
         'footer': 'rgb(var(--color-footer))',
+        'footer-border': 'rgb(var(--color-footer-border))',
       },
       content: {
         'process': 'url("../public/images/process.png")',
@@ -35,8 +39,9 @@ module.exports = {
         '46': '11.25rem',
       },
       boxShadow: {
-        'btn': '0 3px 5px 0 rgba(47, 85, 212, 0.3)',
-        'img': '0 5px 13px rgba(60,72,88,0.2)'
+        'sm': '0 0 3px 0 rgba(0, 0, 0, 0.1)',
+        DEFAULT: '0 3px 5px 0 rgba(0, 0, 0, 0.1)',
+        'md': '0 5px 13px 0 rgba(0, 0, 0, 0.1)'
       },
       fontFamily: {
         "IranSansDn": "IranSansDn",
@@ -44,12 +49,13 @@ module.exports = {
         "IranSansFaNum": "IranSansFaNum",
         "IranSansFaNum-Bold": "IranSansFaNum Bold",
         "IranSansFaNum-Medium": "IranSansFaNum Medium",
+        "Dana": "Dana"
       },
       container: {
         center: true,
         padding: {
           DEFAULT: '0.75rem',
-          sm: '1.875rem'
+          sm: '2.625rem'
         }
       }
     },

@@ -1,7 +1,7 @@
 export default function ServiceBox({ title, caption, icon }) {
     return (
         <div
-            className='relative rounded flex flex-col items-center justify-center bg-[#f8f9fc] p-7 text-center z-10 hover:bg-primary group transition-colors duration-200 child:transition-all'>
+            className='relative rounded flex flex-col items-center justify-center bg-light-bg p-7 text-center z-10 hover:bg-primary group transition-colors duration-200 child:transition-all'>
                         <span className='text-primary inline-block mb-5 group-hover:text-white/50'>
                             <svg className='w-10.5 h-10.5'>
                                 <use href={`#${icon}`}></use>

@@ -23,6 +23,10 @@
         font-family: 'IranSansFaNum Medium';
         src: url("../public/fonts/IranSans/IRANSansWeb(FaNum)_Medium.woff2") format('woff2');
     }
+    @font-face {
+        font-family: 'Dana';
+        src: url("../public/fonts/Dana/dana-demibold.woff2") format('woff2');
+    }
 
     :root {
         --color-primary: 47 85 212;
@@ -35,7 +39,22 @@
         --color-light-border: 222 226 230;
         --color-success: 46 202 139;
         --color-error: 228 63 82;
-        --color-footer: 32 41 66;
+        --color-footer-bg: 32 41 66;
+        --color-light-bg: 248 249 252;
+        --color-footer: 173 181 189;
+        --color-footer-border: 40 51 83;
+    }
+
+    .dark:root{
+        --color-body: 31 45 61;
+        --color-light: 255 255 255;
+        --color-sub-title: 255 255 255;
+        --color-title: 255 255 255;
+        --color-caption: 155 172 196;
+        --color-footer-bg: 36 52 71;
+        --color-light-bg: 37 54 73;
+        --color-footer: 173 181 189;
+        --color-footer-border: 45 65 88;
     }
 
     body {
