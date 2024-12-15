@@ -41,7 +41,8 @@ module.exports = {
       boxShadow: {
         'sm': '0 0 3px 0 rgba(0, 0, 0, 0.1)',
         DEFAULT: '0 3px 5px 0 rgba(0, 0, 0, 0.1)',
-        'md': '0 5px 13px 0 rgba(0, 0, 0, 0.1)'
+        'md': '0 5px 13px 0 rgba(0, 0, 0, 0.1)',
+        'lg': '0 10px 25px 0 rgba(0, 0, 0, 0.1)'
       },
       fontFamily: {
         "IranSansDn": "IranSansDn",
@@ -50,6 +51,22 @@ module.exports = {
         "IranSansFaNum-Bold": "IranSansFaNum Bold",
         "IranSansFaNum-Medium": "IranSansFaNum Medium",
         "Dana": "Dana"
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': {opacity: '0'},
+          '50%': {opacity: '0.5'},
+          '100%': {opacity: '1'},
+        },
+        fadeOut: {
+          '0%': {opacity: '1'},
+          '50%': {opacity: '0.5'},
+          '100%': {opacity: '0'},
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.5s ease-in',
+        fadeOut: 'fadeOut 0.5s ease-in',
       },
       container: {
         center: true,

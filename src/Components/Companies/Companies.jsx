@@ -1,6 +1,6 @@
-export default function Companies() {
+export default function Companies({ className }) {
     return (
-        <section className='py-6 bg-light-bg'>
+        <section className={`py-6 bg-light-bg ${className}`}>
             <div className="container">
                 <div className='grid grid-cols-2 md:grid-cols-6'>
                     <span className='flex items-center justify-center py-6 px-3'>

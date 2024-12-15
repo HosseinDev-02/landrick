@@ -8,7 +8,7 @@ export default function ThemeBox({ changeThemeHandler, theme, setTheme }) {
         setShowBox(prevState => !prevState)
     }
     return (
-        <div className={`fixed top-32 flex items-start transition-all duration-500 ${showBox ? 'left-0' : '-left-48'}`}>
+        <div className={`fixed top-32 flex items-start transition-all duration-500 ${showBox ? 'left-0' : '-left-48'} z-50`}>
             <span onClick={ThemeBoxShowHandler} className='w-10 h-10 rounded-tr-3xl shadow-sm shadow-sub-title/15 rounded-br-3xl bg-body text-primary flex items-center justify-center cursor-pointer'>
                 <svg className='w-6 h-6 animate-spin duration-[1.5s]'>
                     <use href='#setting'></use>

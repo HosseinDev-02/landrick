@@ -1,9 +1,9 @@
 import SectionHeader from "../SectionHeader/SectionHeader";
 import WorkBox from "../WorkBox/WorkBox";
 
-export default function WorkProcess() {
+export default function WorkProcess({ className }) {
     return (
-        <section className='mt-[100px]'>
+        <section className={`mt-[100px] ${className}`}>
             <div className="container">
                 <SectionHeader subTitle='فرآیند کار' title='چگونه کار می کنیم؟'>
                     <p className='max-w-[600px] w-full mx-auto'>

@@ -27,7 +27,7 @@ export default function BlogBox({ title, img, author, date, comment, like, link 
                         {title}
                     </a>
                 </h2>
-                <div className='flex items-center justify-between pr-8'>
+                <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-3'>
                         <a href='' className='flex items-center gap-1 hover:text-error transition-colors duration-500'>
                             <svg className='w-4 h-4'>
