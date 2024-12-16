@@ -10,10 +10,10 @@ export default function OurExperience() {
                     </div>
                     <div className='col-span-12 md:col-span-6'>
                         <div className='flex items-center gap-2 mb-6'>
-                            <div className='text-primary font-IranSansFaNum-Bold text-[56px]/[64px] md:text-[80px]/[96px] flex items-end'>15 <span className='text-[42px]/[64px]'>+</span></div>
-                            <span className='text-title md:mt-12 font-IranSansFaNum-Bold'>سال <br/> تجربه</span>
+                            <div className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-[56px]/[64px] md:text-[80px]/[96px] flex items-end'>15 <span className='text-[42px]/[64px]'>+</span></div>
+                            <span className='text-title md:mt-12 font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>سال <br/> تجربه</span>
                         </div>
-                        <h2 className='text-title text-2xl md:text-3xl font-IranSansFaNum-Bold mb-6'>
+                        <h2 className='text-title text-2xl md:text-3xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold mb-6'>
                             ما کی هستیم ؟
                         </h2>
                         <p className='mb-8'>

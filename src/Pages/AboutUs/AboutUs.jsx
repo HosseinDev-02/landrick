@@ -18,7 +18,7 @@ export default function AboutUs() {
                 <OurExperience/>
                 <Companies className='!bg-body mt-6 !py-0'/>
                 <WorkProcess
-                    className='!bg-light-bg py-[100px]'
+                    className='!bg-light-bg pt-[60px] md:pt-[100px]'
                 />
                 <AboutusServices/>
                 <AboutusTeam/>

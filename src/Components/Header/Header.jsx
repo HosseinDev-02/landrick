@@ -205,7 +205,7 @@ export default function Header() {
                                 )
                             }
                         </div>
-                        <div className='lg:hidden'>
+                        <div className='hidden md:block lg:hidden'>
                             <PrimaryButton title='ورود/ثبت نام'/>
                         </div>
                     </div>

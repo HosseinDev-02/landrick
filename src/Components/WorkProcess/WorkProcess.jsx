@@ -3,7 +3,7 @@ import WorkBox from "../WorkBox/WorkBox";
 
 export default function WorkProcess({ className }) {
     return (
-        <section className={`mt-[100px] ${className}`}>
+        <section className={`mt-[60px] md:mt-[100px] ${className}`}>
             <div className="container">
                 <SectionHeader subTitle='فرآیند کار' title='چگونه کار می کنیم؟'>
                     <p className='max-w-[600px] w-full mx-auto'>
@@ -12,27 +12,27 @@ export default function WorkProcess({ className }) {
                         اتصال به آن نیاز دارید فراهم کند.
                     </p>
                 </SectionHeader>
-                <div className='flex flex-col md:flex-row md:justify-between items-center md:items-start gap-14 md:gap-20 mt-16'>
+                <div className='flex flex-col md:flex-row md:justify-between items-center md:items-start gap-14 md:gap-20 mt-8'>
                     <WorkBox
                         title='بحث'
                         icon='presentation-edit'
                         shape={true}
                         caption='مشهورترین متن ساختگی "لورم اپیسوم" است که گفته می شود ریشه دارد'
-                        className='mt-6 pt-2'
+                        className='md:mt-6 md:pt-2'
                     />
                     <WorkBox
                         title='استراتژی و آزمایش'
                         icon='airplay'
                         shape={true}
                         caption='مشهورترین متن ساختگی "لورم اپیسوم" است که گفته می شود ریشه دارد'
-                        className='mt-12 pt-4'
+                        className='md:mt-12 md:pt-4'
                     />
                     <WorkBox
                         title='گزارش نویسی'
                         icon='image-check'
                         shape={false}
                         caption='مشهورترین متن ساختگی "لورم اپیسوم" است که گفته می شود ریشه دارد'
-                        className='mt-12 pt-12'
+                        className='md:mt-12 md:pt-12'
                     />
                 </div>
             </div>

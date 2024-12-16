@@ -12,23 +12,20 @@ export default function AboutusTeam() {
                         </a>
                         <img className='w-full h-full object-cover' src="/images/aboutus/video-cover.jpg" alt="Team Video Cover"/>
                     </div>
-                    <div className='grid grid-cols-12 gap-y-6 items-center pt-6 md:pt-12 md:mt-12'>
+                    <div className='grid grid-cols-12 gap-y-6 items-center pt-6 md:pt-8 md:mt-8'>
                         <div className='col-span-12 text-center md:text-right md:col-start-2 md:col-end-5 xl:col-end-4'>
                         <span className='font-IranSansFaNum-Bold inline-block mb-2 text-white/50'>
                             تیم
                         </span>
-                            <h2 className='font-IranSansFaNum-Bold text-white text-2xl md:text-3xl'>
+                            <h2 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-white text-2xl md:text-3xl'>
                                 دیدار با تجربه
                                 <br/>
                                 و اعضا تیم
                             </h2>
                         </div>
                         <div className='col-span-12 text-center md:text-right md:col-start-7 md:col-end-12'>
-                            <p className='text-white/50 mb-4'>
-
-                                و اعضا تیم
-                                کار با لنـدریــک را شروع کنید که می تواند همه چیزهایی را که برای ایجاد آگاهی ، ایجاد
-                                ترافیک ، اتصال به آن نیاز دارید فراهم کند.
+                            <p className='text-white/50 mb-4 max-w-[451px] w-full'>
+                                کار با لنـدریــک را شروع کنید که می تواند همه چیزهایی را که برای ایجاد آگاهی ، ایجاد ترافیک ، اتصال به آن نیاز دارید فراهم کند.
                             </p>
                             <a className='text-white inline-flex items-center justify-end gap-1'
                                href="#">

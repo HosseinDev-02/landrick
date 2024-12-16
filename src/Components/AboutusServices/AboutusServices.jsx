@@ -9,11 +9,11 @@ export default function AboutusServices() {
     }
 
     return (
-        <section className='bg-light-bg py-[100px]'>
+        <section className='bg-light-bg py-[60px] md:py-[100px]'>
             <div className="container">
-                <div className='grid grid-cols-12 items-end gap-8 mb-6 pb-6'>
-                    <div className='col-span-12 md:col-span-8 text-center md:text-right'>
-                        <span className='font-IranSansFaNum-Bold text-primary'>خدمات</span>
+                <div className='md:grid md:grid-cols-12 md:items-end gap-8'>
+                    <div className='w-full md:col-span-8 text-center md:text-right'>
+                        <span className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-primary'>خدمات</span>
                         <h2 className='text-2xl md:text-3xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title mt-2'>
                             چه کاری انجام می دهیم؟
                         </h2>
@@ -22,7 +22,7 @@ export default function AboutusServices() {
                             اتصال به آن نیاز دارید فراهم کند.
                         </p>
                     </div>
-                    <div className='col-span-12 md:col-span-4 justify-self-center md:justify-self-end'>
+                    <div className='md:col-span-4 mt-8 md:mt-0 text-center md:text-right justify-self-center md:justify-self-end'>
                         <a className='text-primary inline-flex items-center justify-end gap-1 font-IranSansFaNum-Bold'
                            href="#">
                             نمایش بیشتر
@@ -32,24 +32,24 @@ export default function AboutusServices() {
                         </a>
                     </div>
                 </div>
-                <div className='grid grid-cols-12 mt-6 pt-2 gap-8 items-start'>
-                    <div className='col-span-12 md:col-span-4 bg-body shadow-sm shadow-sub-title/15 p-4 rounded-md'>
+                <div className='md:grid md:grid-cols-12 mt-8 pt-12 md:gap-8 md:items-start'>
+                    <div className='w-full md:col-span-4 bg-body shadow-sm shadow-sub-title/15 p-4 rounded-md'>
                         <ul className='flex flex-col gap-2'>
-                            <li onClick={event => itemSelectionHandler(event)} data-item='Web Development' className={`font-IranSansFaNum-Bold h-11 flex items-center justify-center rounded-md cursor-pointer transition-colors duration-500 ${serviceItemActive === 'Web Development' ? 'bg-primary text-white' : 'bg-transparent text-sub-title'}`}>
+                            <li onClick={event => itemSelectionHandler(event)} data-item='Web Development' className={`font-IranSansFaNum-Bold dark:font-IranSansDn-Bold h-11 flex items-center justify-center rounded-md cursor-pointer transition-colors duration-500 ${serviceItemActive === 'Web Development' ? 'bg-primary text-white' : 'bg-transparent text-sub-title'}`}>
                                 توسعه وب
                             </li>
-                            <li onClick={event => itemSelectionHandler(event)} data-item='Database Analysis' className={`font-IranSansFaNum-Bold h-11 flex items-center justify-center rounded-md cursor-pointer transition-colors duration-500 ${serviceItemActive === 'Database Analysis' ? 'bg-primary text-white' : 'bg-transparent text-sub-title'}`}>
+                            <li onClick={event => itemSelectionHandler(event)} data-item='Database Analysis' className={`font-IranSansFaNum-Bold dark:font-IranSansDn-Bold h-11 flex items-center justify-center rounded-md cursor-pointer transition-colors duration-500 ${serviceItemActive === 'Database Analysis' ? 'bg-primary text-white' : 'bg-transparent text-sub-title'}`}>
                                 تحلیل پایگاه داده
                             </li>
-                            <li onClick={event => itemSelectionHandler(event)} data-item='Server Security' className={`font-IranSansFaNum-Bold h-11 flex items-center justify-center rounded-md cursor-pointer transition-colors duration-500 ${serviceItemActive === 'Server Security' ? 'bg-primary text-white' : 'bg-transparent text-sub-title'}`}>
+                            <li onClick={event => itemSelectionHandler(event)} data-item='Server Security' className={`font-IranSansFaNum-Bold dark:font-IranSansDn-Bold h-11 flex items-center justify-center rounded-md cursor-pointer transition-colors duration-500 ${serviceItemActive === 'Server Security' ? 'bg-primary text-white' : 'bg-transparent text-sub-title'}`}>
                                 امنیت سرور
                             </li>
-                            <li onClick={event => itemSelectionHandler(event)} data-item='Web Design' className={`font-IranSansFaNum-Bold h-11 flex items-center justify-center rounded-md cursor-pointer transition-colors duration-500 ${serviceItemActive === 'Web Design' ? 'bg-primary text-white' : 'bg-transparent text-sub-title'}`}>
+                            <li onClick={event => itemSelectionHandler(event)} data-item='Web Design' className={`font-IranSansFaNum-Bold dark:font-IranSansDn-Bold h-11 flex items-center justify-center rounded-md cursor-pointer transition-colors duration-500 ${serviceItemActive === 'Web Design' ? 'bg-primary text-white' : 'bg-transparent text-sub-title'}`}>
                                 طراحی وب
                             </li>
                         </ul>
                     </div>
-                    <div className='col-span-12 md:col-span-8 p-6 shadow-sm shadow-sub-title/15 rounded-md bg-body'>
+                    <div className='w-full md:col-span-8 p-6 mt-8 md:mt-0 shadow-sm shadow-sub-title/15 rounded-md bg-body'>
                         {/* Web Development Content */}
                         <div className={`${serviceItemActive === 'Web Development' ? 'block opacity-100 animate-fadeIn' : 'hidden opacity-0 animate-fadeOut'}`}>
                             <div className='rounded-md overflow-hidden'>
