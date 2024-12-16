@@ -14,7 +14,9 @@ export default function AboutUs() {
             <Header/>
             <main>
                 <AboutusIntro/>
-                <BreadCrumb/>
+                <BreadCrumb
+                    page='درباره ما'
+                />
                 <OurExperience/>
                 <Companies className='!bg-body mt-6 !py-0'/>
                 <WorkProcess

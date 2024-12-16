@@ -43,6 +43,7 @@
         --color-light-bg: 248 249 252;
         --color-footer: 173 181 189;
         --color-footer-border: 40 51 83;
+        --color-warning: 241 116 37;
     }
 
     .dark:root{
@@ -96,19 +97,26 @@
 
     .aboutus-intro {
         background: url("../public/images/aboutus/introduction-bg.jpg");
+    }
+
+    .services-intro, .aboutus-intro {
         background-size: cover;
         padding: 184px 0 134px 0;
         clip-path: ellipse(270% 100% at 50% 0%);
     }
 
+    .services-intro {
+        background: rgb(var(--color-light-bg));
+    }
+
     @media screen and (min-width: 768px) {
-        .aboutus-intro {
+        .aboutus-intro, .services-intro {
             clip-path: ellipse(195% 100% at 50% 0%);
         }
     }
 
     @media screen and (min-width: 992px) {
-        .aboutus-intro {
+        .aboutus-intro, .services-intro {
             clip-path: ellipse(133% 100% at 50% 0%);
         }
     }

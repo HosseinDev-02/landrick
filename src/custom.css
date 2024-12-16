@@ -1,0 +1,16 @@
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 3px !important;
+    background-color: rgb(var(--color-primary)) !important;
+    transition: all 500ms ease !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(var(--color-primary)) !important;
+    transform: rotate(135deg) !important;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0 !important;
+}

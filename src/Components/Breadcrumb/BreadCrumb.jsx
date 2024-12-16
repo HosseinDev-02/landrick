@@ -1,4 +1,4 @@
-export default function BreadCrumb() {
+export default function BreadCrumb({ page }) {
     return (
         <section className='-translate-y-1/2 relative z-30'>
             <div className="container">
@@ -20,7 +20,9 @@ export default function BreadCrumb() {
                             </svg>
                         </a>
                         <span className='flex items-center gap-1 text-sm font-IranSansFaNum-Bold text-primary'>
-                            درباره ما
+                            {
+                                page
+                            }
                         </span>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import LightButton from "../LightButton/LightButton";
 import SocialMediaBox from "../SocialMediaBox/SocialMediaBox";
 import ThemeBox from "../ThemeBox/ThemeBox";
 
-export default function Header() {
+export default function Header({ changeMode }) {
 
     const [showMobileMenu, setShowMobileMenu] = useState(false)
     const [showMobileSubmenu, setShowMobileSubmenu] = useState(false)
@@ -68,38 +68,48 @@ export default function Header() {
                 <nav className='flex items-center justify-between'>
                     {/*  Header Landrick Logo  */}
                     <a className='inline-block leading-[74px]' href="/">
-                        {/* Light Logo */}
                         {
-                            headerBg && theme === 'dark' ? (
-                                <img className='hidden lg:inline h-6 w-full object-cover'
-                                     src='/images/logo/logo-light.png'
-                                     alt="Landrick Logo"/>
-                            ) : headerBg && theme === 'light' ? (
-                                <img className='hidden lg:inline h-6 w-full object-cover'
-                                     src='/images/logo/logo-dark.png'
-                                     alt="Landrick Logo"/>
-                            ) : (
-                                <img className='hidden lg:inline h-6 w-full object-cover'
-                                     src='/images/logo/logo-light.png'
-                                     alt="Landrick Logo"/>
-                            )
-                        }
-                        {/* Dark Logo */}
-                        {
-                            theme === 'dark' ? (
-                                <img className='inline lg:hidden h-6 w-full object-cover'
-                                     src="/images/logo/logo-light.png"
-                                     alt="Landrick Logo"/>
-                            ) : (
-                                <img className='inline lg:hidden h-6 w-full object-cover'
+                            changeMode ? (
+                                <img className='inline h-6 w-full object-cover'
                                      src="/images/logo/logo-dark.png"
                                      alt="Landrick Logo"/>
+                            ) : (
+                                <>
+                                    {/* Light Logo */}
+                                    {
+                                        headerBg && theme === 'dark' ? (
+                                            <img className='hidden lg:inline h-6 w-full object-cover'
+                                                 src='/images/logo/logo-light.png'
+                                                 alt="Landrick Logo"/>
+                                        ) : headerBg && theme === 'light' ? (
+                                            <img className='hidden lg:inline h-6 w-full object-cover'
+                                                 src='/images/logo/logo-dark.png'
+                                                 alt="Landrick Logo"/>
+                                        ) : (
+                                            <img className='hidden lg:inline h-6 w-full object-cover'
+                                                 src='/images/logo/logo-light.png'
+                                                 alt="Landrick Logo"/>
+                                        )
+                                    }
+                                    {/* Dark Logo */}
+                                    {
+                                        theme === 'dark' ? (
+                                            <img className='inline lg:hidden h-6 w-full object-cover'
+                                                 src="/images/logo/logo-light.png"
+                                                 alt="Landrick Logo"/>
+                                        ) : (
+                                            <img className='inline lg:hidden h-6 w-full object-cover'
+                                                 src="/images/logo/logo-dark.png"
+                                                 alt="Landrick Logo"/>
+                                        )
+                                    }
+                                </>
                             )
                         }
                     </a>
                     {/*  Header Landrick Menu  */}
-                    <ul className={`hidden lg:flex gap-5 child:transition-all ${headerBg ? 'text-sub-title child-hover:text-primary' : 'text-white/50 child-hover:text-white'}`}>
-                        <li className={`inline-flex items-center ${headerBg ? 'text-primary' : 'menu-item--active'}`}>
+                    <ul className={`hidden lg:flex gap-5 child:transition-all ${headerBg || changeMode ? 'text-sub-title child-hover:text-primary' : 'text-white/50 child-hover:text-white'}`}>
+                        <li className={`inline-flex items-center ${headerBg || changeMode ? 'text-primary' : 'menu-item--active'}`}>
                             <a className='font-IranSansDn-Bold text-xs/[74px] px-[15px]'
                                href="#">صفحه اصلی</a>
                         </li>
@@ -196,18 +206,26 @@ export default function Header() {
 
                         </div>
                         {/* Header Register Btn */}
-                        <div className="hidden lg:block">
-                            {
-                                headerBg ? (
-                                    <PrimaryButton title='ورود/ثبت نام'/>
-                                ) : (
-                                    <LightButton title='ورود/ثبت نام'/>
-                                )
-                            }
-                        </div>
-                        <div className='hidden md:block lg:hidden'>
-                            <PrimaryButton title='ورود/ثبت نام'/>
-                        </div>
+                        {
+                            changeMode ? (
+                                <PrimaryButton title='ورود/ثبت نام'/>
+                            ) : (
+                                <>
+                                    <div className="hidden lg:block">
+                                        {
+                                            headerBg ? (
+                                                <PrimaryButton title='ورود/ثبت نام'/>
+                                            ) : (
+                                                <LightButton title='ورود/ثبت نام'/>
+                                            )
+                                        }
+                                    </div>
+                                    <div className='hidden md:block lg:hidden'>
+                                        <PrimaryButton title='ورود/ثبت نام'/>
+                                    </div>
+                                </>
+                            )
+                        }
                     </div>
                 </nav>
             </div>

@@ -21,6 +21,7 @@ module.exports = {
         'light-bg': 'rgb(var(--color-light-bg))',
         'footer': 'rgb(var(--color-footer))',
         'footer-border': 'rgb(var(--color-footer-border))',
+        'warning': 'rgb(var(--color-warning))',
       },
       content: {
         'process': 'url("../public/images/process.png")',
@@ -63,10 +64,19 @@ module.exports = {
           '50%': {opacity: '0.5'},
           '100%': {opacity: '0'},
         },
+        spinMd: {
+          '0%': {
+            transform: 'rotate(-36deg)'
+          },
+          '100%': {
+            transform: 'rotate(-396deg)'
+          }
+        }
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in',
         fadeOut: 'fadeOut 0.5s ease-in',
+        spinMd: 'spinMd 4s linear infinite',
       },
       container: {
         center: true,
