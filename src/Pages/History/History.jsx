@@ -2,6 +2,7 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import PageHeader from "../../Components/PageHeader/PageHeader";
 import BreadCrumb from "../../Components/Breadcrumb/BreadCrumb";
+import HistoryBox from "../../Components/HistoryBox/HistoryBox";
 
 export default function History() {
     return (
@@ -27,25 +28,11 @@ export default function History() {
                             </span>
                             <div className='flex justify-center'>
                                 <div className='md:w-3/4 flex flex-col gap-x-12 gap-y-6'>
-                                    <div className='flex flex-col md:flex-row relative gap-y-6 gap-x-12'>
-                                        <div className='md:w-1/2 flex items-start justify-start md:justify-end'>
-                                <span
-                                    className='text-title shadow-sm shadow-sub-title/15 rounded-md py-2 px-6 bg-body inline-block border border-[#e9ecef] dark:border-[#495057] relative after:absolute after:content-[""] after:top-0 after:bottom-0 after:my-auto after:-right-[26px] md:after:right-auto md:after:-left-[31px] after:bg-primary after:w-3 after:h-3 after:rounded after:rotate-45'>
-                                    2002
-                                </span>
-                                        </div>
-                                        <div
-                                            className='md:w-1/2 bg-body shadow-sm rounded-md overflow-hidden shadow-sub-title/15'>
-                                            <div>
-                                                <img className='w-full h-full object-cover' src="/images/blogs/05.jpg"
-                                                     alt=""/>
-                                            </div>
-                                            <div className='p-6'>
-                                                <h3 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl text-title'>
-                                                    تاسیس
-                                                </h3>
-                                                <p className='mt-4 line-clamp-4'>
-                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    <HistoryBox
+                                        img='/images/blogs/01.jpg'
+                                        direction='left'
+                                        title='تاسیس'
+                                        caption='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                                     استفاده
                                                     از
                                                     طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
@@ -53,30 +40,14 @@ export default function History() {
                                                     لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
                                                     هدف
                                                     بهبود
-                                                    ابزارهای کاربردی می باشد.,
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex flex-col md:flex-row-reverse relative gap-y-6 gap-x-12'>
-                                        <div className='md:w-1/2 flex items-start justify-start'>
-                                <span
-                                    className='text-title shadow-sm shadow-sub-title/15 rounded-md py-2 px-6 bg-body inline-block border border-[#e9ecef] dark:border-[#495057] relative after:absolute after:content-[""] after:top-0 after:bottom-0 after:my-auto after:-right-[26px] md:after:-right-[31px] after:bg-primary after:w-3 after:h-3 after:rounded after:rotate-45'>
-                                    2004
-                                </span>
-                                        </div>
-                                        <div
-                                            className='md:w-1/2 bg-body shadow-sm rounded-md overflow-hidden shadow-sub-title/15'>
-                                            <div>
-                                                <img className='w-full h-full object-cover' src="/images/blogs/01.jpg"
-                                                     alt=""/>
-                                            </div>
-                                            <div className='p-6'>
-                                                <h3 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl text-title'>
-                                                    شراکت
-                                                </h3>
-                                                <p className='mt-4 line-clamp-4'>
-                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    ابزارهای کاربردی می باشد.,'
+                                        year={2002}
+                                    />
+                                    <HistoryBox
+                                        img='/images/blogs/02.jpg'
+                                        direction='right'
+                                        title='شراکت'
+                                        caption='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                                     استفاده
                                                     از
                                                     طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
@@ -84,30 +55,14 @@ export default function History() {
                                                     لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
                                                     هدف
                                                     بهبود
-                                                    ابزارهای کاربردی می باشد.,
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex flex-col md:flex-row relative gap-y-6 gap-x-12'>
-                                        <div className='md:w-1/2 flex items-start justify-start md:justify-end'>
-                                <span
-                                    className='text-title shadow-sm shadow-sub-title/15 rounded-md py-2 px-6 bg-body inline-block border border-[#e9ecef] dark:border-[#495057] relative after:absolute after:content-[""] after:top-0 after:bottom-0 after:my-auto after:-right-[26px] md:after:right-auto md:after:-left-[31px] after:bg-primary after:w-3 after:h-3 after:rounded after:rotate-45'>
-                                    2006
-                                </span>
-                                        </div>
-                                        <div
-                                            className='md:w-1/2 bg-body shadow-sm rounded-md overflow-hidden shadow-sub-title/15'>
-                                            <div>
-                                                <img className='w-full h-full object-cover' src="/images/blogs/06.jpg"
-                                                     alt=""/>
-                                            </div>
-                                            <div className='p-6'>
-                                                <h3 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl text-title'>
-                                                    امنیت
-                                                </h3>
-                                                <p className='mt-4 line-clamp-4'>
-                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    ابزارهای کاربردی می باشد.,'
+                                        year={2002}
+                                    />
+                                    <HistoryBox
+                                        img='/images/blogs/03.jpg'
+                                        direction='left'
+                                        title='امنیت'
+                                        caption='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                                     استفاده
                                                     از
                                                     طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
@@ -115,30 +70,14 @@ export default function History() {
                                                     لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
                                                     هدف
                                                     بهبود
-                                                    ابزارهای کاربردی می باشد.,
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex flex-col md:flex-row-reverse relative gap-y-6 gap-x-12'>
-                                        <div className='md:w-1/2 flex items-start justify-start'>
-                                <span
-                                    className='text-title shadow-sm shadow-sub-title/15 rounded-md py-2 px-6 bg-body inline-block border border-[#e9ecef] dark:border-[#495057] relative after:absolute after:content-[""] after:top-0 after:bottom-0 after:my-auto after:-right-[26px] md:after:-right-[31px] after:bg-primary after:w-3 after:h-3 after:rounded after:rotate-45'>
-                                    2010
-                                </span>
-                                        </div>
-                                        <div
-                                            className='md:w-1/2 bg-body shadow-sm rounded-md overflow-hidden shadow-sub-title/15'>
-                                            <div>
-                                                <img className='w-full h-full object-cover' src="/images/blogs/04.jpg"
-                                                     alt=""/>
-                                            </div>
-                                            <div className='p-6'>
-                                                <h3 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl text-title'>
-                                                    برند
-                                                </h3>
-                                                <p className='mt-4 line-clamp-4'>
-                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    ابزارهای کاربردی می باشد.,'
+                                        year={2010}
+                                    />
+                                    <HistoryBox
+                                        img='/images/blogs/04.jpg'
+                                        direction='right'
+                                        title='برند'
+                                        caption='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                                     استفاده
                                                     از
                                                     طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
@@ -146,30 +85,14 @@ export default function History() {
                                                     لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
                                                     هدف
                                                     بهبود
-                                                    ابزارهای کاربردی می باشد.,
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex flex-col md:flex-row relative gap-y-6 gap-x-12'>
-                                        <div className='md:w-1/2 flex items-start justify-start md:justify-end'>
-                                <span
-                                    className='text-title shadow-sm shadow-sub-title/15 rounded-md py-2 px-6 bg-body inline-block border border-[#e9ecef] dark:border-[#495057] relative after:absolute after:content-[""] after:top-0 after:bottom-0 after:my-auto after:-right-[26px] md:after:right-auto md:after:-left-[31px] after:bg-primary after:w-3 after:h-3 after:rounded after:rotate-45'>
-                                    2016
-                                </span>
-                                        </div>
-                                        <div
-                                            className='md:w-1/2 bg-body shadow-sm rounded-md overflow-hidden shadow-sub-title/15'>
-                                            <div>
-                                                <img className='w-full h-full object-cover' src="/images/blogs/03.jpg"
-                                                     alt=""/>
-                                            </div>
-                                            <div className='p-6'>
-                                                <h3 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl text-title'>
-                                                    جهانی شدن
-                                                </h3>
-                                                <p className='mt-4 line-clamp-4'>
-                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    ابزارهای کاربردی می باشد.,'
+                                        year={2016}
+                                    />
+                                    <HistoryBox
+                                        img='/images/blogs/05.jpg'
+                                        direction='left'
+                                        title='جهانی شدن'
+                                        caption='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                                     استفاده
                                                     از
                                                     طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
@@ -177,30 +100,14 @@ export default function History() {
                                                     لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
                                                     هدف
                                                     بهبود
-                                                    ابزارهای کاربردی می باشد.,
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex flex-col md:flex-row-reverse relative gap-y-6 gap-x-12'>
-                                        <div className='md:w-1/2 flex items-start justify-start'>
-                                <span
-                                    className='text-title shadow-sm shadow-sub-title/15 rounded-md py-2 px-6 bg-body inline-block border border-[#e9ecef] dark:border-[#495057] relative after:absolute after:content-[""] after:top-0 after:bottom-0 after:my-auto after:-right-[26px] md:after:-right-[31px] after:bg-primary after:w-3 after:h-3 after:rounded after:rotate-45'>
-                                    2020
-                                </span>
-                                        </div>
-                                        <div
-                                            className='md:w-1/2 bg-body shadow-sm rounded-md overflow-hidden shadow-sub-title/15'>
-                                            <div>
-                                                <img className='w-full h-full object-cover' src="/images/blogs/02.jpg"
-                                                     alt=""/>
-                                            </div>
-                                            <div className='p-6'>
-                                                <h3 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl text-title'>
-                                                    معروف
-                                                </h3>
-                                                <p className='mt-4 line-clamp-4'>
-                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    ابزارهای کاربردی می باشد.,'
+                                        year={2020}
+                                    />
+                                    <HistoryBox
+                                        img='/images/blogs/06.jpg'
+                                        direction='right'
+                                        title='معروف'
+                                        caption='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                                     استفاده
                                                     از
                                                     طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
@@ -208,11 +115,9 @@ export default function History() {
                                                     لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
                                                     هدف
                                                     بهبود
-                                                    ابزارهای کاربردی می باشد.,
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    ابزارهای کاربردی می باشد.,'
+                                        year={2024}
+                                    />
                                 </div>
                             </div>
                         </div>
