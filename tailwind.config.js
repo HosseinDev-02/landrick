@@ -25,6 +25,7 @@ module.exports = {
       },
       content: {
         'process': 'url("../public/images/process.png")',
+        'star': 'url("../public/images/star.svg")',
         'envelope': 'url("../public/images/envelope (1).svg")'
       },
       fontSize: {
@@ -40,7 +41,7 @@ module.exports = {
         '46': '11.25rem',
       },
       boxShadow: {
-        'sm': '0 0 3px 0 rgba(0, 0, 0, 0.1)',
+        'sm': '0 0 3px rgba(0, 0, 0, 0.1)',
         DEFAULT: '0 3px 5px 0 rgba(0, 0, 0, 0.1)',
         'md': '0 5px 13px 0 rgba(0, 0, 0, 0.1)',
         'lg': '0 10px 25px 0 rgba(0, 0, 0, 0.1)'

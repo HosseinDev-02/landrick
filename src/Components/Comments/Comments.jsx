@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import '../../custom.css';
 import CommentBox from "../CommentBox/CommentBox";
 
-export default function Commnets() {
+export default function Comments() {
     return (
         <section className='my-[60px] md:my-[100px]'>
             <div className="container">

@@ -3,7 +3,7 @@ import Footer from "../../Components/Footer/Footer";
 import ServicesIntro from "../../Components/ServicesIntro/ServicesIntro";
 import BreadCrumb from "../../Components/Breadcrumb/BreadCrumb";
 import OurServices from "../../Components/OurServices/OurServices";
-import Commnets from "../../Components/Comments/Comments";
+import Comments from "../../Components/Comments/Comments";
 import LastProjects from "../../Components/LastProjects/LastProjects";
 
 export default function Services() {
@@ -16,7 +16,7 @@ export default function Services() {
                         page='خدمات'
                     />
                     <OurServices/>
-                    <Commnets/>
+                    <Comments/>
                     <LastProjects/>
                 </main>
             <Footer/>
