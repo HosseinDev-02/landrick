@@ -21,12 +21,12 @@ export default function BlogBox({ title, img, author, date, comment, like, link 
                 </div>
             </div>
             <div className='p-6'>
-                <h2 className='mb-4'>
+                <h3 className='mb-4'>
                     <a className='text-xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title transition-all hover:text-primary duration-500'
                        href="#">
                         {title}
                     </a>
-                </h2>
+                </h3>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-3'>
                         <a href='' className='flex items-center gap-1 hover:text-error transition-colors duration-500'>

@@ -4,6 +4,7 @@ import Services from "./Pages/Services/Services";
 import History from "./Pages/History/History";
 import Team from "./Pages/Team/Team";
 import Pricing from "./Pages/Pricing/Pricing";
+import Blogs from "./Pages/Blogs/Blogs";
 
 
 let routes = [
@@ -13,6 +14,7 @@ let routes = [
     { path: '/history', element: <History/> },
     { path: '/team', element: <Team/> },
     { path: '/pricing', element: <Pricing/> },
+    { path: '/blogs', element: <Blogs/> },
 ]
 
 export default routes
