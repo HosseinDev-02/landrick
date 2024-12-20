@@ -11,9 +11,15 @@ export default function History() {
             <main>
                 <PageHeader
                     title='تاریخچه شرکت ما'
+                    bgColor='rgb(var(--color-light-bg))'
                 />
                 <BreadCrumb
                     page='تاریخچه'
+                    items={[
+                        {id: 1, title: 'لندریک'},
+                        {id: 2, title: 'صفحه'},
+                        {id: 3, title: 'تاریخچه'},
+                    ]}
                 />
                 <section
                     className='my-[60px] md:my-[100px]'>
