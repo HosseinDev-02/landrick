@@ -7,15 +7,27 @@ import Companies from "../../Components/Companies/Companies";
 import WorkProcess from "../../Components/WorkProcess/WorkProcess";
 import AboutusServices from "../../Components/AboutusServices/AboutusServices";
 import AboutusTeam from "../../Components/AboutusTeam/AboutusTeam";
+import PageHeader from "../../Components/PageHeader/PageHeader";
 
 export default function AboutUs() {
     return (
         <>
             <Header/>
             <main>
-                <AboutusIntro/>
+                <PageHeader
+                    title='درباره ما'
+                    titleStyle='text-white'
+                    caption='کار با لنـدریــک را شروع کنید که می تواند همه چیزهایی را که برای ایجاد آگاهی ، ایجاد ترافیک ، اتصال
+                    به آن نیاز دارید فراهم کند.'
+                    img='/images/aboutus/introduction-bg.jpg'
+                />
                 <BreadCrumb
                     page='درباره ما'
+                    items={[
+                        {id: 1, title: 'لندریک'},
+                        {id: 2, title: 'صفحه'},
+                        {id: 3, title: 'درباره ما'},
+                    ]}
                 />
                 <OurExperience/>
                 <Companies className='!bg-body mt-6 !py-0'/>

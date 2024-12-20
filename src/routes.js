@@ -5,6 +5,7 @@ import History from "./Pages/History/History";
 import Team from "./Pages/Team/Team";
 import Pricing from "./Pages/Pricing/Pricing";
 import Blogs from "./Pages/Blogs/Blogs";
+import BlogDetail from "./Pages/BlogDetail/BlogDetail";
 
 
 let routes = [
@@ -15,6 +16,7 @@ let routes = [
     { path: '/team', element: <Team/> },
     { path: '/pricing', element: <Pricing/> },
     { path: '/blogs', element: <Blogs/> },
+    { path: '/blog-detail/:shortName', element: <BlogDetail/> },
 ]
 
 export default routes

@@ -95,28 +95,29 @@
         transform: translateY(-8px);
     }
 
-    .aboutus-intro {
-        background: url("../public/images/aboutus/introduction-bg.jpg");
-    }
+    /*.aboutus-intro {*/
+    /*    background: url("../public/images/aboutus/introduction-bg.jpg");*/
+    /*}*/
 
-    .services-intro, .aboutus-intro {
+    .page-header-image {
         background-size: cover;
+        /*background-position: center;*/
         padding: 184px 0 134px 0;
         clip-path: ellipse(270% 100% at 50% 0%);
     }
 
-    .services-intro {
-        background: rgb(var(--color-light-bg));
-    }
+    /*.services-intro {*/
+    /*    background: rgb(var(--color-light-bg));*/
+    /*}*/
 
     @media screen and (min-width: 768px) {
-        .aboutus-intro, .services-intro {
+        .page-header-image {
             clip-path: ellipse(195% 100% at 50% 0%);
         }
     }
 
     @media screen and (min-width: 992px) {
-        .aboutus-intro, .services-intro {
+        .page-header-image {
             clip-path: ellipse(133% 100% at 50% 0%);
         }
     }
