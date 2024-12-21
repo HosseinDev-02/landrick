@@ -6,6 +6,7 @@ import Team from "./Pages/Team/Team";
 import Pricing from "./Pages/Pricing/Pricing";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogDetail from "./Pages/BlogDetail/BlogDetail";
+import ContactUs from "./Pages/ContactUs/ContactUs";
 
 
 let routes = [
@@ -17,6 +18,7 @@ let routes = [
     { path: '/pricing', element: <Pricing/> },
     { path: '/blogs', element: <Blogs/> },
     { path: '/blog-detail/:shortName', element: <BlogDetail/> },
+    { path: '/contact-us', element: <ContactUs/> },
 ]
 
 export default routes

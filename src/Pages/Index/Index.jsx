@@ -9,8 +9,10 @@ import WorkProcess from "../../Components/WorkProcess/WorkProcess";
 import OurMind from "../../Components/OurMind/OurMind";
 import LastNews from "../../Components/LastNews/LastNews";
 import Footer from "../../Components/Footer/Footer";
-
+import React from "react";
+const react_version = React.version
 export default function Index() {
+    console.log(react_version)
     return(
         <>
             <Header/>
