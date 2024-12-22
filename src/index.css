@@ -106,9 +106,19 @@
         clip-path: ellipse(270% 100% at 50% 0%);
     }
 
+    #user-panel-header {
+        background-image: url("/public/images/bg.png");
+        background-size: cover;
+        background-position: center;
+    }
+
     /*.services-intro {*/
     /*    background: rgb(var(--color-light-bg));*/
     /*}*/
+
+    .user-panel-menu-item {
+        @apply flex items-center gap-2 font-IranSansFaNum-Bold text-title h-[52px] rounded-md shadow-sm shadow-sub-title/15 px-6 hover:bg-primary hover:text-white transition-all duration-500;
+    }
 
     @media screen and (min-width: 768px) {
         .page-header-image {

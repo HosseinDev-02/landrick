@@ -7,6 +7,12 @@ import Pricing from "./Pages/Pricing/Pricing";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogDetail from "./Pages/BlogDetail/BlogDetail";
 import ContactUs from "./Pages/ContactUs/ContactUs";
+import UserPanel from "./Pages/UserPanel/UserPanel";
+import Profile from "./Pages/UserPanel/Profile/Profile";
+import Members from "./Pages/UserPanel/Members/Members";
+import UserProjects from "./Pages/UserPanel/UserProjects/UserProjects";
+import UserMessages from "./Pages/UserPanel/UserMessages/UserMessages";
+import UserTransactions from "./Pages/UserPanel/UserTransactions/UserTransactions";
 
 
 let routes = [
@@ -19,6 +25,15 @@ let routes = [
     { path: '/blogs', element: <Blogs/> },
     { path: '/blog-detail/:shortName', element: <BlogDetail/> },
     { path: '/contact-us', element: <ContactUs/> },
+    { path: '/user-panel', element: <UserPanel/>,
+        children: [
+            {path: 'profile', element: <Profile/>},
+            {path: 'members', element: <Members/>},
+            {path: 'projects', element: <UserProjects/>},
+            {path: 'messages', element: <UserMessages/>},
+            {path: 'transactions', element: <UserTransactions/>},
+        ]
+    }
 ]
 
 export default routes
