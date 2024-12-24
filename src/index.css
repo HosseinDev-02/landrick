@@ -116,8 +116,16 @@
     /*    background: rgb(var(--color-light-bg));*/
     /*}*/
 
+    .account-box:hover{
+        transform: scale(1.05);
+    }
+
     .user-panel-menu-item {
         @apply flex items-center gap-2 font-IranSansFaNum-Bold text-title h-[52px] rounded-md shadow-sm shadow-sub-title/15 px-6 hover:bg-primary hover:text-white transition-all duration-500;
+    }
+
+    .social-media {
+        @apply text-sub-title border-sub-title hover:bg-primary hover:text-white hover:border-primary dark:text-footer dark:border-footer dark:hover:bg-primary dark:hover:text-white dark:hover:border-primary
     }
 
     @media screen and (min-width: 768px) {

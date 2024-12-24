@@ -2,7 +2,7 @@ import CompanyBox from "../CompanyBox/CompanyBox";
 
 export default function Companies({ className }) {
     return (
-        <section className={`pt-6 bg-light-bg ${className}`}>
+        <section className={`py-6 bg-light-bg ${className}`}>
             <div className="container">
                 <div className='grid grid-cols-2 md:grid-cols-6'>
                     <CompanyBox

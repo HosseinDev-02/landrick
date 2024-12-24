@@ -195,18 +195,17 @@ export default function UserPanel () {
                                     <div className='mt-8'>
                                         <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-6'>دنبال کردن ما :</h5>
                                         <div className='flex items-center gap-1'>
-                                            <SocialMediaBox className='text-sub-title border-sub-title hover:bg-primary hover:text-white hover:border-primary' icon='instagram'/>
-                                            <SocialMediaBox className='text-sub-title border-sub-title hover:bg-primary hover:text-white hover:border-primary' icon='linkedin'/>
-                                            <SocialMediaBox className='text-sub-title border-sub-title hover:bg-primary hover:text-white hover:border-primary' icon='twitter'/>
-                                            <SocialMediaBox className='text-sub-title border-sub-title hover:bg-primary hover:text-white hover:border-primary' icon='github'/>
-                                            <SocialMediaBox className='text-sub-title border-sub-title hover:bg-primary hover:text-white hover:border-primary' icon='youtube'/>
-                                            <SocialMediaBox className='text-sub-title border-sub-title hover:bg-primary hover:text-white hover:border-primary' icon='gitlab'/>
-
+                                            <SocialMediaBox className='social-media' icon='instagram'/>
+                                            <SocialMediaBox className='social-media' icon='linkedin'/>
+                                            <SocialMediaBox className='social-media' icon='twitter'/>
+                                            <SocialMediaBox className='social-media' icon='github'/>
+                                            <SocialMediaBox className='social-media' icon='youtube'/>
+                                            <SocialMediaBox className='social-media' icon='gitlab'/>
                                         </div>
                                     </div>
                                 </div>
                                 {/* content */}
-                                <div className='basis-2/3 p-6 rounded-md shadow-sm shadow-sub-title/15'>
+                                <div className='basis-2/3 p-6'>
                                     <Outlet/>
                                 </div>
                             </div>
