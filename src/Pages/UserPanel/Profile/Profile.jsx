@@ -3,7 +3,7 @@ import PrimaryButton from "../../../Components/PrimaryButton/PrimaryButton";
 
 export default function Profile() {
     return (
-        <>
+        <div className='p-6'>
             <div className='pb-6 border-b border-b-light-border dark:border-b-[#495057]'>
                 <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-2'>
                     جعفر عباسی
@@ -166,7 +166,6 @@ export default function Profile() {
                     </div>
                 </div>
             </div>
-
             <div className='mt-6 pt-6 border-t border-t-light-border dark:border-t-[#495057]'>
                 <h5 className='text-title text-xl font-IranSansFaNum-Bold'>
                     پست ها و اخبار :
@@ -193,6 +192,6 @@ export default function Profile() {
                 </div>
                 <PrimaryButton className='mt-8' icon='angle-left' title='نمایش بیشتر'/>
             </div>
-        </>
+        </div>
     )
 }

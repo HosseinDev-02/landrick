@@ -205,7 +205,7 @@ export default function UserPanel () {
                                     </div>
                                 </div>
                                 {/* content */}
-                                <div className='basis-2/3 p-6'>
+                                <div className='basis-2/3'>
                                     <Outlet/>
                                 </div>
                             </div>
