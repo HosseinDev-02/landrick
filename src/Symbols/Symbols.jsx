@@ -257,29 +257,39 @@ export default function Symbols() {
             </symbol>
 
             <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                 className="feather feather-italic fea icon-ex-md text-muted me-3">
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                    className="feather feather-italic fea icon-ex-md text-muted me-3">
                 <line x1="19" y1="4" x2="10" y2="4"></line>
                 <line x1="14" y1="20" x2="5" y2="20"></line>
                 <line x1="15" y1="4" x2="9" y2="20"></line>
             </symbol>
 
             <symbol id='internet' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                 className="feather feather-globe fea icon-ex-md text-muted me-3">
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                    className="feather feather-globe fea icon-ex-md text-muted me-3">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="2" y1="12" x2="22" y2="12"></line>
                 <path
                     d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </symbol>
             <symbol id='gift' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                 className="feather feather-gift fea icon-ex-md text-muted me-3">
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                    className="feather feather-gift fea icon-ex-md text-muted me-3">
                 <polyline points="20 12 20 22 4 22 4 12"></polyline>
                 <rect x="2" y="7" width="20" height="5"></rect>
                 <line x1="12" y1="22" x2="12" y2="7"></line>
                 <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
                 <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+            </symbol>
+
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="check">
+                <path fill="currentColor"
+                      d="M18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21Z"></path>
+            </symbol>
+
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
+                <path fill="currentColor"
+                      d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"></path>
             </symbol>
 
         </svg>

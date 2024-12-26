@@ -74,6 +74,9 @@ module.exports = {
           }
         }
       },
+      backgroundImage: {
+        'check': 'url("../public/images/check.svg")'
+      },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in',
         fadeOut: 'fadeOut 0.5s ease-in',

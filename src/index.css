@@ -66,6 +66,14 @@
         line-height: 1.6rem;
     }
 
+    input[type=checkbox]{
+        transition: all 300ms ease;
+    }
+
+    input[type=checkbox]:checked {
+        @apply checked:bg-primary checked:border-primary checked:bg-check
+    }
+
 }
 
 
