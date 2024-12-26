@@ -7,7 +7,7 @@ export default function Members() {
             <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-8'>
                 اعضا :
             </h5>
-            <div className='grid grid-cols-2 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-8'>
                 <div className='flex flex-col items-center'>
                     <div className='rounded-full w-[110px] h-[110px] overflow-hidden shadow-lg shadow-sub-title/15'>
                         <img className='w-full h-full object-cover' src="/images/team/06.jpg" alt="member 1"/>

@@ -12,7 +12,7 @@ export default function Profile() {
                     من کار خود را به عنوان یک کارآموز آغاز کرده ام و خودم را اثبات می کنم و با راهنمایی خوب به همه نقاط عطف می رسم و به مدیر پروژه می رسم. در این سفر ، من تمام رویه هایی را می شناسم که من را به یک توسعه دهنده ، رهبر تیم و یک مدیر پروژه خوب تبدیل می کند.
                 </p>
             </div>
-            <div className='grid grid-cols-2 mt-6'>
+            <div className='grid md:grid-cols-2 mt-6 space-y-6'>
                 <div>
                     <h5 className='text-title text-xl font-IranSansFaNum-Bold mb-6'>
                         جزئیات شخصی :
@@ -170,7 +170,7 @@ export default function Profile() {
                 <h5 className='text-title text-xl font-IranSansFaNum-Bold'>
                     پست ها و اخبار :
                 </h5>
-                <div className='grid grid-cols-2 gap-6 mt-8'>
+                <div className='grid md:grid-cols-2 gap-6 mt-8'>
                     <BlogBox
                         title='برنامه های خود را به روش خود طراحی کنید'
                         img='/images/blogs/01.jpg'

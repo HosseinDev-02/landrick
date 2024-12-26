@@ -42,6 +42,9 @@ export default function UserMessages() {
             userImg: '/images/team/05.jpg'
         },
     ]
+    const [modalShow, setModalShow] = useState(false)
+    
+    
 
     // تابع هندل کردن چک باکس انتخاب همه
     const handelSelectAll = () =>  {
@@ -74,50 +77,135 @@ export default function UserMessages() {
         setSelectAll(updatedCheckedItems.size === messages.length)
     }
 
+    // const sendMsgModalHandler = () => {
+    //     setModalShow(true)
+    // }
+
 
     return (
-        <div className='shadow-sm shadow-sub-title/15 p-6 rounded-md'>
-            <div className='flex items-center justify-between mb-8'>
-                <h5 className='font-IranSansFaNum-Bold text-xl text-title'>
-                    پیام :
-                </h5>
-                <PrimaryButton className='flex-row-reverse' icon='plus' title='ایجاد'/>
-            </div>
-            <div>
-                <ul className='flex flex-col divide-y divide-[#e9ecef]'>
-                    <li className='flex items-center justify-between p-4 odd:bg-light-bg even:bg-body'>
-                        <div className='flex items-center gap-2'>
-                            <input checked={selectAll} onChange={handelSelectAll}
-                                   className='w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'
-                                   type="checkbox"/>
-                            <span className='font-IranSansFaNum-Bold text-title text-sm'>انتخاب همه</span>
-                        </div>
-                        <PrimaryButton title='اقدام' icon='angle-down'/>
-                    </li>
-                    {
-                        messages.map(item => (
-                            <li key={item.id} className='flex items-center justify-start gap-4 p-4 odd:bg-light-bg even:bg-body'>
-                                <input onChange={() => checkboxHandleCheck(item.id)} checked={checkedItems.has(item.id)}
-                                    className='w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'
-                                    type="checkbox"/>
-                                <div className='flex items-center gap-4'>
-                                    <div className='w-[45px] h-[45px] rounded-full overflow-hidden'>
-                                        <img className='w-full h-full object-cover' src={item.userImg} alt=""/>
-                                    </div>
-                                    <div className='flex flex-col gap-2 items-start'>
-                                        <h6 className='font-IranSansFaNum-Bold text-title'>
-                                            {item.username}
-                                        </h6>
-                                        <span>
+        <>
+            <div className='shadow-sm shadow-sub-title/15 p-6 rounded-md'>
+                <div className='flex items-center justify-between mb-8'>
+                    <h5 className='font-IranSansFaNum-Bold text-xl text-title'>
+                        پیام:
+                    </h5>
+                    <PrimaryButton onClickHandler={() => setModalShow(prevState => !prevState)} className='flex-row-reverse' icon='plus'
+                                   title='ایجاد'/>
+                </div>
+                <div>
+                    <ul className='flex flex-col divide-y divide-[#e9ecef]'>
+                        <li className='flex items-center justify-between p-4 odd:bg-light-bg even:bg-body'>
+                            <div className='flex items-center gap-2'>
+                                <input checked={selectAll} onChange={handelSelectAll}
+                                       className='w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'
+                                       type="checkbox"/>
+                                <span className='font-IranSansFaNum-Bold text-title text-sm'>انتخاب همه</span>
+                            </div>
+                            <PrimaryButton title='اقدام' icon='angle-down'/>
+                        </li>
+                        {
+                            messages.map(item => (
+                                <li key={item.id}
+                                    className='flex items-start md:items-center justify-start gap-4 p-4 odd:bg-light-bg even:bg-body'>
+                                    <input onChange={() => checkboxHandleCheck(item.id)}
+                                           checked={checkedItems.has(item.id)}
+                                           className='shrink-0 w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'
+                                           type="checkbox"/>
+                                    <div className='flex items-start md:items-center gap-4'>
+                                        <div className='shrink-0 w-[45px] h-[45px] rounded-full overflow-hidden'>
+                                            <img className='w-full h-full object-cover' src={item.userImg} alt=""/>
+                                        </div>
+                                        <div className='flex flex-col gap-2 items-start'>
+                                            <h6 className='font-IranSansFaNum-Bold text-title'>
+                                                {item.username}
+                                            </h6>
+                                            <span>
                                     {item.msg}
                             </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        ))
-                    }
-                </ul>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+                <div className='flex items-center justify-between mt-6'>
+                <span className='font-IranSansFaNum-Bold'>
+                    نمایش 8 از 33
+                </span>
+                    <PrimaryButton title='نمایش بیشتر'/>
+                </div>
             </div>
-        </div>
+
+            <div onClick={() => setModalShow(false)} className={`transition-all duration-500 ${modalShow ? 'opacity-100 visible' : 'opacity-0 invisible'} fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-black/50`}>
+                <div className={`w-full h-fit bg-body p-6 rounded-md shadow-sm shadow-sub-title/15 transition-all duration-500 max-w-4xl relative ${modalShow ? 'top-0' : '-top-40'}`}>
+                    <div className='flex items-center justify-between pb-6 border-b border-b-light-border mb-6'>
+                        <span className='text-title font-IranSansFaNum-Bold'>
+                            ارسال پیام
+                        </span>
+                        <span onClick={() => setModalShow(false)} className='cursor-pointer transition-colors duration-300 hover:text-error'>
+                            <svg className='w-6 h-6'>
+                                <use href='#multiply'></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <form className='flex flex-col items-start gap-6' action="#">
+                        <div className='flex flex-col gap-2 w-full'>
+                            <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
+                                نام شما
+                                <span className='text-error text-sm'>
+                                        *
+                                    </span>
+                            </div>
+                            <div
+                                className='flex items-center gap-2 relative h-10 w-full'>
+                                <span className='shrink-0 absolute right-4 text-title'>
+                                    <svg className='w-4 h-4'>
+                                        <use href='#user'></use>
+                                    </svg>
+                                </span>
+                                <input
+                                    className='outline-none border border-light-border rounded-md dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 w-full text-sub-title h-full text-sm pr-12 py-1.5 pl-1.5'
+                                    placeholder='نام :'
+                                    type="text"/>
+                            </div>
+                        </div>
+                        <div className='flex flex-col gap-2 w-full'>
+                            <span className='text-title font-IranSansFaNum-Bold text-sm'>
+                                موضوع
+                            </span>
+                            <div
+                                className='flex items-center gap-2 relative h-10 w-full'>
+                                <span className='shrink-0 absolute right-4 text-title'>
+                                    <svg className='w-4 h-4'>
+                                        <use href='#book'></use>
+                                    </svg>
+                                </span>
+                                <input
+                                    className='outline-none border border-light-border rounded-md dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 w-full text-sub-title h-full text-sm pr-12 py-1.5 pl-1.5' placeholder='موضوع :'
+                                       type="text"/>
+                            </div>
+                        </div>
+                        <div className='flex flex-col gap-2 w-full'>
+                            <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
+                                پیام
+                                <span className='text-error text-sm'>
+                                        *
+                                    </span>
+                            </div>
+                            <div className='relative'>
+                                <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
+                                    <use href='#comment'></use>
+                                </svg>
+                                <textarea
+                                    className='outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border pr-12 py-1.5 pl-3 text-sm'
+                                    placeholder='پیام :'></textarea>
+                            </div>
+                        </div>
+                        <PrimaryButton className='' title='ارسال کنید'/>
+                    </form>
+                </div>
+            </div>
+        </>
     )
 }

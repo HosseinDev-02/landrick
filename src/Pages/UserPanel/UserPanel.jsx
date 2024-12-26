@@ -16,65 +16,71 @@ export default function UserPanel () {
     }, [match]);
 
     
+    // -translate-y-[300px] md:-translate-y-[125px]
 
     return (
         <>
             <Header/>
 
             <main>
-                <div id='user-panel-header' className='bg-primary h-[400px]'></div>
-                <section className='-translate-y-[125px]'>
+                <div id='user-panel-header' className='bg-primary flex items-center justify-center py-[100px]'>
                     <div className="container">
-                        <div className='flex flex-col gap-6 rounded-md'>
+                        <div
+                            className='w-full flex flex-col md:flex-row items-center gap-8 md:justify-between bg-body shadow-sm shadow-sub-title/15 rounded-md p-6 relative top-[159px]'>
+                            <div className='w-[140px] h-[140px] rounded-full overflow-hidden shrink-0'>
+                                <img className='w-full h-full object-cover' src="/images/team/06.jpg"
+                                     alt=""/>
+                            </div>
                             <div
-                                className='flex items-center gap-8 justify-between bg-body shadow-sm shadow-sub-title/15 rounded-md p-6'>
-                                    <div className='w-[140px] h-[140px] rounded-full overflow-hidden shrink-0'>
-                                        <img className='w-full h-full object-cover' src="/images/team/06.jpg"
-                                             alt=""/>
-                                    </div>
-                                <div className='flex items-end justify-between w-full'>
-                                    <div className='flex flex-col'>
-                                        <h4 className='text-title font-IranSansFaNum-Bold text-3xl'>
-                                            جعفر عباسی
-                                        </h4>
-                                        <span className='font-IranSansFaNum-Bold'>
+                                className='flex flex-col md:flex-row items-center md:items-end md:justify-between w-full'>
+                                <div className='flex gap-y-2 flex-col items-center md:items-start'>
+                                    <h4 className='text-title font-IranSansFaNum-Bold text-3xl'>
+                                        جعفر عباسی
+                                    </h4>
+                                    <span className='font-IranSansFaNum-Bold'>
                                             توسعه وب
                                         </span>
-                                        <div className='flex items-center gap-4 mt-4'>
-                                            <a className='flex items-center gap-2' href="#">
-                                                <svg className='w-4 h-4'>
-                                                    <use href='#instagram'></use>
-                                                </svg>
-                                                <span>jafar_abbasi</span>
-                                            </a>
-                                            <a className='flex items-center gap-2' href="#">
-                                                <svg className='w-4 h-4'>
-                                                    <use href='#linkedin'></use>
-                                                </svg>
-                                                <span>جعفر عباسی</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className='flex items-center justify-center gap-1'>
-                                        <SocialMediaBox
-                                            className='border-footer text-footer hover:bg-primary hover:text-white hover:border-primary'
-                                            icon='linkedin'/>
-                                        <SocialMediaBox
-                                            className='border-footer text-footer hover:bg-primary hover:text-white hover:border-primary'
-                                            icon='instagram'/>
-                                        <SocialMediaBox
-                                            className='border-footer text-footer hover:bg-primary hover:text-white hover:border-primary'
-                                            icon='twitter'/>
-                                        <SocialMediaBox
-                                            className='border-footer text-footer hover:bg-primary hover:text-white hover:border-primary'
-                                            icon='youtube'/>
+                                    <div className='flex items-center gap-4 mt-2 md:mt-4'>
+                                        <a className='flex items-center gap-2' href="#">
+                                            <svg className='w-4 h-4'>
+                                                <use href='#instagram'></use>
+                                            </svg>
+                                            <span>jafar_abbasi</span>
+                                        </a>
+                                        <a className='flex items-center gap-2' href="#">
+                                            <svg className='w-4 h-4'>
+                                                <use href='#linkedin'></use>
+                                            </svg>
+                                            <span>جعفر عباسی</span>
+                                        </a>
                                     </div>
                                 </div>
-
+                                <div className='flex items-center justify-center gap-1 mt-2 md:mt-0'>
+                                    <SocialMediaBox
+                                        className='border-footer text-footer hover:bg-primary hover:text-white hover:border-primary'
+                                        icon='linkedin'/>
+                                    <SocialMediaBox
+                                        className='border-footer text-footer hover:bg-primary hover:text-white hover:border-primary'
+                                        icon='instagram'/>
+                                    <SocialMediaBox
+                                        className='border-footer text-footer hover:bg-primary hover:text-white hover:border-primary'
+                                        icon='twitter'/>
+                                    <SocialMediaBox
+                                        className='border-footer text-footer hover:bg-primary hover:text-white hover:border-primary'
+                                        icon='youtube'/>
+                                </div>
                             </div>
-                            <div className='flex items-start gap-6'>
+
+                        </div>
+                    </div>
+                </div>
+                <section className='pt-[100px] pb-[60px] md:pb-[100px]'>
+                    <div className="container">
+                        <div
+                            className='flex flex-col gap-6 rounded-md'>
+                            <div className='flex flex-col lg:flex-row items-start gap-6'>
                                 {/* sidebar */}
-                                <div className='basis-1/3 shadow-sm shadow-sub-title/15 rounded-md p-6'>
+                                <div className='w-full lg:basis-1/3 shadow-sm shadow-sub-title/15 rounded-md p-6'>
                                     <div>
                                         <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-6'>فالوور :</h5>
                                         <div className='flex'>
@@ -205,7 +211,7 @@ export default function UserPanel () {
                                     </div>
                                 </div>
                                 {/* content */}
-                                <div className='basis-2/3'>
+                                <div className='w-full lg:basis-2/3'>
                                     <Outlet/>
                                 </div>
                             </div>

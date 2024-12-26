@@ -4,7 +4,7 @@ export default function UserProjects() {
             <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-8'>
                 آثار و پروژه ها :
             </h5>
-            <div className='grid grid-cols-2 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div>
                     <div className='w-full rounded-md overflow-hidden'>
                         <img className='w-full h-full object-cover' src="/images/blogs/1.jpg" alt=""/>
