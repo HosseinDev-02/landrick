@@ -43,6 +43,7 @@ export default function UserMessages() {
         },
     ]
     const [modalShow, setModalShow] = useState(false)
+    const [actionModalShow, setActionModalShow] = useState(false)
     
     
 
@@ -82,6 +83,17 @@ export default function UserMessages() {
     // }
 
 
+    const sendMsgModalHandler = (event) => {
+        event.preventDefault()
+        setModalShow(prevState => !prevState)
+    }
+
+    const actionModalHandler = event => {
+        event.preventDefault()
+        setActionModalShow(prevState => !prevState)
+    }
+
+
     return (
         <>
             <div className='shadow-sm shadow-sub-title/15 p-6 rounded-md'>
@@ -89,8 +101,10 @@ export default function UserMessages() {
                     <h5 className='font-IranSansFaNum-Bold text-xl text-title'>
                         پیام:
                     </h5>
-                    <PrimaryButton onClickHandler={() => setModalShow(prevState => !prevState)} className='flex-row-reverse' icon='plus'
-                                   title='ایجاد'/>
+                    <div>
+                        <PrimaryButton onClickHandler={event => sendMsgModalHandler(event)} className='flex-row-reverse' icon='plus'
+                                       title='ایجاد'/>
+                    </div>
                 </div>
                 <div>
                     <ul className='flex flex-col divide-y divide-[#e9ecef]'>
@@ -101,7 +115,54 @@ export default function UserMessages() {
                                        type="checkbox"/>
                                 <span className='font-IranSansFaNum-Bold text-title text-sm'>انتخاب همه</span>
                             </div>
-                            <PrimaryButton title='اقدام' icon='angle-down'/>
+                            <div className='relative'>
+                                <PrimaryButton onClickHandler={event => actionModalHandler(event)} title='اقدام'
+                                               icon='angle-down'/>
+                                <div className={`bg-body shadow-sm shadow-sub-title/15 rounded-md absolute left-0 top-full w-[160px] ${actionModalShow ? 'block' : 'hidden'}`}>
+                                    <ul className='py-2 text-[#212529] bg-body rounded-md relative before:bg-body before:w-3.5 before:h-3.5 before:content-[""] before:absolute before:rotate-[225deg] before:-top-[5px] before:right-6 before:shadow-[2px_2px_2px_-1px_rgba(22,28,45,0.15)]'>
+                                        <li className='px-4 py-1 hover:text-primary transition-all duration-500'>
+                                            <a className='flex items-center gap-1' href="#">
+                                                <svg className='w-4 h-4'>
+                                                    <use href='#eye-hidden'></use>
+                                                </svg>
+                                                <span>
+                                            خوانده شده
+                                        </span>
+                                            </a>
+                                        </li>
+                                        <li className='px-4 py-1 hover:text-primary transition-all duration-500'>
+                                            <a className='flex items-center gap-1' href="#">
+                                                <svg className='w-4 h-4'>
+                                                    <use href='#answer'></use>
+                                                </svg>
+                                                <span>
+                                            پاسخ
+                                        </span>
+                                            </a>
+                                        </li>
+                                        <li className='px-4 py-1 hover:text-primary transition-all duration-500'>
+                                            <a className='flex items-center gap-1' href="#">
+                                                <svg className='w-4 h-4'>
+                                                    <use href='#send'></use>
+                                                </svg>
+                                                <span>
+                                            ارسال
+                                        </span>
+                                            </a>
+                                        </li>
+                                        <li className='px-4 pt-2 text-error border-t border-t-light-border'>
+                                            <a className='flex items-center gap-1' href="#">
+                                                <svg className='w-4 h-4'>
+                                                    <use href='#trash'></use>
+                                                </svg>
+                                                <span>
+                                            حذف کردن
+                                        </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
                         {
                             messages.map(item => (

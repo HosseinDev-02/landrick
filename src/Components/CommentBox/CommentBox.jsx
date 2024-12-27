@@ -10,7 +10,7 @@ export default function CommentBox({name, job, rate, img, caption}) {
             </div>
             {/* comment content */}
             <div
-                className='p-4 rounded-md shadow-sm shadow-sub-title/15 relative before:absolute before:content-[""] before:w-4 before:h-4 before:shadow-[2px_-2px_2px_-1px_rgba(60,72,88,0.15)] before:-right-1.5 before:bg-body bg-body before:top-6 before:rotate-45'>
+                className='p-4 rounded-md shadow-sm shadow-sub-title/15 relative bg-body before:absolute before:content-[""] before:w-4 before:h-4 before:shadow-[2px_-2px_2px_-1px_rgba(60,72,88,0.15)] before:-right-1.5 before:bg-body before:top-6 before:rotate-45'>
                 <div className='flex items-center gap-2 py-2 pr-8'>
                     {
                         Array(rate).fill(0).map((star, index) => (
