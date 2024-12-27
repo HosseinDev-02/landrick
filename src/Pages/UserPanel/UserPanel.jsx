@@ -185,6 +185,18 @@ export default function UserPanel () {
                                                 </Link>
                                             </li>
                                             <li>
+                                                <Link onClick={() => setActiveTab('setting')}
+                                                      className={`user-panel-menu-item ${activeTab === 'setting' && 'text-white bg-primary'}`}
+                                                      to='setting'>
+                                                    <svg className='w-6 h-6'>
+                                                        <use href='#config'></use>
+                                                    </svg>
+                                                    <span>
+                                                    تنظیمات
+                                                </span>
+                                                </Link>
+                                            </li>
+                                            <li>
                                                 <Link onClick={() => setActiveTab('')}
                                                       className={`flex items-center gap-2 font-IranSansFaNum-Bold text-title h-[52px] rounded-md shadow-sm shadow-sub-title/15 px-6 hover:bg-primary hover:text-white transition-all duration-500`}
                                                       to='#'>
@@ -199,7 +211,8 @@ export default function UserPanel () {
                                         </ul>
                                     </div>
                                     <div className='mt-8'>
-                                        <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-6'>دنبال کردن ما :</h5>
+                                        <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-6'>دنبال کردن ما
+                                            :</h5>
                                         <div className='flex items-center gap-1'>
                                             <SocialMediaBox className='social-media' icon='instagram'/>
                                             <SocialMediaBox className='social-media' icon='linkedin'/>

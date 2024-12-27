@@ -1,5 +1,6 @@
 import PrimaryButton from "../../../Components/PrimaryButton/PrimaryButton";
 import {useState} from "react";
+import Input from "../../../Components/Input/Input";
 
 export default function UserMessages() {
     const [selectAll, setSelectAll] = useState(false)
@@ -102,7 +103,8 @@ export default function UserMessages() {
                         پیام:
                     </h5>
                     <div>
-                        <PrimaryButton onClickHandler={event => sendMsgModalHandler(event)} className='flex-row-reverse' icon='plus'
+                        <PrimaryButton onClickHandler={event => sendMsgModalHandler(event)} className='flex-row-reverse'
+                                       icon='plus'
                                        title='ایجاد'/>
                     </div>
                 </div>
@@ -118,7 +120,8 @@ export default function UserMessages() {
                             <div className='relative'>
                                 <PrimaryButton onClickHandler={event => actionModalHandler(event)} title='اقدام'
                                                icon='angle-down'/>
-                                <div className={`bg-body shadow-sm shadow-sub-title/15 rounded-md absolute left-0 top-full w-[160px] ${actionModalShow ? 'block' : 'hidden'}`}>
+                                <div
+                                    className={`bg-body shadow-sm shadow-sub-title/15 rounded-md absolute left-0 top-full w-[160px] ${actionModalShow ? 'block' : 'hidden'}`}>
                                     <ul className='py-2 text-[#212529] bg-body rounded-md relative before:bg-body before:w-3.5 before:h-3.5 before:content-[""] before:absolute before:rotate-[225deg] before:-top-[5px] before:right-6 before:shadow-[2px_2px_2px_-1px_rgba(22,28,45,0.15)]'>
                                         <li className='px-4 py-1 hover:text-primary transition-all duration-500'>
                                             <a className='flex items-center gap-1' href="#">
@@ -198,75 +201,63 @@ export default function UserMessages() {
                 </div>
             </div>
 
-            <div onClick={() => setModalShow(false)} className={`transition-all duration-500 ${modalShow ? 'opacity-100 visible' : 'opacity-0 invisible'} fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-black/50`}>
-                <div className={`w-full h-fit bg-body p-6 rounded-md shadow-sm shadow-sub-title/15 transition-all duration-500 max-w-4xl relative ${modalShow ? 'top-0' : '-top-40'}`}>
-                    <div className='flex items-center justify-between pb-6 border-b border-b-light-border mb-6'>
+            <div
+                className={`fixed inset-0 z-[100] m-auto w-full h-fit bg-body p-6 rounded-md shadow-sm shadow-sub-title/15 transition-all duration-500 max-w-4xl ${modalShow ? 'top-0 opacity-100 visible' : '-top-40 opacity-0 invisible'}`}>
+                <div className='flex items-center justify-between pb-6 border-b border-b-light-border mb-6'>
                         <span className='text-title font-IranSansFaNum-Bold'>
                             ارسال پیام
                         </span>
-                        <span onClick={() => setModalShow(false)} className='cursor-pointer transition-colors duration-300 hover:text-error'>
+                    <span onClick={() => setModalShow(false)}
+                          className='cursor-pointer transition-colors duration-300 hover:text-error'>
                             <svg className='w-6 h-6'>
                                 <use href='#multiply'></use>
                             </svg>
                         </span>
-                    </div>
-                    <form className='flex flex-col items-start gap-6' action="#">
-                        <div className='flex flex-col gap-2 w-full'>
-                            <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
-                                نام شما
-                                <span className='text-error text-sm'>
+                </div>
+                <form className='flex flex-col items-start gap-6 w-full' action="#">
+                    <div className='flex flex-col gap-2 w-full'>
+                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
+                            نام شما
+                            <span className='text-error text-sm'>
                                         *
                                     </span>
-                            </div>
-                            <div
-                                className='flex items-center gap-2 relative h-10 w-full'>
+                        </div>
+                        <div
+                            className='flex items-center gap-2 relative h-10 w-full'>
                                 <span className='shrink-0 absolute right-4 text-title'>
                                     <svg className='w-4 h-4'>
                                         <use href='#user'></use>
                                     </svg>
                                 </span>
-                                <input
-                                    className='outline-none border border-light-border rounded-md dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 w-full text-sub-title h-full text-sm pr-12 py-1.5 pl-1.5'
-                                    placeholder='نام :'
-                                    type="text"/>
-                            </div>
+                            <input
+                                className='outline-none border border-light-border rounded-md dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 w-full text-sub-title h-full text-sm pr-12 py-1.5 pl-1.5'
+                                placeholder='نام :'
+                                type="text"/>
                         </div>
-                        <div className='flex flex-col gap-2 w-full'>
-                            <span className='text-title font-IranSansFaNum-Bold text-sm'>
-                                موضوع
-                            </span>
-                            <div
-                                className='flex items-center gap-2 relative h-10 w-full'>
-                                <span className='shrink-0 absolute right-4 text-title'>
-                                    <svg className='w-4 h-4'>
-                                        <use href='#book'></use>
-                                    </svg>
-                                </span>
-                                <input
-                                    className='outline-none border border-light-border rounded-md dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 w-full text-sub-title h-full text-sm pr-12 py-1.5 pl-1.5' placeholder='موضوع :'
-                                       type="text"/>
-                            </div>
-                        </div>
-                        <div className='flex flex-col gap-2 w-full'>
-                            <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
-                                پیام
-                                <span className='text-error text-sm'>
+                    </div>
+                    <Input type='text' icon='book' placeholder='موضوع :' label='موضوع'/>
+                    <div className='flex flex-col gap-2 w-full'>
+                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
+                            پیام
+                            <span className='text-error text-sm'>
                                         *
                                     </span>
-                            </div>
-                            <div className='relative'>
-                                <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
-                                    <use href='#comment'></use>
-                                </svg>
-                                <textarea
-                                    className='outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border pr-12 py-1.5 pl-3 text-sm'
-                                    placeholder='پیام :'></textarea>
-                            </div>
                         </div>
-                        <PrimaryButton className='' title='ارسال کنید'/>
-                    </form>
-                </div>
+                        <div className='relative'>
+                            <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
+                                <use href='#comment'></use>
+                            </svg>
+                            <textarea
+                                className='outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border pr-12 py-1.5 pl-3 text-sm'
+                                placeholder='پیام :'></textarea>
+                        </div>
+                    </div>
+                    <PrimaryButton className='' title='ارسال کنید'/>
+                </form>
             </div>
+
+            <div onClick={() => setModalShow(false)}
+                className={`transition-all duration-500 ${modalShow ? 'opacity-100 visible' : 'opacity-0 invisible'} fixed inset-0 z-[99] flex items-center justify-center w-full h-full bg-black/50`}></div>
         </>
     )
 }

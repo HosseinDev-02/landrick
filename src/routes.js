@@ -13,6 +13,7 @@ import Members from "./Pages/UserPanel/Members/Members";
 import UserProjects from "./Pages/UserPanel/UserProjects/UserProjects";
 import UserMessages from "./Pages/UserPanel/UserMessages/UserMessages";
 import UserTransactions from "./Pages/UserPanel/UserTransactions/UserTransactions";
+import UserPanelSetting from "./Pages/UserPanel/UserPanelSetting/UserPanelSetting";
 
 
 let routes = [
@@ -32,6 +33,7 @@ let routes = [
             {path: 'projects', element: <UserProjects/>},
             {path: 'messages', element: <UserMessages/>},
             {path: 'transactions', element: <UserTransactions/>},
+            {path: 'setting', element: <UserPanelSetting/>},
         ]
     }
 ]
