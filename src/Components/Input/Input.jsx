@@ -43,7 +43,7 @@ export default function Input({type, icon, className, placeholder, label, requir
                             </div>
                         ) : (
                             <input
-                                   className='shrink-0 w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'
+                                   className='shrink-0 w-4 h-4 appearance-none border checked:bg-check border-black/25 dark:border-[#495057] cursor-pointer rounded'
                                    type="checkbox"/>
                         )
                 }

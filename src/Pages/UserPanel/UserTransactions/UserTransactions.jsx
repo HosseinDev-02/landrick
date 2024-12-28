@@ -24,7 +24,7 @@ export default function UserTransactions() {
                     number='•••• •••• •••• 9856'
                     date='10/22'
                     className='bg-sub-title'
-                    bodyStyle='text-white'
+                    bodyStyle='text-white dark:text-[#161c2d]'
                     footerStyle='text-caption'
                 />
                 <PaymentCard
@@ -33,15 +33,15 @@ export default function UserTransactions() {
                     number='•••• •••• •••• 5465'
                     date='10/22'
                     className='bg-[#17a2b8]'
-                    bodyStyle='text-white'
-                    footerStyle='text-white'
+                    bodyStyle='text-white dark:text-[#161c2d]'
+                    footerStyle='text-white dark:text-[#161c2d]'
                 />
                 <PaymentCard
                     img='/images/payments/cards/paypals.png'
                     className='bg-light-bg flex flex-col justify-between'
                 >
                     <div className='mt-6 flex'>
-                        <input className='w-full text-sm px-3 h-full transition-all duration-500 focus:border-primary outline-none border border-light-border rounded-r-md' placeholder='ایمیل پی پال:' type="text"/>
+                        <input className='w-full text-sm px-3 h-full bg-body transition-all duration-500 focus:border-primary dark:focus:border-primary dark:border-[#495057] outline-none border border-light-border rounded-r-md' placeholder='ایمیل پی پال:' type="text"/>
                         <PrimaryButton title='ارسال'/>
                     </div>
                 </PaymentCard>

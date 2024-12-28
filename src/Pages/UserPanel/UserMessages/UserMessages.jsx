@@ -203,7 +203,7 @@ export default function UserMessages() {
 
             <div
                 className={`fixed inset-0 z-[100] m-auto w-full h-fit bg-body p-6 rounded-md shadow-sm shadow-sub-title/15 transition-all duration-500 max-w-4xl ${modalShow ? 'top-0 opacity-100 visible' : '-top-40 opacity-0 invisible'}`}>
-                <div className='flex items-center justify-between pb-6 border-b border-b-light-border mb-6'>
+                <div className='flex items-center justify-between pb-6 border-b border-b-light-border dark:border-b-[#495057] mb-6'>
                         <span className='text-title font-IranSansFaNum-Bold'>
                             ارسال پیام
                         </span>

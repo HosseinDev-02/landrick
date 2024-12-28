@@ -57,12 +57,12 @@ export default function UserPanelSetting() {
                 </div>
             </div>
             <div className='shadow-sm shadow-sub-title/15 rounded-md mt-6'>
-                <div className='p-6 border-b border-b-light-border'>
+                <div className='p-6 border-b border-b-light-border dark:border-b-[#495057]'>
                     <h5 className='text-xl font-IranSansFaNum-Bold text-title'>
                         اعلان های حساب :
                     </h5>
                 </div>
-                <ul className='w-full flex flex-col divide-y divide-light-border px-6'>
+                <ul className='w-full flex flex-col divide-y divide-light-border dark:divide-[#495057] px-6'>
                     <li className='py-6 flex items-center justify-between w-full'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             وقتی کسی از من نام می برد
@@ -90,12 +90,12 @@ export default function UserPanelSetting() {
                 </ul>
             </div>
             <div className='shadow-sm shadow-sub-title/15 rounded-md mt-6'>
-                <div className='p-6 border-b border-b-light-border'>
+                <div className='p-6 border-b border-b-light-border dark:border-b-[#495057]'>
                     <h5 className='text-xl font-IranSansFaNum-Bold text-title'>
                         اعلان های بازاریابی :
                     </h5>
                 </div>
-                <ul className='w-full flex flex-col divide-y divide-light-border px-6'>
+                <ul className='w-full flex flex-col divide-y divide-light-border dark:divide-[#495057] px-6'>
                     <li className='py-6 flex items-center justify-between w-full'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             یک فروش یا تبلیغ وجود دارد
@@ -123,7 +123,7 @@ export default function UserPanelSetting() {
                 </ul>
             </div>
             <div className='shadow-sm shadow-sub-title/15 rounded-md mt-6'>
-                <div className='p-6 border-b border-b-light-border'>
+                <div className='p-6 border-b border-b-light-border dark:border-b-[#495057]'>
                     <h5 className='text-xl font-IranSansFaNum-Bold text-error'>
                         حذف اکانت :
                     </h5>
