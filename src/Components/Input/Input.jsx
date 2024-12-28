@@ -2,7 +2,7 @@ export default function Input({type, icon, className, placeholder, label, requir
 
     return (
         <>
-            <div className={`w-full ${label && 'flex flex-col gap-2'}`}>
+            <div className={`${label && 'flex flex-col gap-2'} ${type === 'checkbox' ? 'w-auto flex items-center justify-center' : 'w-full'}`}>
                 {
                     label && (
                         <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
@@ -18,7 +18,7 @@ export default function Input({type, icon, className, placeholder, label, requir
                     )
                 }
                 {
-                    type === 'text' ? (
+                    type === 'text' || type === 'password' ? (
                             <div
                                 className='flex items-center gap-2 relative h-10 w-full'>
                             <span className='shrink-0 absolute right-4 text-title'>
@@ -29,9 +29,9 @@ export default function Input({type, icon, className, placeholder, label, requir
                                 <input
                                     className={`outline-none border border-light-border rounded-md dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 w-full text-sub-title h-full text-sm py-1.5 pl-1.5 ${icon && 'pr-12'} ${className}`}
                                     placeholder={placeholder}
-                                    type="text"/>
+                                    type={type}/>
                             </div>
-                        ) :
+                        ) : type === 'textarea' ?
                         (
                             <div className='relative flex'>
                                 <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
@@ -41,6 +41,10 @@ export default function Input({type, icon, className, placeholder, label, requir
                                     className={`outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border py-1.5 pl-3 text-sm ${icon && 'pr-12'} ${className}`}
                                     placeholder={placeholder}></textarea>
                             </div>
+                        ) : (
+                            <input
+                                   className='shrink-0 w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'
+                                   type="checkbox"/>
                         )
                 }
             </div>
