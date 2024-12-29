@@ -1,7 +1,7 @@
-export default function PrimaryButton({ className, title, icon, onClickHandler }) {
+export default function PrimaryButton({ className, title, icon, onClickHandler, link }) {
     return (
         <a onClick={onClickHandler} className={`bg-primary rounded-md border border-primary py-2 px-5 font-IranSansFaNum-Bold text-white shadow shadow-primary/30 duration-300 transition-colors hover:bg-primary-darker hover:border-primary-darker inline-flex items-center gap-1 ${className}`}
-           href="#">
+           href={`${link ? link : '#'}`}>
             {
                 title
             }

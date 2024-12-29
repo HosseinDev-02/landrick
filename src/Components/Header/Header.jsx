@@ -111,16 +111,16 @@ export default function Header({ changeMode }) {
                     <ul className={`hidden lg:flex gap-5 child:transition-all ${headerBg || changeMode ? 'text-sub-title child-hover:text-primary' : 'text-white/50 child-hover:text-white'}`}>
                         <li className={`inline-flex items-center ${headerBg || changeMode ? 'text-primary' : 'menu-item--active'}`}>
                             <a className='font-IranSansDn-Bold text-xs/[74px] px-[15px]'
-                               href="#">صفحه اصلی</a>
+                               href="/">صفحه اصلی</a>
                         </li>
                         <li className='inline-flex items-center'>
                             <a className='font-IranSansDn-Bold text-xs/[74px] px-[15px]'
-                               href="#">وبلاگ</a>
+                               href="/blogs">وبلاگ</a>
                         </li>
                         {/* Has Submenu */}
                         <li className='relative group/aboutus'>
                             <a className='flex items-center gap-1 font-IranSansDn-Bold text-xs/[74px] px-[15px]'
-                               href="#">
+                               href="/aboutus">
                                 <span>درباره ما</span>
                                 <svg className='w-6 h-6 group-hover/aboutus:rotate-180 transition-all'>
                                     <use href='#angle-down'></use>
@@ -129,23 +129,33 @@ export default function Header({ changeMode }) {
                             <ul className='flex flex-col w-46 bg-body rounded-md py-[15px] absolute right-0 top-[110%] invisible opacity-0 transition-all group-hover/aboutus:visible group-hover/aboutus:opacity-100 group-hover/aboutus:top-full duration-200 shadow-sm shadow-sub-title/15 dark:shadow-white/15'>
                                 <li>
                                     <a className='px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block'
-                                       href="#">خدمات</a>
+                                       href="/services">خدمات</a>
                                 </li>
                                 <li>
                                     <a className='px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block'
-                                       href="#">تاریخجه</a>
+                                       href="/history">تاریخجه</a>
                                 </li>
                                 <li>
                                     <a className='px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block'
-                                       href="#">
+                                       href="/team">
                                         تیم ما
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className='px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block'
+                                       href="/pricing">
+                                        قیمت گذاری
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li className='inline-flex items-center'>
                             <a className='font-IranSansDn-Bold text-xs/[74px] px-[15px]'
-                               href="#">تماس با ما</a>
+                               href="/contact-us">تماس با ما</a>
+                        </li>
+                        <li className='inline-flex items-center'>
+                            <a className='font-IranSansDn-Bold text-xs/[74px] px-[15px]'
+                               href="/user-panel">پنل کاربری</a>
                         </li>
                     </ul>
                     <div className='flex items-center gap-4'>
@@ -164,18 +174,18 @@ export default function Header({ changeMode }) {
                             <ul className='flex flex-col pr-2.5'>
                                 <li className='mobile-submenu-item--active'>
                                     <a className='px-5 py-2.5 block font-IranSansDn-Bold text-xs text-sub-title'
-                                       href="#">صفحه
+                                       href="/">صفحه
                                         اصلی</a>
                                 </li>
                                 <li>
                                     <a className='px-5 py-2.5 block font-IranSansDn-Bold text-xs text-sub-title'
-                                       href="#">وبلاگ</a>
+                                       href="/blogs">وبلاگ</a>
                                 </li>
                                 <li>
                                     {/* Has SubMenu */}
                                     <a onClick={(event) => mobileSubmenuHandler(event)}
                                        className={`flex items-center justify-between px-5 py-2.5 font-IranSansDn-Bold text-xs ${showMobileSubmenu ? 'text-primary' : 'text-sub-title'}`}
-                                       href="#">
+                                       href="/aboutus">
                                         <span>درباره ما</span>
                                         <svg className={`w-6 h-6 ${showMobileSubmenu && 'rotate-180'}`}>
                                             <use href='#angle-down'></use>
@@ -184,23 +194,31 @@ export default function Header({ changeMode }) {
                                     <ul className={`flex-col pr-5 ${showMobileSubmenu ? 'flex' : 'hidden'}`}>
                                         <li>
                                             <a className='font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]'
-                                               href="#">خدمات</a>
+                                               href="/services">خدمات</a>
                                         </li>
                                         <li>
                                             <a className='font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]'
-                                               href="#">تاریخجه</a>
+                                               href="/history">تاریخجه</a>
                                         </li>
                                         <li>
                                             <a className='font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]'
-                                               href="#">تیم ما</a>
+                                               href="/team">تیم ما</a>
+                                        </li>
+                                        <li>
+                                            <a className='font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]'
+                                               href="/pricing">قیمت گذاری</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a className='px-5 py-2.5 block font-IranSansDn-Bold text-xs text-sub-title'
-                                       href="#">تماس
+                                       href="/contact-us">تماس
                                         با
                                         ما</a>
+                                </li>
+                                <li>
+                                    <a className='px-5 py-2.5 block font-IranSansDn-Bold text-xs text-sub-title'
+                                       href="/user-panel">پنل کاربری</a>
                                 </li>
                             </ul>
 
@@ -208,20 +226,20 @@ export default function Header({ changeMode }) {
                         {/* Header Register Btn */}
                         {
                             changeMode ? (
-                                <PrimaryButton title='ورود/ثبت نام'/>
+                                <PrimaryButton link='/register' title='ورود/ثبت نام'/>
                             ) : (
                                 <>
                                     <div className="hidden lg:block">
                                         {
                                             headerBg ? (
-                                                <PrimaryButton title='ورود/ثبت نام'/>
+                                                <PrimaryButton link='/register' title='ورود/ثبت نام'/>
                                             ) : (
-                                                <LightButton title='ورود/ثبت نام'/>
+                                                <LightButton link='/register' title='ورود/ثبت نام'/>
                                             )
                                         }
                                     </div>
                                     <div className='hidden md:block lg:hidden'>
-                                        <PrimaryButton title='ورود/ثبت نام'/>
+                                        <PrimaryButton link='/register' title='ورود/ثبت نام'/>
                                     </div>
                                 </>
                             )

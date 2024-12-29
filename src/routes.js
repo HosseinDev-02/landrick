@@ -15,6 +15,7 @@ import UserMessages from "./Pages/UserPanel/UserMessages/UserMessages";
 import UserTransactions from "./Pages/UserPanel/UserTransactions/UserTransactions";
 import UserPanelSetting from "./Pages/UserPanel/UserPanelSetting/UserPanelSetting";
 import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
 
 let routes = [
@@ -37,7 +38,8 @@ let routes = [
             {path: 'setting', element: <UserPanelSetting/>},
         ]
     },
-    { path: '/login', element: <Login/> }
+    { path: '/login', element: <Login/> },
+    { path: '/register', element: <Register/> },
 ]
 
 export default routes

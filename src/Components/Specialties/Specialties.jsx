@@ -7,27 +7,27 @@ export default function Specialties() {
                 <div className='bg-primary bg-gradient-to-b from-white/15 to-white/0 rounded-md p-6 grid grid-cols-1 md:grid-cols-2 gap-5 shadow-sm shadow-sub-title/15'>
                     <ProgressBar
                         title='طراحی وب'
-                        percent='79%'
+                        percent={79}
                     />
                     <ProgressBar
                         title='توسعه وب'
-                        percent='60%'
+                        percent={60}
                     />
                     <ProgressBar
                         title='بازی سازی'
-                        percent='88%'
+                        percent={88}
                     />
                     <ProgressBar
                         title='توسعه کامل پشته'
-                        percent='85%'
+                        percent={85}
                     />
                     <ProgressBar
                         title='دیجیتال مارکتینگ'
-                        percent='68%'
+                        percent={68}
                     />
                     <ProgressBar
                         title='توسعه اپ'
-                        percent='56%'
+                        percent={56}
                     />
                 </div>
             </div>

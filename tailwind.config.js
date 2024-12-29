@@ -76,7 +76,8 @@ module.exports = {
       },
       backgroundImage: {
         'check': 'url("../public/images/check.svg")',
-        'login': 'url("../public/images/login/01.jpg")'
+        'login': 'url("../public/images/login/01.jpg")',
+        'register': 'url("../public/images/register/02.jpg")'
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in',
