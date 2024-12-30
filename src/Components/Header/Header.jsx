@@ -2,14 +2,15 @@ import Symbols from "../../Symbols/Symbols";
 import {useEffect, useRef, useState} from "react";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import LightButton from "../LightButton/LightButton";
-import SocialMediaBox from "../SocialMediaBox/SocialMediaBox";
 import ThemeBox from "../ThemeBox/ThemeBox";
+import IconButton from "../IconButton/IconButton";
 
 export default function Header({ changeMode }) {
 
     const [showMobileMenu, setShowMobileMenu] = useState(false)
     const [showMobileSubmenu, setShowMobileSubmenu] = useState(false)
     const [headerBg, setHeaderBg] = useState(false)
+    const [showScrollToUpButton, setShowScrollToUpButton] = useState(false)
     const [theme, setTheme] = useState('light')
 
     const header = useRef()
@@ -22,8 +23,10 @@ export default function Header({ changeMode }) {
             setTheme('light')
         }
         setHeaderFixedStyle()
+        setScrollUpButton()
         window.addEventListener('scroll', e => {
             setHeaderFixedStyle()
+            setScrollUpButton()
         })
     }, []);
 
@@ -33,6 +36,24 @@ export default function Header({ changeMode }) {
         } else if (window.scrollY === 0) {
             setHeaderBg(false)
         }
+    }
+
+    const setScrollUpButton = () => {
+        if(window.scrollY > 600) {
+            setShowScrollToUpButton(true)
+
+        }else {
+            setShowScrollToUpButton(false)
+        }
+    }
+
+    const scrollUpHandler = (e) => {
+        e.preventDefault()
+        window.scrollTo({
+            top: '0',
+            left: '0',
+            behavior: 'smooth'
+        })
     }
 
     const themeChangeHandler = (event) => {
@@ -59,11 +80,10 @@ export default function Header({ changeMode }) {
         setShowMobileSubmenu(prevState => !prevState)
     }
 
-
     return (<>
         <Symbols/>
         <header ref={header}
-                className={`fixed left-0 right-0 flex items-center transition-colors duration-200 z-50 justify-center bg-body lg:bg-transparent ${headerBg && 'lg:!bg-body shadow-sm shadow-sub-title/15'}`}>
+                className={`fixed left-0 right-0 flex items-center transition-colors duration-200 z-[1000] justify-center bg-body lg:bg-transparent ${headerBg && 'lg:!bg-body shadow-sm shadow-sub-title/15'}`}>
             <div className="container">
                 <nav className='flex items-center justify-between'>
                     {/*  Header Landrick Logo  */}
@@ -153,20 +173,23 @@ export default function Header({ changeMode }) {
                             <a className='font-IranSansDn-Bold text-xs/[74px] px-[15px]'
                                href="/contact-us">تماس با ما</a>
                         </li>
-                        <li className='inline-flex items-center'>
-                            <a className='font-IranSansDn-Bold text-xs/[74px] px-[15px]'
-                               href="/user-panel">پنل کاربری</a>
-                        </li>
                     </ul>
                     <div className='flex items-center gap-4'>
+                        <a className='flex md:hidden items-center justify-center w-6 h-6 bg-primary rounded'
+                           href="/user-panel/profile">
+                            <svg className='w-4 h-4 text-white'>
+                                <use href='#user-fill'></use>
+                            </svg>
+                        </a>
                         {/* Mobile Menu Btn */}
-                        <div onClick={mobileMenuHandler} className='lg:hidden cursor-pointer relative w-6 h-4'>
+                        <div onClick={mobileMenuHandler}
+                             className='lg:hidden cursor-pointer w-6 h-6 flex flex-col items-center justify-center gap-1.5'>
                             <span
-                                className={`inline-block h-0.5 bg-title rounded-xl absolute right-0 left-0 transition-all ${showMobileMenu ? 'rotate-45 top-2' : 'top-0'}`}></span>
+                                className={`inline-block h-0.5 w-full bg-title rounded-xl transition-all ${showMobileMenu ? 'rotate-45 top-2' : 'top-0'}`}></span>
                             <span
-                                className={`h-0.5 bg-title rounded-xl absolute top-2 right-0 left-0 transition-all duration-200 inline-block ${showMobileMenu && 'invisible opacity-0'}`}></span>
+                                className={`h-0.5 w-full bg-title rounded-xl transition-all duration-200 inline-block ${showMobileMenu && 'invisible opacity-0'}`}></span>
                             <span
-                                className={`inline-block h-0.5 bg-title rounded-xl absolute right-0 left-0 transition-all ${showMobileMenu ? 'top-2 -rotate-45' : 'top-4'}`}></span>
+                                className={`inline-block h-0.5 w-full bg-title rounded-xl transition-all ${showMobileMenu ? 'top-2 -rotate-45' : 'top-4'}`}></span>
                         </div>
                         {/* Mobile Menu */}
                         <div
@@ -216,30 +239,26 @@ export default function Header({ changeMode }) {
                                         با
                                         ما</a>
                                 </li>
-                                <li>
-                                    <a className='px-5 py-2.5 block font-IranSansDn-Bold text-xs text-sub-title'
-                                       href="/user-panel">پنل کاربری</a>
-                                </li>
                             </ul>
 
                         </div>
                         {/* Header Register Btn */}
                         {
                             changeMode ? (
-                                <PrimaryButton link='/register' title='ورود/ثبت نام'/>
+                                <PrimaryButton link='/user-panel/profile' title='پروفایل کاربر'/>
                             ) : (
                                 <>
-                                    <div className="hidden lg:block">
+                                    <div className="hidden lg:block relative">
                                         {
                                             headerBg ? (
-                                                <PrimaryButton link='/register' title='ورود/ثبت نام'/>
+                                                <PrimaryButton link='/user-panel/profile' title='پروفایل کاربر'/>
                                             ) : (
-                                                <LightButton link='/register' title='ورود/ثبت نام'/>
+                                                <LightButton link='/user-panel/profile' title='پروفایل کاربر'/>
                                             )
                                         }
                                     </div>
                                     <div className='hidden md:block lg:hidden'>
-                                        <PrimaryButton link='/register' title='ورود/ثبت نام'/>
+                                        <PrimaryButton link='/user-panel/profile' title='پروفایل کاربر'/>
                                     </div>
                                 </>
                             )
@@ -253,5 +272,11 @@ export default function Header({ changeMode }) {
             changeThemeHandler={themeChangeHandler}
             setTheme={setTheme}
         />
+
+        {
+            showScrollToUpButton && (
+                <IconButton animation={true} className='bottom-8 left-8 transition-all duration-500 hover:rotate-45 hover:bg-primary-darker' icon='arrow-up' onClick={(e) => scrollUpHandler(e)}/>
+            )
+        }
     </>)
 }

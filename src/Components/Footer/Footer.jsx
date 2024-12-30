@@ -1,4 +1,5 @@
 import SocialMediaBox from "../SocialMediaBox/SocialMediaBox";
+import Input from "../Input/Input";
 
 export default function Footer() {
     return (
@@ -175,17 +176,7 @@ export default function Footer() {
                                     ثبت نام کنید و آخرین نکات را از طریق ایمیل دریافت کنید.
                                 </p>
                                 <form className='flex flex-col mt-4' action="#">
-                                    <label className='font-IranSansFaNum-Bold text-sm mb-2' htmlFor="#">
-                                        ایمیل خود را بنویسید <span className='text-error'>*</span>
-                                    </label>
-                                    <div className='relative h-10'>
-                                        <svg className='w-4 h-4 absolute right-4 top-0 bottom-0 my-auto'>
-                                            <use href='#envelope'></use>
-                                        </svg>
-                                        <input type="text"
-                                               className='h-full w-full rounded-md bg-[#27314f] dark:bg-[#28394e] border border-[#27314f] dark:border-[#28394e] pr-12 text-sm focus:border-primary dark:focus:border-primary outline-none'
-                                               placeholder='ایمیل شما :'/>
-                                    </div>
+                                    <Input color='text-inherit' className='!bg-[#27314f] !text-inherit dark:!bg-[#28394e] !border-[#27314f] dark:!border-[#28394e] dark:focus:!border-primary focus:!border-primary' icon='envelope' require={true} type='text' label='ایمیل خود را بنویسید' placeholder='ایمیل شما'/>
                                     <button
                                         className='bg-primary/10 flex items-center justify-center rounded-md h-11 mt-4 shadow shadow-primary/30 text-primary font-IranSansFaNum-Bold transition-colors hover:text-white hover:bg-primary duration-500'>
                                         خبرنامه

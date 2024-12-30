@@ -5,6 +5,7 @@ import BreadCrumb from "../../Components/Breadcrumb/BreadCrumb";
 import SocialMediaBox from "../../Components/SocialMediaBox/SocialMediaBox";
 import Comment from "../../Components/Comment/Comment";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+import Input from "../../Components/Input/Input";
 
 export default function BlogDetail() {
     return (
@@ -126,40 +127,10 @@ export default function BlogDetail() {
                                              ارسال نظر :
                                         </h3>
                                         <form action="#">
-                                            <h4 className='text-sm font-IranSansFaNum-Bold text-title mb-2'>
-                                                نظر شما
-                                            </h4>
-                                            <div className='relative'>
-                                                <svg className='w-4 h-4 absolute right-4 top-2 text-title'>
-                                                    <use href='#comment'></use>
-                                                </svg>
-                                                <textarea className='outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border pr-12 py-1.5 pl-3 text-sm' placeholder='کامنت شما'></textarea>
-                                            </div>
+                                            <Input type='textarea' icon='comment' require={true} label='نظر شما' placeholder='نظر شما :'/>
                                             <div className='grid grid-cols-2 gap-6 mt-2.5 mb-4'>
-                                                <div>
-                                                    <label className='font-IranSansFaNum-Bold text-sm text-title mb-2 inline-block'>
-                                                        نام <span className='text-error'>*</span>
-                                                    </label>
-                                                    <div className='relative'>
-                                                        <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
-                                                            <use href='#user'></use>
-                                                        </svg>
-                                                        <input placeholder='نام' type="text"
-                                                               className='bg-body outline-none focus:border-primary transition-all duration-500 h-10 w-full rounded-md border border-light-border dark:border-[#495057] dark:focus:border-primary pr-12 p-1.5 pl-3 text-sm'/>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <label className='font-IranSansFaNum-Bold text-sm text-title mb-2 inline-block'>
-                                                        ایمیل <span className='text-error'>*</span>
-                                                    </label>
-                                                    <div className='relative'>
-                                                        <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
-                                                            <use href='#envelope'></use>
-                                                        </svg>
-                                                        <input placeholder='ایمل' type="email"
-                                                               className='bg-body dark:border-[#495057] dark:focus:border-primary outline-none focus:border-primary transition-all duration-500 h-10 w-full rounded-md border border-light-border pr-12 p-1.5 pl-3 text-sm'/>
-                                                    </div>
-                                                </div>
+                                                <Input icon='user' placeholder='نام :' label='نام' require={true} type='text'/>
+                                                <Input icon='envelope' placeholder='ایمیل :' label='ایمیل' require={true} type='text'/>
                                             </div>
                                             <PrimaryButton title='ارسال پیام' className='!flex justify-center'/>
                                         </form>

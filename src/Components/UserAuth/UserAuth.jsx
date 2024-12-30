@@ -3,6 +3,7 @@ import Input from "../Input/Input";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import ThemeBox from "../ThemeBox/ThemeBox";
 import {useEffect, useState} from "react";
+import IconButton from "../IconButton/IconButton";
 
 export default function UserAuth({ title, bg, children }) {
     const [theme, setTheme] = useState('light')
@@ -47,12 +48,7 @@ export default function UserAuth({ title, bg, children }) {
                 </div>
                 <div className={`w-full min-h-[400px] h-full bg-center bg-cover bg-no-repeat ${bg}`}></div>
             </div>
-            <a className='h-9 w-9 rounded-md bg-primary text-white flex items-center justify-center fixed left-3 top-8'
-               href="/">
-                <svg className='w-4 h-4'>
-                    <use href='#home'></use>
-                </svg>
-            </a>
+            <IconButton link='/' icon='home' className='left-3 top-8'/>
 
             <ThemeBox
                 theme={theme}

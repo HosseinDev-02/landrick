@@ -1,11 +1,11 @@
-export default function Input({type, icon, className, placeholder, label, require = false}) {
+export default function Input({type, icon, className, placeholder, label, require = false, color}) {
 
     return (
         <>
             <div className={`${label && 'flex flex-col gap-2'} ${type === 'checkbox' ? 'w-auto flex items-center justify-center' : 'w-full'}`}>
                 {
                     label && (
-                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
+                        <div className={`flex gap-1 items-center ${color ? color : 'text-title'} font-IranSansFaNum-Bold text-sm`}>
                             {label}
                             {
                                 require && (
@@ -21,7 +21,7 @@ export default function Input({type, icon, className, placeholder, label, requir
                     type === 'text' || type === 'password' ? (
                             <div
                                 className='flex items-center gap-2 relative h-10 w-full'>
-                            <span className='shrink-0 absolute right-4 text-title'>
+                            <span className={`shrink-0 absolute right-4 ${color ? color : 'text-title'}`}>
                             <svg className='w-4 h-4'>
                             <use href={`#${icon}`}></use>
                 </svg>

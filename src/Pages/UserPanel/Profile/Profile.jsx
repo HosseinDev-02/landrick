@@ -46,6 +46,19 @@ export default function Profile() {
                         </div>
                         <div className='flex items-center gap-4'>
                             <svg className='w-5 h-5'>
+                                <use href='#bookmark'></use>
+                            </svg>
+                            <div className='flex flex-col'>
+                                <span className='text-primary font-IranSansFaNum-Bold'>
+                                    زبان ها :
+                                </span>
+                                <a href="#">
+                                    انگلیسی،فارسی،ترکی
+                                </a>
+                            </div>
+                        </div>
+                        <div className='flex items-center gap-4'>
+                            <svg className='w-5 h-5'>
                                 <use href='#internet'></use>
                             </svg>
                             <div className='flex flex-col'>

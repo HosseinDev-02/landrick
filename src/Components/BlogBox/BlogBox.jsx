@@ -3,9 +3,11 @@ export default function BlogBox({ title, img, author, date, comment, like, link 
         <div
             className='blog rounded-md overflow-hidden shadow-sm shadow-sub-title/15 dark:shadow-white/15 transition-all duration-500 group bg-body'>
             <div className='relative'>
-                <img className='w-full h-full object-cover' src={`${img}`} alt="blog 1"/>
-                <div
-                    className='absolute inset-0 p-4 bg-sub-title/40 invisible opacity-0 transition-all duration-500 group-hover:visible group-hover:opacity-100'>
+                <a href='/blog-detail/blog-01-info'>
+                    <img className='w-full h-full object-cover' src={`${img}`} alt="blog 1"/>
+                </a>
+                <a href='/blog-detail/blog-01-info'
+                    className='absolute inset-0 p-4 bg-sub-title/40 invisible block opacity-0 transition-all duration-500 group-hover:visible group-hover:opacity-100'>
                     <div className='mb-1 flex items-center gap-1'>
                         <svg className='w-4 h-4 text-light-bg'>
                             <use href='#user'></use>
@@ -18,7 +20,7 @@ export default function BlogBox({ title, img, author, date, comment, like, link 
                         </svg>
                         <span className='text-sm text-light-bg'>{date}</span>
                     </div>
-                </div>
+                </a>
             </div>
             <div className='p-6'>
                 <h3 className='mb-4'>
