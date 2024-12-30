@@ -1,55 +1,18 @@
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
-import {GoogleMap, useJsApiLoader} from "@react-google-maps/api";
-import React, {useState} from "react";
+import React from "react";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+import Input from "../../Components/Input/Input";
 
 export default function ContactUs() {
-
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: 'AIzaSyBY_v_r4MLTPy2po_HjLjbWffvPzZoPcYo',
-    })
-
-    const [map, setMap] = useState(null)
-    const center = {
-        lat: 35.30453,
-        lng: 50.49728,
-    }
-
-    const onLoad = React.useCallback(function callback(map) {
-        // This is just an example of getting and using the map instance!!! don't just blindly copy!
-        const bounds = new window.google.maps.LatLngBounds(center)
-        map.fitBounds(bounds)
-
-        setMap(map)
-    }, [])
-
-    const onUnmount = React.useCallback(function callback(map) {
-        setMap(null)
-    }, [])
-
 
     return (
         <>
             <Header changeMode={true}/>
             <main className='pt-[74px]'>
                 <section>
-                    {
-                        isLoaded ? (
-                            <GoogleMap
-                                center={center}
-                                mapContainerClassName='w-full h-[400px]'
-                                zoom={2}
-                                onLoad={onLoad}
-                                onUnmount={onUnmount}
-                            >
-
-                            </GoogleMap>
-                        ) : (
-                            <></>
-                        )
-                    }
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.973802644696!2d51.41548582636884!3d35.7022622788174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0177e812efab%3A0xac2453a4834d3bb5!2sTehran%20Province%2C%20Tehran%2C%20Ferdowsi%20Square%2C%20Iran!5e0!3m2!1sen!2sru!4v1735561589885!5m2!1sen!2sru"
+                        width="100%" height="400" style={{border: '0px'}} allowFullScreen="" loading="lazy"></iframe>
                 </section>
                 <section className='my-20'>
                     <div className="container">
@@ -57,60 +20,13 @@ export default function ContactUs() {
                             <div className='w-full md:basis-1/2 lg:basis-5/12'>
                                 <form className='p-6 shadow-sm shadow-sub-title/15 bg-body space-y-4' action="#">
                                     <div className='flex items-center gap-4'>
-                                        <div>
-                                            <label
-                                                className='font-IranSansFaNum-Bold text-sm text-title mb-2 inline-block'>
-                                                نام شما <span className='text-error'>*</span>
-                                            </label>
-                                            <div className='relative'>
-                                                <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
-                                                    <use href='#user'></use>
-                                                </svg>
-                                                <input placeholder='نام شما' type="text"
-                                                       className='bg-body outline-none focus:border-primary transition-all duration-500 h-10 w-full rounded-md border border-light-border dark:border-[#495057] dark:focus:border-primary pr-12 p-1.5 pl-3 text-sm'/>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <label
-                                                className='font-IranSansFaNum-Bold text-sm text-title mb-2 inline-block'>
-                                                ایمیل شما <span className='text-error'>*</span>
-                                            </label>
-                                            <div className='relative'>
-                                                <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
-                                                    <use href='#user'></use>
-                                                </svg>
-                                                <input placeholder='ایمیل شما' type="text"
-                                                       className='bg-body outline-none focus:border-primary transition-all duration-500 h-10 w-full rounded-md border border-light-border dark:border-[#495057] dark:focus:border-primary pr-12 p-1.5 pl-3 text-sm'/>
-                                            </div>
-                                        </div>
+
+                                        <Input require={true} label='نام شما' placeholder='نام شما :' type='text' icon='user'/>
+                                        <Input require={true} label='ایمیل شما' placeholder='ایمیل شما :' type='text' icon='envelope'/>
                                     </div>
-                                    <div>
-                                        <label
-                                            className='font-IranSansFaNum-Bold text-sm text-title mb-2 inline-block'>
-                                            موضوع <span className='text-error'>*</span>
-                                        </label>
-                                        <div className='relative'>
-                                            <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
-                                                <use href='#user'></use>
-                                            </svg>
-                                            <input placeholder='موضوع' type="text"
-                                                   className='bg-body outline-none focus:border-primary transition-all duration-500 h-10 w-full rounded-md border border-light-border dark:border-[#495057] dark:focus:border-primary pr-12 p-1.5 pl-3 text-sm'/>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label
-                                            className='font-IranSansFaNum-Bold text-sm text-title mb-2 inline-block'>
-                                            نظر شما <span className='text-error'>*</span>
-                                        </label>
-                                        <div className='relative'>
-                                            <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
-                                                <use href='#user'></use>
-                                            </svg>
-                                            <textarea
-                                                className='outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border pr-12 py-1.5 pl-3 text-sm'
-                                                placeholder='نظر شما'></textarea>
-                                        </div>
-                                    </div>
+                                    <Input require={true} label='موضوع' placeholder='موضوع' type='text' icon='book'/>
+
+                                <Input className='resize-none' type='textarea' label='نظر شما' placeholder='نظر شما' icon='comment' require={true}/>
                                     <PrimaryButton title='ارسال پیام' className='!flex justify-center'/>
                                 </form>
                             </div>

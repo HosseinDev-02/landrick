@@ -10,8 +10,12 @@ export default function Team() {
         <>
             <Header changeMode={true}/>
             <main>
-                <PageHeader title='اعضای تیم'/>
-                <BreadCrumb page='تیم'/>
+                <PageHeader bgColor='rgb(var(--color-light-bg))' titleStyle='text-title' title='اعضای تیم'/>
+                <BreadCrumb items={[
+                    {id:1, title: 'لندریک'},
+                    {id:2, title: 'صفحه'},
+                    {id:3, title: 'تیم'},
+                ]} page='تیم'/>
                 <section className='mt-14 mb-[60px] md:mb-[100px]'>
                     <div className="container">
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>

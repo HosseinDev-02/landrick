@@ -63,25 +63,25 @@ export default function UserPanelSetting() {
                     </h5>
                 </div>
                 <ul className='w-full flex flex-col divide-y divide-light-border dark:divide-[#495057] px-6'>
-                    <li className='py-6 flex items-center justify-between w-full'>
+                    <li className='py-6 flex items-center justify-between w-full gap-4'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             وقتی کسی از من نام می برد
                         </span>
                         <Input type='checkbox'/>
                     </li>
-                    <li className='py-6 flex items-center justify-between w-full'>
+                    <li className='py-6 flex items-center justify-between w-full gap-4'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             وقتی کسی مرا تعقیب می کند
                         </span>
                         <Input type='checkbox'/>
                     </li>
-                    <li className='py-6 flex items-center justify-between w-full'>
+                    <li className='py-6 flex items-center justify-between w-full gap-4'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             هنگامی که فعالیت من را به اشتراک می گذارد
                         </span>
                         <Input type='checkbox'/>
                     </li>
-                    <li className='py-6 flex items-center justify-between w-full'>
+                    <li className='py-6 flex items-center justify-between w-full gap-4'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             وقتی کسی به من پیام می دهد
                         </span>
@@ -96,25 +96,25 @@ export default function UserPanelSetting() {
                     </h5>
                 </div>
                 <ul className='w-full flex flex-col divide-y divide-light-border dark:divide-[#495057] px-6'>
-                    <li className='py-6 flex items-center justify-between w-full'>
+                    <li className='py-6 flex items-center justify-between w-full gap-4'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             یک فروش یا تبلیغ وجود دارد
                         </span>
                         <Input type='checkbox'/>
                     </li>
-                    <li className='py-6 flex items-center justify-between w-full'>
+                    <li className='py-6 flex items-center justify-between w-full gap-4'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             اخبار شرکت
                         </span>
                         <Input type='checkbox'/>
                     </li>
-                    <li className='py-6 flex items-center justify-between w-full'>
+                    <li className='py-6 flex items-center justify-between w-full gap-4'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             همشاغل هفتگی
                         </span>
                         <Input type='checkbox'/>
                     </li>
-                    <li className='py-6 flex items-center justify-between w-full'>
+                    <li className='py-6 flex items-center justify-between w-full gap-4'>
                         <span className='font-IranSansFaNum-Bold text-title'>
                             اخبار را لغو اشتراک کنید
                         </span>
@@ -132,7 +132,7 @@ export default function UserPanelSetting() {
                     <span className='font-IranSansFaNum-Bold text-title'>
                         آیا می خواهید حساب را حذف کنید؟ لطفاً زیر دکمه "حذف" را فشار دهید
                     </span>
-                    <PrimaryButton className='!bg-error !border-error' title='حذف اکانت'/>
+                    <PrimaryButton className='!bg-error !border-error shadow-error/15' title='حذف اکانت'/>
                 </div>
             </div>
         </>

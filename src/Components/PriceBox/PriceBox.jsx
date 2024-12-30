@@ -2,7 +2,7 @@ import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
 export default function PriceBox({ title, price, items, theBest }) {
     return (
-        <div className={`p-1.5 overflow-hidden relative group transition-all duration-500  hover:scale-[1.03] ${theBest && 'after:absolute after:bg-[#d55b0e] after:content-[""] after:left-[55px] after:top-2 after:w-10 after:h-10 after:rotate-45 before:absolute before:bg-[#d55b0e] before:content-[""] before:left-2 before:top-[55px] before:w-10 before:h-10 before:rotate-45'}`}>
+        <div className={`price-box p-1.5 overflow-hidden relative group transition-all duration-500 ${theBest && 'after:absolute after:bg-[#d55b0e] after:content-[""] after:left-[55px] after:top-2 after:w-10 after:h-10 after:rotate-45 before:absolute before:bg-[#d55b0e] before:content-[""] before:left-2 before:top-[55px] before:w-10 before:h-10 before:rotate-45'}`}>
             <div
                 className='bg-light-bg relative z-10 rounded-md px-6 py-12 border-b-[3px] border-b-footer text-center shadow-sm shadow-sub-title/15 transition-all duration-500 group-hover:border-primary group-hover:bg-body group-hover:shadow-md group-hover:shadow-sub-title/20 dark:group-hover:shadow-[rgba(60,72,88,0.2)]'>
                                     <span className='text-primary font-IranSansFaNum-Bold inline-block mb-6'>

@@ -8,12 +8,27 @@ export default function UserPanel () {
 
     const match = useMatch("/:dashboard/*");
     const [activeTab, setActiveTab] = useState(match.params['*'])
+    const [showBox, setShowBox] = useState(false)
+    const [number, setNumber] = useState(0)
 
 
     useEffect(() => {
+
         console.log(match)
         setActiveTab(match.params['*'])
     }, [match]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setNumber(prevNumber => prevNumber + 1)
+            console.log(number)
+        }, 20)
+
+        if(number === 60) {
+            clearInterval(interval)
+        }
+        return () => clearInterval(interval)
+    }, [number]);
 
     
     // -translate-y-[300px] md:-translate-y-[125px]
@@ -110,19 +125,19 @@ export default function UserPanel () {
                                     </div>
                                     <div className='mt-8'>
                                         <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-6'>پروژه :</h5>
-                                        <div className='flex flex-col gap-2'>
+                                        <div className='flex flex-col gap-2 overflow-hidden'>
                                             <span className='font-IranSansFaNum-Bold'>
                                                 پیش رفتن
                                             </span>
                                             <div className='rounded-md h-2 bg-[#e9ecef]'>
-                                                <div className='bg-primary w-[60%] h-full rounded-md relative'>
+                                                <div style={{width: `${number}%`}} className='bg-primary h-full rounded-md relative'>
                                                 <span
                                                     className='absolute -left-4 -top-7 font-IranSansFaNum-Bold'>24 / 48</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='mt-8 py-[15px]'>
+                                    <div className='hidden lg:block mt-8 py-[15px]'>
                                         <ul className='flex flex-col gap-3.5'>
                                             <li>
                                                 <Link onClick={() => setActiveTab('profile')}
@@ -234,6 +249,126 @@ export default function UserPanel () {
             </main>
 
             <Footer/>
+
+            <div
+                className={`fixed top-32 flex lg:hidden items-start transition-all duration-500 ${showBox ? 'right-0' : '-right-64'} z-50`}>
+                <div
+                    className='w-64 bg-light-bg shadow-sm shadow-sub-title/15 flex flex-col justify-between items-center px-6 py-4'>
+                    <ul className='flex flex-col gap-3.5 w-full'>
+                        <li>
+                            <Link onClick={() => {
+                                setActiveTab('profile')
+                                setShowBox(prevState => !prevState)
+                            }}
+                                  className={`user-panel-menu-item ${activeTab === 'profile' ? 'text-white bg-primary' : ''}`}
+                                  to='profile'>
+                                <svg className='w-6 h-6'>
+                                    <use href='#dashboard'></use>
+                                </svg>
+                                <span>
+                                                    پروفایل
+                                                </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link onClick={() => {
+                                setActiveTab('members')
+                                setShowBox(prevState => !prevState)
+                            }}
+                                  className={`user-panel-menu-item ${activeTab === 'members' && 'text-white bg-primary'}`}
+                                  to='members'>
+                                <svg className='w-6 h-6'>
+                                    <use href='#users-alt'></use>
+                                </svg>
+                                <span>
+                                                    اعضا
+                                                </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link onClick={() => {
+                                setActiveTab('projects')
+                                setShowBox(prevState => !prevState)
+                            }}
+                                  className={`user-panel-menu-item ${activeTab === 'projects' && 'text-white bg-primary'}`}
+                                  to='projects'>
+                                <svg className='w-6 h-6'>
+                                    <use href='#file-alt'></use>
+                                </svg>
+                                <span>
+                                                    نمونه کار
+                                                </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link onClick={() => {
+                                setActiveTab('messages')
+                                setShowBox(prevState => !prevState)
+                            }}
+                                  className={`user-panel-menu-item ${activeTab === 'messages' && 'text-white bg-primary'}`}
+                                  to='messages'>
+                                <svg className='w-6 h-6'>
+                                    <use href='#envelope-star'></use>
+                                </svg>
+                                <span>
+                                                    پیام ها
+                                                </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link onClick={() => {
+                                setActiveTab('transactions')
+                                setShowBox(prevState => !prevState)
+                            }}
+                                  className={`user-panel-menu-item ${activeTab === 'transactions' && 'text-white bg-primary'}`}
+                                  to='transactions'>
+                                <svg className='w-6 h-6'>
+                                    <use href='#transaction'></use>
+                                </svg>
+                                <span>
+                                                    پرداخت ها
+                                                </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link onClick={() => {
+                                setActiveTab('setting')
+                                setShowBox(prevState => !prevState)
+                            }}
+                                  className={`user-panel-menu-item ${activeTab === 'setting' && 'text-white bg-primary'}`}
+                                  to='setting'>
+                                <svg className='w-6 h-6'>
+                                    <use href='#config'></use>
+                                </svg>
+                                <span>
+                                                    تنظیمات
+                                                </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link onClick={() => {
+                                setActiveTab('')
+                                setShowBox(prevState => !prevState)
+                            }}
+                                  className={`flex items-center gap-2 font-IranSansFaNum-Bold text-title h-[52px] rounded-md shadow-sm shadow-sub-title/15 px-6 hover:bg-primary hover:text-white transition-all duration-500`}
+                                  to='/login'>
+                                <svg className='w-6 h-6'>
+                                    <use href='#power'></use>
+                                </svg>
+                                <span>
+                                                    خروج
+                                                </span>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <span onClick={() => setShowBox(prevState => !prevState)}
+                      className='w-10 h-10 rounded-tl-3xl shadow-sm shadow-sub-title/15 rounded-bl-3xl bg-body text-primary flex items-center justify-center cursor-pointer'>
+                <svg className='w-6 h-6'>
+                    <use href='#draggabledots'></use>
+                </svg>
+            </span>
+            </div>
         </>
     )
 }

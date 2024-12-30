@@ -107,7 +107,7 @@ export default function Symbols() {
             </symbol>
 
             <symbol id='arrow-up' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="12" y1="19" x2="12" y2="5"></line>
                 <polyline points="5 12 12 5 19 12"></polyline>
             </symbol>
@@ -387,6 +387,11 @@ export default function Symbols() {
                 <line x1="19" y1="4" x2="10" y2="4"></line>
                 <line x1="14" y1="20" x2="5" y2="20"></line>
                 <line x1="15" y1="4" x2="9" y2="20"></line>
+            </symbol>
+
+            <symbol xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="draggabledots">
+                <path fill="currentColor"
+                      d="M8.5,10a2,2,0,1,0,2,2A2,2,0,0,0,8.5,10Zm0,7a2,2,0,1,0,2,2A2,2,0,0,0,8.5,17Zm7-10a2,2,0,1,0-2-2A2,2,0,0,0,15.5,7Zm-7-4a2,2,0,1,0,2,2A2,2,0,0,0,8.5,3Zm7,14a2,2,0,1,0,2,2A2,2,0,0,0,15.5,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,15.5,10Z"></path>
             </symbol>
 
 

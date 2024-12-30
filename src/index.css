@@ -128,6 +128,10 @@
         transform: scale(1.05);
     }
 
+    .price-box:hover{
+        transform: scale(1.03);
+    }
+
     .user-panel-menu-item {
         @apply flex items-center gap-2 font-IranSansFaNum-Bold text-title h-[52px] rounded-md shadow-sm shadow-sub-title/15 px-6 hover:bg-primary hover:text-white transition-all duration-500;
     }

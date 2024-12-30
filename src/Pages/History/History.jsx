@@ -10,6 +10,7 @@ export default function History() {
             <Header changeMode={true}/>
             <main>
                 <PageHeader
+                    titleStyle='text-title'
                     title='تاریخچه شرکت ما'
                     bgColor='rgb(var(--color-light-bg))'
                 />

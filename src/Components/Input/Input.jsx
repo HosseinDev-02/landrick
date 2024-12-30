@@ -1,4 +1,4 @@
-export default function Input({type, icon, className, placeholder, label, require = false, color}) {
+export default function Input({type, icon, className, placeholder, label, require = false, color, checked, onChange}) {
 
     return (
         <>
@@ -42,8 +42,8 @@ export default function Input({type, icon, className, placeholder, label, requir
                                     placeholder={placeholder}></textarea>
                             </div>
                         ) : (
-                            <input
-                                   className='shrink-0 w-4 h-4 appearance-none border checked:bg-check border-black/25 dark:border-[#495057] cursor-pointer rounded'
+                            <input checked={checked} onChange={onChange}
+                                   className='shrink-0 w-4 h-4 appearance-none border bg-body checked:bg-check border-black/25 dark:border-[#495057] cursor-pointer rounded'
                                    type="checkbox"/>
                         )
                 }

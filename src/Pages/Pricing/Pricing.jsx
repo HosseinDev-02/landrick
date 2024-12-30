@@ -8,11 +8,14 @@ import PriceBox from "../../Components/PriceBox/PriceBox";
 export default function Pricing() {
     return (
         <>
-
             <Header changeMode={true}/>
                 <main>
-                    <PageHeader title='قیمت گذاری'/>
-                    <BreadCrumb page='قیمت گذاری'/>
+                    <PageHeader title='قیمت گذاری' bgColor='rgb(var(--color-light-bg))' titleStyle='text-title'/>
+                    <BreadCrumb items={[
+                        {id:1, title: 'لندریک'},
+                        {id:2, title: 'صفحه'},
+                        {id:3, title: 'قیمت گذاری'},
+                    ]} page='قیمت گذاری'/>
                     <section className='mt-14 mb-[60px] md:mb-[100px]'>
                         <div className="container">
                             <SectionHeader title='قیمت گذاری'>
@@ -61,7 +64,6 @@ export default function Pricing() {
                     </section>
                 </main>
             <Footer/>
-
         </>
     )
 }

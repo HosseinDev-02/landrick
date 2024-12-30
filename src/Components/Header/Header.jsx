@@ -83,7 +83,7 @@ export default function Header({ changeMode }) {
     return (<>
         <Symbols/>
         <header ref={header}
-                className={`fixed left-0 right-0 flex items-center transition-colors duration-200 z-[1000] justify-center bg-body lg:bg-transparent ${headerBg && 'lg:!bg-body shadow-sm shadow-sub-title/15'}`}>
+                className={`fixed left-0 right-0 flex items-center transition-colors duration-200 z-[55] justify-center bg-body lg:bg-transparent ${headerBg && 'lg:!bg-body shadow-sm shadow-sub-title/15'}`}>
             <div className="container">
                 <nav className='flex items-center justify-between'>
                     {/*  Header Landrick Logo  */}
@@ -140,8 +140,8 @@ export default function Header({ changeMode }) {
                         {/* Has Submenu */}
                         <li className='relative group/aboutus'>
                             <a className='flex items-center gap-1 font-IranSansDn-Bold text-xs/[74px] px-[15px]'
-                               href="/aboutus">
-                                <span>درباره ما</span>
+                               href="#">
+                                <span>شرکت</span>
                                 <svg className='w-6 h-6 group-hover/aboutus:rotate-180 transition-all'>
                                     <use href='#angle-down'></use>
                                 </svg>
@@ -167,6 +167,12 @@ export default function Header({ changeMode }) {
                                         قیمت گذاری
                                     </a>
                                 </li>
+                                <li>
+                                    <a className='px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block'
+                                       href="/aboutus">
+                                        درباره ما
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li className='inline-flex items-center'>
@@ -183,13 +189,13 @@ export default function Header({ changeMode }) {
                         </a>
                         {/* Mobile Menu Btn */}
                         <div onClick={mobileMenuHandler}
-                             className='lg:hidden cursor-pointer w-6 h-6 flex flex-col items-center justify-center gap-1.5'>
+                             className={`lg:hidden cursor-pointer w-6 h-6 relative shrink-0 flex`}>
                             <span
-                                className={`inline-block h-0.5 w-full bg-title rounded-xl transition-all ${showMobileMenu ? 'rotate-45 top-2' : 'top-0'}`}></span>
+                                className={`block h-0.5 absolute w-full bg-title rounded-xl transition-all ${showMobileMenu ? 'rotate-45 top-2' : 'top-0.5'}`}></span>
                             <span
-                                className={`h-0.5 w-full bg-title rounded-xl transition-all duration-200 inline-block ${showMobileMenu && 'invisible opacity-0'}`}></span>
+                                className={`h-0.5 w-full bg-title rounded-xl absolute top-[11px] transition-all duration-200 block ${showMobileMenu && 'invisible opacity-0'}`}></span>
                             <span
-                                className={`inline-block h-0.5 w-full bg-title rounded-xl transition-all ${showMobileMenu ? 'top-2 -rotate-45' : 'top-4'}`}></span>
+                                className={`block h-0.5 w-full bg-title absolute rounded-xl transition-all ${showMobileMenu ? 'top-2 -rotate-45' : 'top-5'}`}></span>
                         </div>
                         {/* Mobile Menu */}
                         <div
@@ -208,8 +214,8 @@ export default function Header({ changeMode }) {
                                     {/* Has SubMenu */}
                                     <a onClick={(event) => mobileSubmenuHandler(event)}
                                        className={`flex items-center justify-between px-5 py-2.5 font-IranSansDn-Bold text-xs ${showMobileSubmenu ? 'text-primary' : 'text-sub-title'}`}
-                                       href="/aboutus">
-                                        <span>درباره ما</span>
+                                       href="#">
+                                        <span>شرکت</span>
                                         <svg className={`w-6 h-6 ${showMobileSubmenu && 'rotate-180'}`}>
                                             <use href='#angle-down'></use>
                                         </svg>
@@ -231,6 +237,10 @@ export default function Header({ changeMode }) {
                                             <a className='font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]'
                                                href="/pricing">قیمت گذاری</a>
                                         </li>
+                                        <li>
+                                            <a className='font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]'
+                                               href="/aboutus">درباره ما</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li>
@@ -245,7 +255,7 @@ export default function Header({ changeMode }) {
                         {/* Header Register Btn */}
                         {
                             changeMode ? (
-                                <PrimaryButton link='/user-panel/profile' title='پروفایل کاربر'/>
+                                <PrimaryButton className='hidden md:flex' link='/user-panel/profile' title='پروفایل کاربر'/>
                             ) : (
                                 <>
                                     <div className="hidden lg:block relative">

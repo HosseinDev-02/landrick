@@ -14,7 +14,7 @@ export default function ThemeBox({ changeThemeHandler, theme, setTheme }) {
                     <use href='#setting'></use>
                 </svg>
             </span>
-            <div className='w-48 bg-light-bg shadow-sm shadow-sub-title/15 h-48 flex flex-col justify-between items-center px-6 py-4'>
+            <div className='w-48 bg-light-bg shadow-sm shadow-sub-title/15 flex flex-col gap-20 justify-between items-center px-6 py-4'>
                 <span className='font-IranSansFaNum-Bold text-title inline-block text-center'>
                 رنگ خود را انتخاب کنید
             </span>

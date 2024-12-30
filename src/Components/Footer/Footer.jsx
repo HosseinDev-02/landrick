@@ -18,7 +18,7 @@ export default function Footer() {
                                 ترافیک ، اتصال به آن نیاز دارید فراهم کند.
                             </p>
                             <div
-                                className='flex items-center justify-start gap-2 transition-all duration-500 mt-8 pr-8'>
+                                className='flex items-center justify-start gap-2 transition-all duration-500 mt-8'>
                                 <SocialMediaBox
                                     icon='facebook'
                                     link='#'

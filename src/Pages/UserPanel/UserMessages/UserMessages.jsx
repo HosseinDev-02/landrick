@@ -109,20 +109,21 @@ export default function UserMessages() {
                     </div>
                 </div>
                 <div>
-                    <ul className='flex flex-col divide-y divide-[#e9ecef]'>
+                    <ul className='flex flex-col divide-y divide-[#e9ecef] dark:divide-[#495057]'>
                         <li className='flex items-center justify-between p-4 odd:bg-light-bg even:bg-body'>
                             <div className='flex items-center gap-2'>
-                                <input checked={selectAll} onChange={handelSelectAll}
-                                       className='w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'
-                                       type="checkbox"/>
-                                <span className='font-IranSansFaNum-Bold text-title text-sm'>انتخاب همه</span>
+                                <Input type='checkbox' checked={selectAll} onChange={handelSelectAll}/>
+                                {/*<input checked={selectAll} onChange={handelSelectAll}*/}
+                                {/*       className='w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'*/}
+                                {/*       type="checkbox"/>*/}
+                                <span className='font-IranSansFaNum-Bold text-title text-sm shrink-0'>انتخاب همه</span>
                             </div>
                             <div className='relative'>
                                 <PrimaryButton onClickHandler={event => actionModalHandler(event)} title='اقدام'
                                                icon='angle-down'/>
                                 <div
-                                    className={`bg-body shadow-sm shadow-sub-title/15 rounded-md absolute left-0 top-full w-[160px] ${actionModalShow ? 'block' : 'hidden'}`}>
-                                    <ul className='py-2 text-[#212529] bg-body rounded-md relative before:bg-body before:w-3.5 before:h-3.5 before:content-[""] before:absolute before:rotate-[225deg] before:-top-[5px] before:right-6 before:shadow-[2px_2px_2px_-1px_rgba(22,28,45,0.15)]'>
+                                    className={`bg-white shadow-sm shadow-sub-title/15 rounded-md absolute left-0 top-full w-[160px] ${actionModalShow ? 'block' : 'hidden'}`}>
+                                    <ul className='py-2 text-[#212529] bg-white rounded-md relative before:bg-white before:w-3.5 before:h-3.5 before:content-[""] before:absolute before:rotate-[225deg] before:-top-[5px] before:right-6 before:shadow-[2px_2px_2px_-1px_rgba(22,28,45,0.15)]'>
                                         <li className='px-4 py-1 hover:text-primary transition-all duration-500'>
                                             <a className='flex items-center gap-1' href="#">
                                                 <svg className='w-4 h-4'>
@@ -171,10 +172,11 @@ export default function UserMessages() {
                             messages.map(item => (
                                 <li key={item.id}
                                     className='flex items-start md:items-center justify-start gap-4 p-4 odd:bg-light-bg even:bg-body'>
-                                    <input onChange={() => checkboxHandleCheck(item.id)}
-                                           checked={checkedItems.has(item.id)}
-                                           className='shrink-0 w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'
-                                           type="checkbox"/>
+                                    <Input checked={checkedItems.has(item.id)} type='checkbox' onChange={() => checkboxHandleCheck(item.id)}/>
+                                    {/*<input onChange={() => checkboxHandleCheck(item.id)}*/}
+                                    {/*       checked={checkedItems.has(item.id)}*/}
+                                    {/*       className='shrink-0 w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'*/}
+                                    {/*       type="checkbox"/>*/}
                                     <div className='flex items-start md:items-center gap-4'>
                                         <div className='shrink-0 w-[45px] h-[45px] rounded-full overflow-hidden'>
                                             <img className='w-full h-full object-cover' src={item.userImg} alt=""/>
@@ -202,7 +204,7 @@ export default function UserMessages() {
             </div>
 
             <div
-                className={`fixed inset-0 z-[100] m-auto w-full h-fit bg-body p-6 rounded-md shadow-sm shadow-sub-title/15 transition-all duration-500 max-w-4xl ${modalShow ? 'top-0 opacity-100 visible' : '-top-40 opacity-0 invisible'}`}>
+                className={`fixed z-[100] inset-0 m-auto w-full h-fit bg-body p-6 rounded-md shadow-sm shadow-sub-title/15 transition-all duration-500 max-w-sm md:max-w-2xl lg:max-w-4xl ${modalShow ? 'top-0 opacity-100 visible' : '-top-40 opacity-0 invisible'}`}>
                 <div className='flex items-center justify-between pb-6 border-b border-b-light-border dark:border-b-[#495057] mb-6'>
                         <span className='text-title font-IranSansFaNum-Bold'>
                             ارسال پیام

@@ -53,7 +53,7 @@ export default function Login() {
                                     حسابی ندارید؟
                                 </span>
                         <a className='text-title hover:text-primary text-md font-IranSansFaNum-Bold transition-colors duration-500'
-                           href="#">
+                           href="/register">
                             ثبت نام کنید
                         </a>
                     </div>

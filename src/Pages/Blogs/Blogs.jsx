@@ -14,7 +14,7 @@ export default function Blogs() {
 
             <Header changeMode={true}/>
             <main>
-                <PageHeader bgColor='rgb(var(--color-light-bg))' title='وبلاگ'/>
+                <PageHeader titleStyle='text-title' bgColor='rgb(var(--color-light-bg))' title='وبلاگ'/>
                 <BreadCrumb page='وبلاگ' items={[
                     {id: 1, title: 'لندریک'},
                     {id: 2, title: 'صفحه'},
