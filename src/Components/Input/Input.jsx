@@ -38,7 +38,7 @@ export default function Input({type, icon, className, placeholder, label, requir
                                     <use href={`#${icon}`}></use>
                                 </svg>
                                 <textarea
-                                    className={`outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border py-1.5 pl-3 text-sm ${icon && 'pr-12'} ${className}`}
+                                    className={`outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border py-1.5 pl-3 text-sm resize-none ${icon && 'pr-12'} ${className}`}
                                     placeholder={placeholder}></textarea>
                             </div>
                         ) : (
