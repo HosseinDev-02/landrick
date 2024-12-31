@@ -205,43 +205,9 @@ export default function UserMessages() {
                         </span>
                 </div>
                 <form className='flex flex-col items-start gap-6 w-full' action="#">
-                    <div className='flex flex-col gap-2 w-full'>
-                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-sm'>
-                            نام شما
-                            <span className='text-error text-sm'>
-                                        *
-                                    </span>
-                        </div>
-                        <div
-                            className='flex items-center gap-2 relative h-10 w-full'>
-                                <span className='shrink-0 absolute right-4 text-title'>
-                                    <svg className='w-4 h-4'>
-                                        <use href='#user'></use>
-                                    </svg>
-                                </span>
-                            <input
-                                className='outline-none border border-light-border rounded-md dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 w-full text-sub-title h-full text-sm pr-12 py-1.5 pl-1.5'
-                                placeholder='نام :'
-                                type="text"/>
-                        </div>
-                    </div>
-                    <Input type='text' icon='book' placeholder='موضوع :' label='موضوع'/>
-                    <div className='flex flex-col gap-2 w-full'>
-                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-sm'>
-                            پیام
-                            <span className='text-error text-sm'>
-                                        *
-                                    </span>
-                        </div>
-                        <div className='relative'>
-                            <svg className='w-4 h-4 absolute right-4 top-3 text-title'>
-                                <use href='#comment'></use>
-                            </svg>
-                            <textarea
-                                className='outline-none dark:border-[#495057] dark:focus:border-primary bg-body focus:border-primary transition-all duration-500 h-36 w-full rounded-md border border-light-border pr-12 py-1.5 pl-3 text-sm'
-                                placeholder='پیام :'></textarea>
-                        </div>
-                    </div>
+                    <Input type='text' icon='user' placeholder='نام شما :' label='نام شما' require={true}/>
+                    <Input type='text' icon='book' placeholder='موضوع :' label='موضوع' require={true}/>
+                    <Input type='textarea' icon='comment' placeholder='پیام :' label='پیام' require={true}/>
                     <PrimaryButton className='' title='ارسال کنید'/>
                 </form>
             </div>
