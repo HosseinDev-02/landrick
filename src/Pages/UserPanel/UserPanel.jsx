@@ -167,7 +167,7 @@ export default function UserPanel() {
                                                 onClickHandler={() => setActiveTab('projects')}
                                             />
                                             <UserPanelMenuItem
-                                                icon='envelopestar'
+                                                icon='envelope-star'
                                                 title='پیام ها'
                                                 activeTab={activeTab}
                                                 path='messages'
