@@ -25,7 +25,7 @@ export default function BlogBox({ title, img, author, date, comment, like, link 
             <div className='p-6'>
                 <h3 className='mb-4'>
                     <a className='text-xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title transition-all hover:text-primary duration-500'
-                       href="#">
+                       href="/blog-detail/blog-01-info">
                         {title}
                     </a>
                 </h3>
@@ -46,7 +46,7 @@ export default function BlogBox({ title, img, author, date, comment, like, link 
                         </a>
                     </div>
                     <a className='flex items-center gap-1 transition-all hover:text-primary duration-500 text-sm'
-                       href={`${link}`}>
+                       href='/blog-detail/blog-01-info'>
                         ادامه مطلب
                         <svg className='w-4 h-4'>
                             <use href='#angle-left'></use>

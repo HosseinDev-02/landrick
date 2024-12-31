@@ -29,7 +29,6 @@ export default function LastNews() {
                         date='مهر 1403'
                         comment='8'
                         like='14'
-                        link='#'
                     />
                     <BlogBox
                         title='برنامه ها چگونه دنیای اطلاعات را تغییر می دهند'
@@ -38,7 +37,6 @@ export default function LastNews() {
                         date='اردیبهشت 1403'
                         comment='28'
                         like='50'
-                        link='#'
                     />
                     <BlogBox
                         title='هوشمندترین برنامه ها برای تجارت و کار'
@@ -47,7 +45,6 @@ export default function LastNews() {
                         date='مهر 1403'
                         comment='16'
                         like='33'
-                        link='#'
                     />
                 </div>
             </div>
