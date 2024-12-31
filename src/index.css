@@ -58,6 +58,10 @@
         --color-footer-border: 45 65 88;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         background-color: rgb(var(--color-body));
         color: rgb(var(--color-caption));
@@ -133,7 +137,7 @@
     }
 
     .user-panel-menu-item {
-        @apply flex items-center gap-2 font-IranSansFaNum-Bold text-title h-[52px] rounded-md shadow-sm shadow-sub-title/15 px-6 hover:bg-primary hover:text-white transition-all duration-500;
+        @apply flex items-center gap-2 font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title h-[52px] rounded-md shadow-sm shadow-sub-title/15 px-6 hover:bg-primary hover:text-white transition-all duration-500;
     }
 
     .social-media {

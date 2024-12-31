@@ -79,11 +79,6 @@ export default function UserMessages() {
         setSelectAll(updatedCheckedItems.size === messages.length)
     }
 
-    // const sendMsgModalHandler = () => {
-    //     setModalShow(true)
-    // }
-
-
     const sendMsgModalHandler = (event) => {
         event.preventDefault()
         setModalShow(prevState => !prevState)
@@ -99,7 +94,7 @@ export default function UserMessages() {
         <>
             <div className='shadow-sm shadow-sub-title/15 p-6 rounded-md'>
                 <div className='flex items-center justify-between mb-8'>
-                    <h5 className='font-IranSansFaNum-Bold text-xl text-title'>
+                    <h5 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl text-title'>
                         پیام:
                     </h5>
                     <div>
@@ -113,10 +108,7 @@ export default function UserMessages() {
                         <li className='flex items-center justify-between p-4 odd:bg-light-bg even:bg-body'>
                             <div className='flex items-center gap-2'>
                                 <Input type='checkbox' checked={selectAll} onChange={handelSelectAll}/>
-                                {/*<input checked={selectAll} onChange={handelSelectAll}*/}
-                                {/*       className='w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'*/}
-                                {/*       type="checkbox"/>*/}
-                                <span className='font-IranSansFaNum-Bold text-title text-sm shrink-0'>انتخاب همه</span>
+                                <span className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title text-sm shrink-0'>انتخاب همه</span>
                             </div>
                             <div className='relative'>
                                 <PrimaryButton onClickHandler={event => actionModalHandler(event)} title='اقدام'
@@ -173,16 +165,12 @@ export default function UserMessages() {
                                 <li key={item.id}
                                     className='flex items-start md:items-center justify-start gap-4 p-4 odd:bg-light-bg even:bg-body'>
                                     <Input checked={checkedItems.has(item.id)} type='checkbox' onChange={() => checkboxHandleCheck(item.id)}/>
-                                    {/*<input onChange={() => checkboxHandleCheck(item.id)}*/}
-                                    {/*       checked={checkedItems.has(item.id)}*/}
-                                    {/*       className='shrink-0 w-4 h-4 appearance-none border checked:bg-check border-black/25 rounded'*/}
-                                    {/*       type="checkbox"/>*/}
                                     <div className='flex items-start md:items-center gap-4'>
                                         <div className='shrink-0 w-[45px] h-[45px] rounded-full overflow-hidden'>
                                             <img className='w-full h-full object-cover' src={item.userImg} alt=""/>
                                         </div>
                                         <div className='flex flex-col gap-2 items-start'>
-                                            <h6 className='font-IranSansFaNum-Bold text-title'>
+                                            <h6 className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title'>
                                                 {item.username}
                                             </h6>
                                             <span>
@@ -196,7 +184,7 @@ export default function UserMessages() {
                     </ul>
                 </div>
                 <div className='flex items-center justify-between mt-6'>
-                <span className='font-IranSansFaNum-Bold'>
+                <span className='font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                     نمایش 8 از 33
                 </span>
                     <PrimaryButton title='نمایش بیشتر'/>
@@ -206,7 +194,7 @@ export default function UserMessages() {
             <div
                 className={`fixed z-[100] inset-0 m-auto w-full h-fit bg-body p-6 rounded-md shadow-sm shadow-sub-title/15 transition-all duration-500 max-w-sm md:max-w-2xl lg:max-w-4xl ${modalShow ? 'top-0 opacity-100 visible' : '-top-40 opacity-0 invisible'}`}>
                 <div className='flex items-center justify-between pb-6 border-b border-b-light-border dark:border-b-[#495057] mb-6'>
-                        <span className='text-title font-IranSansFaNum-Bold'>
+                        <span className='text-title font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                             ارسال پیام
                         </span>
                     <span onClick={() => setModalShow(false)}
@@ -218,7 +206,7 @@ export default function UserMessages() {
                 </div>
                 <form className='flex flex-col items-start gap-6 w-full' action="#">
                     <div className='flex flex-col gap-2 w-full'>
-                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
+                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-sm'>
                             نام شما
                             <span className='text-error text-sm'>
                                         *
@@ -239,7 +227,7 @@ export default function UserMessages() {
                     </div>
                     <Input type='text' icon='book' placeholder='موضوع :' label='موضوع'/>
                     <div className='flex flex-col gap-2 w-full'>
-                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold text-sm'>
+                        <div className='flex gap-1 items-center text-title font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-sm'>
                             پیام
                             <span className='text-error text-sm'>
                                         *

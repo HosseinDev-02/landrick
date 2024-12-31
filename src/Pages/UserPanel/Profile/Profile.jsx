@@ -5,7 +5,7 @@ export default function Profile() {
     return (
         <div className='p-6'>
             <div className='pb-6 border-b border-b-light-border dark:border-b-[#495057]'>
-                <h5 className='text-title font-IranSansFaNum-Bold text-xl mb-2'>
+                <h5 className='text-title font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-xl mb-2'>
                     جعفر عباسی
                 </h5>
                 <p>
@@ -14,7 +14,7 @@ export default function Profile() {
             </div>
             <div className='grid md:grid-cols-2 mt-6 space-y-6'>
                 <div>
-                    <h5 className='text-title text-xl font-IranSansFaNum-Bold mb-6'>
+                    <h5 className='text-title text-xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold mb-6'>
                         جزئیات شخصی :
                     </h5>
                     <div className='flex flex-col items-start gap-4'>
@@ -23,7 +23,7 @@ export default function Profile() {
                                 <use href='#envelope'></use>
                             </svg>
                             <div className='flex flex-col'>
-                                <span className='text-primary font-IranSansFaNum-Bold'>
+                                <span className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                                     ایمیل :
                                 </span>
                                 <a href="#">
@@ -36,7 +36,7 @@ export default function Profile() {
                                 <use href='#bookmark'></use>
                             </svg>
                             <div className='flex flex-col'>
-                                <span className='text-primary font-IranSansFaNum-Bold'>
+                                <span className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                                     مهارت ها :
                                 </span>
                                 <a href="#">
@@ -49,7 +49,7 @@ export default function Profile() {
                                 <use href='#bookmark'></use>
                             </svg>
                             <div className='flex flex-col'>
-                                <span className='text-primary font-IranSansFaNum-Bold'>
+                                <span className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                                     زبان ها :
                                 </span>
                                 <a href="#">
@@ -62,7 +62,7 @@ export default function Profile() {
                                 <use href='#internet'></use>
                             </svg>
                             <div className='flex flex-col'>
-                                <span className='text-primary font-IranSansFaNum-Bold'>
+                                <span className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                                     وبسایت :
                                 </span>
                                 <a href="#">
@@ -75,7 +75,7 @@ export default function Profile() {
                                 <use href='#gift'></use>
                             </svg>
                             <div className='flex flex-col'>
-                                <span className='text-primary font-IranSansFaNum-Bold'>
+                                <span className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                                     تاریخ تولد :
                                 </span>
                                 <a href="#">
@@ -88,7 +88,7 @@ export default function Profile() {
                                 <use href='#map'></use>
                             </svg>
                             <div className='flex flex-col'>
-                                <span className='text-primary font-IranSansFaNum-Bold'>
+                                <span className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                                     موقعیت :
                                 </span>
                                 <a href="#">
@@ -101,7 +101,7 @@ export default function Profile() {
                                 <use href='#phone'></use>
                             </svg>
                             <div className='flex flex-col'>
-                                <span className='text-primary font-IranSansFaNum-Bold'>
+                                <span className='text-primary font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                                     تلفن :
                                 </span>
                                 <a href="#">
@@ -112,7 +112,7 @@ export default function Profile() {
                     </div>
                 </div>
                 <div>
-                    <h5 className='text-title text-xl font-IranSansFaNum-Bold'>
+                    <h5 className='text-title text-xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                         تجربه :
                     </h5>
                     <div>
@@ -122,7 +122,7 @@ export default function Profile() {
                                 <img className='w-full h-full object-cover' src="/images/acount/Circleci.svg" alt=""/>
                             </div>
                             <div className='flex flex-col items-start'>
-                                <h6 className='text-lg font-IranSansFaNum-Bold text-title'>
+                                <h6 className='text-lg font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title'>
                                     توسعه وب سینور
                                 </h6>
                                 <span>
@@ -142,7 +142,7 @@ export default function Profile() {
                                 <img className='w-full h-full object-cover' src="/images/acount/Codepen.svg" alt=""/>
                             </div>
                             <div className='flex flex-col items-start'>
-                                <h6 className='text-lg font-IranSansFaNum-Bold text-title'>
+                                <h6 className='text-lg font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title'>
                                     طراحی وب
                                 </h6>
                                 <span>
@@ -162,7 +162,7 @@ export default function Profile() {
                                 <img className='w-full h-full object-cover' src="/images/acount/Gitlab.svg" alt=""/>
                             </div>
                             <div className='flex flex-col items-start'>
-                                <h6 className='text-lg font-IranSansFaNum-Bold text-title'>
+                                <h6 className='text-lg font-IranSansFaNum-Bold dark:font-IranSansDn-Bold text-title'>
                                     UI طراح
                                 </h6>
                                 <span>
@@ -180,7 +180,7 @@ export default function Profile() {
                 </div>
             </div>
             <div className='mt-6 pt-6 border-t border-t-light-border dark:border-t-[#495057]'>
-                <h5 className='text-title text-xl font-IranSansFaNum-Bold'>
+                <h5 className='text-title text-xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                     پست ها و اخبار :
                 </h5>
                 <div className='grid md:grid-cols-2 gap-6 mt-8'>

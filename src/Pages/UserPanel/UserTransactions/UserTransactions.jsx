@@ -5,7 +5,7 @@ export default function UserTransactions() {
     return (
         <div className='shadow-sm shadow-sub-title/15 p-6 rounded-md'>
             <div className='flex items-center justify-between mb-8'>
-                <h5 className='text-title text-xl font-IranSansFaNum-Bold'>
+                <h5 className='text-title text-xl font-IranSansFaNum-Bold dark:font-IranSansDn-Bold'>
                     روش های پرداخت :
                 </h5>
                 <PrimaryButton className='flex-row-reverse' icon='plus' title='افزودن'/>
