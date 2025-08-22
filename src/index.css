@@ -155,4 +155,11 @@
             clip-path: ellipse(133% 100% at 50% 0%);
         }
     }
+
+    .page-loader {
+        width: 6rem !important;
+        height: 6rem !important;
+        display: block;
+        margin: auto;
+    }
 }
