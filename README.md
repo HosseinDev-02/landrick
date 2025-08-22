@@ -1,3 +1,7 @@
+# سایت شرکتی لندریک
+### وب‌سایت شرکتی توسعه‌یافته با React و Tailwind CSS با طراحی مدرن و واکنش‌گرا، مناسب برای معرفی خدمات و نمایش اطلاعات سازمانی.
+آدرس سایت :
+[Landrick](https://landrick-neon.vercel.app/)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
