@@ -33,10 +33,19 @@ export default function Header({ changeMode }) {
 
         // وقتی کل صفحه (تمام عکس‌ها و فونت‌ها) لود شد
         const handleLoad = () => setLoading(false);
+        const handleDomReady = () => setLoading(false);
 
         window.addEventListener("load", handleLoad);
+        document.addEventListener("DOMContentLoaded", handleDomReady);
 
-        return () => window.removeEventListener("load", handleLoad);
+        // fallback بعد از 5 ثانیه
+        const timer = setTimeout(() => setLoading(false), 5000);
+
+        return () => {
+            window.removeEventListener("load", handleLoad);
+            document.removeEventListener("DOMContentLoaded", handleDomReady);
+            clearTimeout(timer);
+        };
     }, []);
 
     const setHeaderFixedStyle = () => {
