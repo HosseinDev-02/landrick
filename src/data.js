@@ -111,5 +111,49 @@ const useFulLinks = [
         href: '#'
     },
 ]
+const userProfileLinks = [
+    {
+        id: 1,
+        title: 'پروفایل',
+        href: 'profile',
+        shortName: 'profile'
+    },
+    {
+        id: 2,
+        title: 'اعضا',
+        href: 'members',
+        shortName: 'members'
+    },
+    {
+        id: 3,
+        title: 'نمونه کار',
+        href: 'projects',
+        shortName: 'projects'
+    },
+    {
+        id: 4,
+        title: 'پیام ها',
+        href: 'messages',
+        shortName: 'messages'
+    },
+    {
+        id: 5,
+        title: 'پرداخت ها',
+        href: 'transactions',
+        shortName: 'transactions'
+    },
+    {
+        id: 6,
+        title: 'تنظیمات',
+        href: 'setting',
+        shortName: 'setting'
+    },
+    {
+        id: 7,
+        title: 'خروج',
+        href: '#',
+        shortName: ''
+    },
+]
 
-export { menuItems, footerComponyLinks, useFulLinks };
+export { menuItems, footerComponyLinks, useFulLinks, userProfileLinks };
