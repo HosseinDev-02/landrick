@@ -127,12 +127,12 @@ export default function BlogDetail() {
                                              ارسال نظر :
                                         </h3>
                                         <form action="#">
-                                            <Input type='textarea' icon='comment' require={true} label='نظر شما' placeholder='نظر شما :'/>
-                                            <div className='grid grid-cols-2 gap-6 mt-2.5 mb-4'>
+                                            <div className='grid md:grid-cols-2 gap-6 mt-2.5 mb-4'>
                                                 <Input icon='user' placeholder='نام :' label='نام' require={true} type='text'/>
                                                 <Input icon='envelope' placeholder='ایمیل :' label='ایمیل' require={true} type='text'/>
                                             </div>
-                                            <PrimaryButton title='ارسال پیام' className='!flex justify-center'/>
+                                            <Input type='textarea' icon='comment' require={true} label='نظر شما' placeholder='نظر شما :'/>
+                                            <PrimaryButton title='ارسال پیام' className='!flex justify-center mt-4'/>
                                         </form>
                                     </div>
                                 </div>
