@@ -6,6 +6,8 @@ import ThemeBox from "../ThemeBox/ThemeBox";
 import IconButton from "../IconButton/IconButton";
 import { Loader } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
+import { menuItems } from "../../data";
+import { Link } from "react-router-dom";
 
 export default function Header({ changeMode }) {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -163,90 +165,50 @@ export default function Header({ changeMode }) {
                                     : "text-white/50 child-hover:text-white"
                             }`}
                         >
-                            <li
-                                className={`inline-flex items-center ${
-                                    headerBg || changeMode
-                                        ? "text-primary"
-                                        : "menu-item--active"
-                                }`}
-                            >
-                                <a
-                                    className="font-IranSansDn-Bold text-xs/[74px] px-[15px]"
-                                    href="/"
+                            {menuItems.map((item) => (
+                                <li
+                                    key={item.id}
+                                    className={`${
+                                        (headerBg || changeMode) &&
+                                        item.title === "صفحه اصلی"
+                                            ? "text-primary"
+                                            : ""
+                                    } ${
+                                        item.subLinks
+                                            ? "group/aboutus relative"
+                                            : "inline-flex items-center"
+                                    }`}
                                 >
-                                    صفحه اصلی
-                                </a>
-                            </li>
-                            <li className="inline-flex items-center">
-                                <a
-                                    className="font-IranSansDn-Bold text-xs/[74px] px-[15px]"
-                                    href="/blogs"
-                                >
-                                    وبلاگ
-                                </a>
-                            </li>
-                            {/* Has Submenu */}
-                            <li className="relative group/aboutus">
-                                <a
-                                    className="flex items-center gap-1 font-IranSansDn-Bold text-xs/[74px] px-[15px]"
-                                    href="#"
-                                >
-                                    <span>شرکت</span>
-                                    <svg className="w-6 h-6 group-hover/aboutus:rotate-180 transition-all">
-                                        <use href="#angle-down"></use>
-                                    </svg>
-                                </a>
-                                <ul className="flex flex-col w-46 bg-body rounded-md py-[15px] absolute right-0 top-[110%] invisible opacity-0 transition-all group-hover/aboutus:visible group-hover/aboutus:opacity-100 group-hover/aboutus:top-full duration-200 shadow-sm shadow-sub-title/15 dark:shadow-white/15">
-                                    <li>
-                                        <a
-                                            className="px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block"
-                                            href="/services"
-                                        >
-                                            خدمات
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block"
-                                            href="/history"
-                                        >
-                                            تاریخجه
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block"
-                                            href="/team"
-                                        >
-                                            تیم ما
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block"
-                                            href="/pricing"
-                                        >
-                                            قیمت گذاری
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block"
-                                            href="/aboutus"
-                                        >
-                                            درباره ما
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="inline-flex items-center">
-                                <a
-                                    className="font-IranSansDn-Bold text-xs/[74px] px-[15px]"
-                                    href="/contact-us"
-                                >
-                                    تماس با ما
-                                </a>
-                            </li>
+                                    <Link
+                                        className={`font-IranSansDn-Bold text-xs/[74px] px-[15px] ${
+                                            item.subLinks &&
+                                            "flex items-center gap-1"
+                                        }`}
+                                        to={item.href}
+                                    >
+                                        <span>{item.title}</span>
+                                        {item.subLinks && (
+                                            <svg className="w-6 h-6 group-hover/aboutus:rotate-180 transition-all">
+                                                <use href="#angle-down"></use>
+                                            </svg>
+                                        )}
+                                    </Link>
+                                    {item.subLinks && (
+                                        <ul className="flex flex-col w-46 bg-body rounded-md py-[15px] absolute right-0 top-[110%] invisible opacity-0 transition-all group-hover/aboutus:visible group-hover/aboutus:opacity-100 group-hover/aboutus:top-full duration-200 shadow-sm shadow-sub-title/15 dark:shadow-white/15">
+                                            {item.subLinks.map((subLink) => (
+                                                <li key={subLink.id}>
+                                                    <Link
+                                                        to={subLink.href}
+                                                        className="px-5 py-2.5 text-xxs text-sub-title font-IranSansFaNum-Bold transition-colors hover:text-primary duration-200 block"
+                                                    >
+                                                        {subLink.title}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            ))}
                         </ul>
                         <div className="flex items-center gap-4">
                             <a
@@ -291,102 +253,63 @@ export default function Header({ changeMode }) {
                                 }`}
                             >
                                 <ul className="flex flex-col pr-2.5">
-                                    <li className="mobile-submenu-item--active">
-                                        <a
-                                            className="px-5 py-2.5 block font-IranSansDn-Bold text-xs text-sub-title"
-                                            href="/"
-                                        >
-                                            صفحه اصلی
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="px-5 py-2.5 block font-IranSansDn-Bold text-xs text-sub-title"
-                                            href="/blogs"
-                                        >
-                                            وبلاگ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        {/* Has SubMenu */}
-                                        <a
-                                            onClick={(event) =>
-                                                mobileSubmenuHandler(event)
-                                            }
-                                            className={`flex items-center justify-between px-5 py-2.5 font-IranSansDn-Bold text-xs ${
-                                                showMobileSubmenu
-                                                    ? "text-primary"
-                                                    : "text-sub-title"
-                                            }`}
-                                            href="#"
-                                        >
-                                            <span>شرکت</span>
-                                            <svg
-                                                className={`w-6 h-6 ${
-                                                    showMobileSubmenu &&
-                                                    "rotate-180"
+                                    {menuItems.map((item) => (
+                                        <li key={item.id}>
+                                            {/* Has SubMenu */}
+                                            <Link
+                                                to={item.href}
+                                                onClick={(event) => {
+                                                    if (item.subLinks) {
+                                                        event.preventDefault();
+                                                        mobileSubmenuHandler(
+                                                            event
+                                                        );
+                                                    }
+                                                }}
+                                                className={`flex items-center justify-between px-5 py-2.5 font-IranSansDn-Bold text-xs ${
+                                                    showMobileSubmenu && item.subLinks
+                                                        ? "text-primary"
+                                                        : "text-sub-title"
                                                 }`}
                                             >
-                                                <use href="#angle-down"></use>
-                                            </svg>
-                                        </a>
-                                        <ul
-                                            className={`flex-col pr-5 ${
-                                                showMobileSubmenu
-                                                    ? "flex"
-                                                    : "hidden"
-                                            }`}
-                                        >
-                                            <li>
-                                                <a
-                                                    className="font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]"
-                                                    href="/services"
+                                                <span>{item.title}</span>
+                                                {item.subLinks && (
+                                                    <svg
+                                                        className={`w-6 h-6 ${
+                                                            showMobileSubmenu &&
+                                                            "rotate-180"
+                                                        }`}
+                                                    >
+                                                        <use href="#angle-down"></use>
+                                                    </svg>
+                                                )}
+                                            </Link>
+                                            {item.subLinks && (
+                                                <ul
+                                                    className={`flex-col pr-5 ${
+                                                        showMobileSubmenu
+                                                            ? "flex"
+                                                            : "hidden"
+                                                    }`}
                                                 >
-                                                    خدمات
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    className="font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]"
-                                                    href="/history"
-                                                >
-                                                    تاریخجه
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    className="font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]"
-                                                    href="/team"
-                                                >
-                                                    تیم ما
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    className="font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]"
-                                                    href="/pricing"
-                                                >
-                                                    قیمت گذاری
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    className="font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]"
-                                                    href="/aboutus"
-                                                >
-                                                    درباره ما
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="px-5 py-2.5 block font-IranSansDn-Bold text-xs text-sub-title"
-                                            href="/contact-us"
-                                        >
-                                            تماس با ما
-                                        </a>
-                                    </li>
+                                                    {item.subLinks.map(
+                                                        (link) => (
+                                                            <li key={link.id}>
+                                                                <Link
+                                                                    className="font-IranSansDn-Bold text-xxs text-sub-title block px-[15px] py-[7px]"
+                                                                    to={
+                                                                        link.href
+                                                                    }
+                                                                >
+                                                                    {link.title}
+                                                                </Link>
+                                                            </li>
+                                                        )
+                                                    )}
+                                                </ul>
+                                            )}
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                             {/* Header Register Btn */}

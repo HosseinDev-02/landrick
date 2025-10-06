@@ -1,6 +1,7 @@
 import SocialMediaBox from "../SocialMediaBox/SocialMediaBox";
 import Input from "../Input/Input";
 import { Link } from "react-router-dom";
+import { footerComponyLinks, useFulLinks } from "../../data";
 
 export default function Footer() {
     return (
@@ -56,83 +57,19 @@ export default function Footer() {
                                         شرکت
                                     </h3>
                                     <ul className="flex flex-col mt-6 gap-2.5">
-                                        <li className="flex">
-                                            <Link
-                                                className="inline-flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                to="/aboutus"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>درباره ما</span>
-                                            </Link>
-                                        </li>
-                                        <li className="flex">
-                                            <Link
-                                                className="inline-flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                to="/services"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>خدمات</span>
-                                            </Link>
-                                        </li>
-                                        <li className="flex">
-                                            <Link
-                                                className="inline-flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                to="/team"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>تیم</span>
-                                            </Link>
-                                        </li>
-                                        <li className="flex">
-                                            <Link
-                                                className="inline-flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                to="/pricing"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>قیمت گذاری</span>
-                                            </Link>
-                                        </li>
-                                        <li className="flex">
-                                            <Link
-                                                className="inline-flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                to="#"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>پروژه</span>
-                                            </Link>
-                                        </li>
-                                        <li className="flex">
-                                            <Link
-                                                className="inline-flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                to="/blogs"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>وبلاگ</span>
-                                            </Link>
-                                        </li>
-                                        <li className="flex">
-                                            <Link
-                                                className="inline-flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                to="#"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>مشاغل</span>
-                                            </Link>
-                                        </li>
+                                        {footerComponyLinks.map((item) => (
+                                            <li key={item.id} className="flex">
+                                                <Link
+                                                    className="inline-flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
+                                                    to={item.href}
+                                                >
+                                                    <svg className="w-5 h-5">
+                                                        <use href="#angle-left"></use>
+                                                    </svg>
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                                 {/* Footer Second Menu */}
@@ -141,61 +78,19 @@ export default function Footer() {
                                         لینک های مفید
                                     </h3>
                                     <ul className="flex flex-col mt-6 gap-2.5">
-                                        <li className="flex">
-                                            <a
-                                                className="flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                href="#"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>خدمات سایت</span>
-                                            </a>
-                                        </li>
-                                        <li className="flex">
-                                            <a
-                                                className="flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                href="#"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>حریم خصوصی</span>
-                                            </a>
-                                        </li>
-                                        <li className="flex">
-                                            <a
-                                                className="flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                href="#"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>مستند</span>
-                                            </a>
-                                        </li>
-                                        <li className="flex">
-                                            <a
-                                                className="flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                href="#"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>تغییرات</span>
-                                            </a>
-                                        </li>
-                                        <li className="flex">
-                                            <a
-                                                className="flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
-                                                href="#"
-                                            >
-                                                <svg className="w-5 h-5">
-                                                    <use href="#angle-left"></use>
-                                                </svg>
-                                                <span>اجزاء</span>
-                                            </a>
-                                        </li>
+                                        {useFulLinks.map((item) => (
+                                            <li key={item.id} className="flex">
+                                                <Link
+                                                    className="flex items-center gap-1 transition-colors hover:text-light dark:hover:text-[#e6e8ea] duration-500"
+                                                    to={item.href}
+                                                >
+                                                    <svg className="w-5 h-5">
+                                                        <use href="#angle-left"></use>
+                                                    </svg>
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -223,9 +118,7 @@ export default function Footer() {
                                         label="ایمیل خود را بنویسید"
                                         placeholder="ایمیل شما"
                                     />
-                                    <button
-                                        className="bg-primary/10 flex items-center justify-center rounded-md h-11 mt-4 shadow shadow-primary/30 text-primary font-IranSansFaNum-Bold transition-colors hover:text-white hover:bg-primary duration-500"
-                                    >
+                                    <button className="bg-primary/10 flex items-center justify-center rounded-md h-11 mt-4 shadow shadow-primary/30 text-primary font-IranSansFaNum-Bold transition-colors hover:text-white hover:bg-primary duration-500">
                                         خبرنامه
                                     </button>
                                 </form>
