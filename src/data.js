@@ -86,74 +86,137 @@ const footerComponyLinks = [
 ];
 const useFulLinks = [
     {
-        id: '1',
-        title: 'خدمات سایت',
-        href: '#'
+        id: "1",
+        title: "خدمات سایت",
+        href: "#",
     },
     {
-        id: '2',
-        title: 'حریم خصوصی',
-        href: '#'
+        id: "2",
+        title: "حریم خصوصی",
+        href: "#",
     },
     {
-        id: '3',
-        title: 'مستند',
-        href: '#'
+        id: "3",
+        title: "مستند",
+        href: "#",
     },
     {
-        id: '4',
-        title: 'تغییرات',
-        href: '#'
+        id: "4",
+        title: "تغییرات",
+        href: "#",
     },
     {
-        id: '5',
-        title: 'اجزاء',
-        href: '#'
+        id: "5",
+        title: "اجزاء",
+        href: "#",
     },
-]
+];
 const userProfileLinks = [
     {
         id: 1,
-        title: 'پروفایل',
-        href: 'profile',
-        shortName: 'profile'
+        title: "پروفایل",
+        href: "profile",
+        shortName: "profile",
     },
     {
         id: 2,
-        title: 'اعضا',
-        href: 'members',
-        shortName: 'members'
+        title: "اعضا",
+        href: "members",
+        shortName: "members",
     },
     {
         id: 3,
-        title: 'نمونه کار',
-        href: 'projects',
-        shortName: 'projects'
+        title: "نمونه کار",
+        href: "projects",
+        shortName: "projects",
     },
     {
         id: 4,
-        title: 'پیام ها',
-        href: 'messages',
-        shortName: 'messages'
+        title: "پیام ها",
+        href: "messages",
+        shortName: "messages",
     },
     {
         id: 5,
-        title: 'پرداخت ها',
-        href: 'transactions',
-        shortName: 'transactions'
+        title: "پرداخت ها",
+        href: "transactions",
+        shortName: "transactions",
     },
     {
         id: 6,
-        title: 'تنظیمات',
-        href: 'setting',
-        shortName: 'setting'
+        title: "تنظیمات",
+        href: "setting",
+        shortName: "setting",
     },
     {
         id: 7,
-        title: 'خروج',
-        href: '#',
-        shortName: ''
+        title: "خروج",
+        href: "#",
+        shortName: "",
     },
-]
+];
 
-export { menuItems, footerComponyLinks, useFulLinks, userProfileLinks };
+const blogs = [
+    {
+        id: 1,
+        title: 'برنامه های خود را به روش خود طراحی کنید',
+        img: '/images/blogs/01.jpg',
+        author: 'کالوین لورس',
+        date: 'مهر 1403',
+        comment: '8',
+        like: '14',
+        link: '#',
+    },
+    {
+        id: 2,
+        title: 'برنامه ها چگونه دنیای اطلاعات را تغییر می دهند',
+        img: '/images/blogs/02.jpg',
+        author: 'کالوین لورس',
+        date: 'اردیبهشت 1403',
+        comment: '28',
+        like: '50',
+        link: "#",
+    },
+    {
+        id: 3,
+        title: 'هوشمندترین برنامه ها برای تجارت و کار',
+        img: '/images/blogs/03.jpg',
+        author: 'کالوین لورس',
+        date: 'مهر 1403',
+        comment: '16',
+        like: '33',
+        link: "#",
+    },
+    {
+        id: 4,
+        title: 'برنامه های خود را به روش خود طراحی کنید',
+        img: '/images/blogs/04.jpg',
+        author: 'کالوین لورس',
+        date: 'مهر 1403',
+        comment: '16',
+        like: '33',
+        link: "#",
+    },
+    {
+        id: 5,
+        title: 'هوشمندترین برنامه ها برای تجارت و کار',
+        img: '/images/blogs/01.jpg',
+        author: 'کالوین لورس',
+        date: 'مهر 1403',
+        comment: '16',
+        like: '33',
+        link: "#",
+    },
+    {
+        id: 6,
+        title: 'برنامه ها چگونه دنیای اطلاعات را تغییر می دهند',
+        img: '/images/blogs/02.jpg',
+        author: 'کالوین لورس',
+        date: 'مهر 1403',
+        comment: '16',
+        like: '33',
+        link: "#",
+    },
+];
+
+export { menuItems, footerComponyLinks, useFulLinks, userProfileLinks, blogs };
