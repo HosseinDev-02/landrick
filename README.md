@@ -1,4 +1,4 @@
 # سایت شرکتی لندریک
 ### وب‌سایت شرکتی توسعه‌یافته با React و Tailwind CSS با طراحی مدرن و واکنش‌گرا، مناسب برای معرفی خدمات و نمایش اطلاعات سازمانی.
 آدرس سایت :
-[Landrick](https://hr-landrick.vercel.app/)
+[Landrick](https://hr-landrick.netlify.app)
