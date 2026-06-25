@@ -8,7 +8,7 @@ developed using Tailwind CSS and React Js.
 
 ## Features
 - Different pages
-- Different Charts
+- Dark Mode
 - Responsive
 - Attractive user interface
 
@@ -22,6 +22,7 @@ developed using Tailwind CSS and React Js.
   <img src="./public/images/ScreenShots/screenshot-02.webp" width="700"/>
   <img src="./public/images/ScreenShots/screenshot-03.webp" width="700"/>
   <img src="./public/images/ScreenShots/screenshot-04.webp" width="700"/>
+  <img src="./public/images/ScreenShots/screenshot-05.webp" width="700"/>
 </p>
 
 ## Requirements
@@ -70,9 +71,8 @@ public
 
 src
 ├── Components
-├── custom-styleSheet
 ├── Pages
-├── Utils
+├── Symbols
 ├── App.css
 ├── App.js
 ├── Custom.css
@@ -82,7 +82,6 @@ src
 ├── index.js
 ├── setupTests.js
 └── routes.js
-└── Symbols.jsx
 ```
 
 ## Live Demo
